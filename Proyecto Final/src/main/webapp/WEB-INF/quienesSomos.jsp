@@ -15,7 +15,7 @@
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3">
         <div class="container-fluid">
             <a href="#" class="navbar-brand">
-                <img class="logo" src="imagenes/Second Chance.png" id="logo" alt="logo home">
+                <img class="logo" src="imgCss/Second Chance.png" id="logo" alt="logo home">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
