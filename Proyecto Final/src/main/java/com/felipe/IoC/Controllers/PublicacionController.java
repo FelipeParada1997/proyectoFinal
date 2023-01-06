@@ -4,6 +4,7 @@ import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -16,6 +17,8 @@ import com.felipe.IoC.Models.User;
 import com.felipe.IoC.Services.MascotaService;
 import com.felipe.IoC.Services.PublicacionService;
 import com.felipe.IoC.Services.UserService;
+
+import java.util.List;
 
 
 @Controller
@@ -69,6 +72,18 @@ public class PublicacionController{
     public String deletePublic(@PathVariable("id")Long id){
         publicacionService.delete(id);
         return "redirect:/SecondChance";
+    }
+
+    @GetMapping("")
+    public String home(Model model, HttpSession session){
+       /* Long userId = (Long) session.getAttribute("userId");
+        User user = userService.findById(userId);
+        List<Publicacion> publicaciones = publicacionService.findAll();
+        model.addAttribute("user", user);
+        model.addAttribute("publicacionesItem", publicaciones); */
+
+
+        return "home.jsp";
     }
 
 
