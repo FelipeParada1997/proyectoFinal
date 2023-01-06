@@ -1,5 +1,7 @@
 package com.felipe.IoC.Controllers;
 
+import java.util.List;
+
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
@@ -36,22 +38,22 @@ public class PublicacionController{
 
     // para ver el crear publicacion get
     @GetMapping("/publicacion")
-    public String vercreaPublicacion(@ModelAttribute("publicacion") Publicacion publicacion){
+    public String vercreaPublicacion(@ModelAttribute("publicacion") Publicacion publicacion, Model model){
+        List<Mascota> mascotas = mascotaService.findAll();
+        model.addAttribute("mascotas", mascotas);
         return "publicacionver.jsp";
     }
-    //para crear publicacion mascota por post
-    @PostMapping("/publicacion/nueva")
-    public String crearPublicacion(@Valid @ModelAttribute("publicacion")Publicacion publicacion, BindingResult result, HttpSession session){
+    
+    //para crear publicacion  por post(muestra la mascota en lista)
+    @PostMapping("/publicacion")
+    public String crearPublicacion(@Valid @ModelAttribute("publicacion")Publicacion publicacion, BindingResult result, HttpSession session,Model model){
         if (result.hasErrors()) {
+            List<Mascota> mascotas = mascotaService.findAll();
+            model.addAttribute("mascotas", mascotas);
             return "publicacionver.jsp";
         }else{
-            Long mascotaId = (Long)session.getAttribute("mascotaId");
-            Mascota mascota = mascotaService.findById(mascotaId);
-            publicacion.setDescripcion("descripcion");
-            publicacion.setTitulo("titulo");
-            publicacion.setMascota(mascota);
             publicacionService.save(publicacion);
-            return "redirect:/";
+            return "redirect:/home2";
         }
     }
     //para crear usuario publicacion por post
