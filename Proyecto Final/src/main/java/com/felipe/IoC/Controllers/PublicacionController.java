@@ -1,7 +1,5 @@
 package com.felipe.IoC.Controllers;
 
-import java.util.List;
-
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
@@ -38,22 +36,22 @@ public class PublicacionController{
 
     // para ver el crear publicacion get
     @GetMapping("/publicacion")
-    public String vercreaPublicacion(@ModelAttribute("publicacion") Publicacion publicacion, Model model){
-        List<Mascota> mascotas = mascotaService.findAll();
-        model.addAttribute("mascotas", mascotas);
+    public String vercreaPublicacion(@ModelAttribute("publicacion") Publicacion publicacion){
         return "publicacionver.jsp";
     }
-    
-    //para crear publicacion  por post(muestra la mascota en lista)
-    @PostMapping("/publicacion")
-    public String crearPublicacion(@Valid @ModelAttribute("publicacion")Publicacion publicacion, BindingResult result, HttpSession session,Model model){
+    //para crear publicacion mascota por post
+    @PostMapping("/publicacion/nueva")
+    public String crearPublicacion(@Valid @ModelAttribute("publicacion")Publicacion publicacion, BindingResult result, HttpSession session){
         if (result.hasErrors()) {
-            List<Mascota> mascotas = mascotaService.findAll();
-            model.addAttribute("mascotas", mascotas);
             return "publicacionver.jsp";
         }else{
+            Long mascotaId = (Long)session.getAttribute("mascotaId");
+            Mascota mascota = mascotaService.findById(mascotaId);
+            publicacion.setDescripcion("descripcion");
+            publicacion.setTitulo("titulo");
+            publicacion.setMascota(mascota);
             publicacionService.save(publicacion);
-            return "redirect:/home2";
+            return "redirect:/";
         }
     }
     //para crear usuario publicacion por post
@@ -76,13 +74,14 @@ public class PublicacionController{
         return "redirect:/SecondChance";
     }
 
-    @GetMapping("/")
+    @GetMapping("")
     public String home(Model model, HttpSession session){
        /* Long userId = (Long) session.getAttribute("userId");
         User user = userService.findById(userId);
         List<Publicacion> publicaciones = publicacionService.findAll();
         model.addAttribute("user", user);
-        model.addAttribute("publicacionesItem", publicaciones);*/
+        model.addAttribute("publicacionesItem", publicaciones); */
+
 
         return "home.jsp";
     }
