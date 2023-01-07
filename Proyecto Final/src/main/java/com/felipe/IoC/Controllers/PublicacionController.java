@@ -56,18 +56,6 @@ public class PublicacionController{
             return "redirect:/home2";
         }
     }
-    //para crear usuario publicacion por post
-    // @PostMapping("/publucacion/nueva")
-    // public String crearPublicacionu(@Valid @ModelAttribute("publicacion")Publicacion publicacion, BindingResult result, HttpSession session){
-    //     if (result.hasErrors()) {
-    //         return "publicacionver.jsp";
-    //     }else{
-    //         Long userId = (Long)session.getAttribute("userNamId");
-    //         User user = userService.findById(userId)
-    //         publicacion.setMascota(null);
-    //         publicacionService.save(publicacion);
-    //         return "redirect:/";
-    //     }
     
     //para borrar la publicacion
     @GetMapping("/publicacion/{id}/delete")

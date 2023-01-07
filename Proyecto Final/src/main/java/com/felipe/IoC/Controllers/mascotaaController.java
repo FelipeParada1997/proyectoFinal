@@ -68,7 +68,6 @@ public class mascotaaController {
         }
     }
     //para editar info de mascota ver
-   //para editar una reserva ya hecha
     @GetMapping("/mascota/{id}/edit")
     public String editMascota(@PathVariable("id")Long id, Model model){
         Mascota mascota = mascotaService.findById(id);
