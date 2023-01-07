@@ -1,6 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+
 body {
     overflow-x: hidden;
     color: #505962;
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 /* fondo video */
@@ -16,7 +27,6 @@ video{
     width: 100%;
     object-fit: cover;
 }
-/* fondo video */
 
 
 
@@ -44,7 +54,7 @@ video{
     border-radius: 30px;
     font-size: 1.1rem;
     padding: .6rem 1.3rem;
-    background-color: #1EBBA3
+    background-color: #1EBBA3;
 }
 
 
@@ -53,45 +63,15 @@ video{
     width: 10rem;
 }
 
-/* imagenes pie vide animales */
-.thumb{
-    position: relative;
-    left: 35%;
-    top: 30px;
-    bottom: 20px;
-    bottom: translateX(-50%);
-    display: flex;
-    letter-spacing: 50%;
+/* imagenes pie video animales */
+.animals li {
+    cursor: pointer; 
 }
-
-.thumb li {
-    list-style: none;
-    display: inline-block;
-    margin: 0 20px;
-    cursor: pointer;
-}
-.thumb li img{max-width: 80px;}
-
-/* cards */
-.card{
-    position: relative;
-    width: 320px;
-    height: 450px;
-    left: 30px;
-    background: #fff;
-    overflow: hidden;
-    border-radius: 20px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
-}
-.card .poster::before{
-content:'';position: absolute; bottom: -180%; width: 100%;height: 100%;background: linear-gradient(0deg,#1064a6 50%,transparent);transition: 0.5s;z-index: 1;}
-.card .poster{position: relative;overflow: hidden;}
-.card:hover .poster::before{bottom:0px;}
-.card:hover .poster img{transform: translateY(-50%);filter:blur(5px);}
-.card .poster img{width: 100%;transition: 0.5s;}
+.animals li img{max-width: 100px; } 
 
 
-start course section
+
+/* start course section */
 .col-md-8{
     margin: 2rem auto 8rem;
     padding-top: 2rem;
@@ -135,3 +115,7 @@ start course section
         font-size: 1.7rem;
     }
 }
+
+
+
+
