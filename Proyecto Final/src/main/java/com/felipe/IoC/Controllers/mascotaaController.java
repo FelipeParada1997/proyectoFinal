@@ -31,13 +31,11 @@ public class mascotaaController {
         }
 
     //mostrar todas las mescotas asociacdas al usuario
-    @GetMapping("/mimascota")
-    public String mascotasMostrar(@ModelAttribute("mascota")Mascota mascota){
-        return "mascotaver.jsp";
-    }
+
+
     //para ver una mascota en especifico
     @GetMapping("/mascota/{id}")
-    public String verMascota(@PathVariable("id")Long id, Model model){
+    public String verUnaMascota(@PathVariable("id")Long id, Model model){
         Mascota mascota = mascotaService.findById(id);
         model.addAttribute("mascota", mascota);
         return "mascotaver.jsp";
@@ -48,16 +46,25 @@ public class mascotaaController {
         return "agregarmascota.jsp";
     }
     //para rellenar formulario
+    // @PostMapping("/agregar")
+    // public String hacerFormuario(@Valid @ModelAttribute("mascota")Mascota mascota, BindingResult result, HttpSession session){
+    //     if (result.hasErrors()) {
+    //         return "agregarmascota.jsp";
+    //     }else{
+    //         Long userId = (Long)session.getAttribute("userId");
+    //         User user = userService.findById(userId);
+    //         mascota.setUser(user);
+    //         mascotaService.save(mascota);
+    //         return "redirect:/publicacion";
+    //     }
+    // }
     @PostMapping("/agregar")
-    public String hacerFormuario(@Valid @ModelAttribute("mascota")Mascota mascota, BindingResult result, HttpSession session){
+    public String crearMascot(@Valid @ModelAttribute("mascota") Mascota mascota, BindingResult result) {
         if (result.hasErrors()) {
             return "agregarmascota.jsp";
-        }else{
-            Long userId = (Long)session.getAttribute("userId");
-            User user = userService.findById(userId);
-            mascota.setUser(user);
+        } else {
             mascotaService.save(mascota);
-            return "redirect:/publicacion";
+            return "redirect:/books";
         }
     }
     //para editar info de mascota ver

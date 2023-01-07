@@ -78,7 +78,7 @@ public class PublicacionController{
 
     @GetMapping("")
     public String home(Model model, HttpSession session){
-       /* Long userId = (Long) session.getAttribute("userId");
+    /* Long userId = (Long) session.getAttribute("userId");
         User user = userService.findById(userId);
         List<Publicacion> publicaciones = publicacionService.findAll();
         model.addAttribute("user", user);
