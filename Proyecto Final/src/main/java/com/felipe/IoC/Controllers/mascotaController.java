@@ -32,47 +32,46 @@ public class mascotaController{
         //Modificar
         //Eliminar
     }
+}
+//      //GET (Mostrar todas las mascotas asociadas al usuario)
+//         @GetMapping("/mis-mascotas")
+//         //     return "home2.jsp"; 
+//         // }
 
-     //GET (Mostrar todas las mascotas asociadas al usuario)
-        @GetMapping("/mis-mascotas")
-        //     return "home2.jsp"; 
-        // }
+//         @GetMapping("/ver/{id_mascota}") //GET (Mostrar una mascota en especifico)
+//         public String visualizarMascota(){
+//             return "home2.jsp";
+//         }
 
-        @GetMapping("/ver/{id_mascota}") //GET (Mostrar una mascota en especifico)
-        public String visualizarMascota(){
+             @GetMapping("/agregar") //GET (Mostrar formulario de agregar)
+            public String formulAgregar(){
             return "home2.jsp";
-        }
+//         }
 
-        @GetMapping("/agregar") //GET (Mostrar formulario de agregar)
-        public String formulAgregar(){
+//         @PostMapping("/agregar") //POST (Agregar a base de datos)
+//         public String visualizar(){
+//             return "home2.jsp";
+//         }
 
-            return "home2.jsp";
-        }
+//         @GetMapping("/modificar/{id_mascota}") //GET (Desplegar formulario de modificacion)
+//         public String visualizar(){
+//             return "home2.jsp";
+//         }
 
-        @PostMapping("/agregar") //POST (Agregar a base de datos)
-        public String visualizar(){
-            return "home2.jsp";
-        }
+//         @PostMapping("/modificar/{id_mascota}") //POST (Modificacion de una mascota en bd)
+//         public String visualizar(){
+//             return "home2.jsp";
+//         }
 
-        @GetMapping("/modificar/{id_mascota}") //GET (Desplegar formulario de modificacion)
-        public String visualizar(){
-            return "home2.jsp";
-        }
+//         @PostMapping("/eliminar/{id_mascota}") //POST (Eliminacion de una mascota,tiene q apreecer una notificacioln)
+//         public String visualizar(){
+//             return "home2.jsp";
+//         }
+//     }
 
-        @PostMapping("/modificar/{id_mascota}") //POST (Modificacion de una mascota en bd)
-        public String visualizar(){
-            return "home2.jsp";
-        }
-
-        @PostMapping("/eliminar/{id_mascota}") //POST (Eliminacion de una mascota,tiene q apreecer una notificacioln)
-        public String visualizar(){
-            return "home2.jsp";
-        }
-    }
-
-//para crear mascota por post
-    @PostMapping("/publicacion")
-    public Mascota crearPublicacion(Mascota mascota){
-            return mascotaService.save(mascota);
-        }
-    }
+// //para crear mascota por post
+//     @PostMapping("/publicacion")
+//     public Mascota crearPublicacion(Mascota mascota){
+//             return mascotaService.save(mascota);
+//         }
+//     }
