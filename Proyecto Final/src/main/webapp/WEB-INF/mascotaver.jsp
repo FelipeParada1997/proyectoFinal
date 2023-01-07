@@ -11,6 +11,7 @@
     <title>Ver Mascota</title>
 </head>
 <body>
-    
+    <h1>Agregar</h1>
+    <a href="/agregar">agregar mascota</a>
 </body>
 </html>

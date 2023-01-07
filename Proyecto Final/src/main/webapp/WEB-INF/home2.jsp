@@ -12,15 +12,14 @@
 </head>
 <body>
     hola (nombre usuario)
-    <a href="//iniciasesion/registrate">registrate</a>
-    <a href="/iniciasesion/registrate">inicia sesion</a>
-    <a href="/salir">salir</a>
 
     <h1>Publicaciones</h1>
     <div>
         <a href="/iniciasesion/registrate">login</a>
         <a href="/iniciasesion/registrate">registro</a>
         <a href="/publicacion">publicar</a>
+        <a href="/mimascota">mis mascotas</a>
+        <a href="/agregar">agregar</a>
         
     </div>
 </body>

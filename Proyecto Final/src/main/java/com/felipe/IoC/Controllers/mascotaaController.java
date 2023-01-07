@@ -31,11 +31,9 @@ public class mascotaaController {
         }
 
     //mostrar todas las mescotas asociacdas al usuario
-    @GetMapping("/mismascotas")
-    public String mascotasMostrar(@ModelAttribute("mascota")Mascota mascota,Model model){
-        List<Mascota> mascotas= mascotaService.findAll();
-        model.addAttribute("mascota", mascota);
-        return "publicacionver.jsp";
+    @GetMapping("/mimascota")
+    public String mascotasMostrar(@ModelAttribute("mascota")Mascota mascota){
+        return "mascotaver.jsp";
     }
     //para ver una mascota en especifico
     @GetMapping("/mascota/{id}")
@@ -47,13 +45,13 @@ public class mascotaaController {
     //para ver formulario para agregar mascotas
     @GetMapping("/agregar")
     public String verFormulario(@ModelAttribute("mascota")Mascota mascota){
-        return "adipcion.jsp";
+        return "agregarmascota.jsp";
     }
     //para rellenar formulario
     @PostMapping("/agregar")
     public String hacerFormuario(@Valid @ModelAttribute("mascota")Mascota mascota, BindingResult result, HttpSession session){
         if (result.hasErrors()) {
-            return "adopcion.jsp";
+            return "agregarmascota.jsp";
         }else{
             Long userId = (Long)session.getAttribute("userId");
             User user = userService.findById(userId);

@@ -13,7 +13,7 @@
 <body>
     <div class="container-sm">
         <h1>Nueva Publicacion</h1>
-        <a href="/home2" class="col-auto">Volver al home</a>
+        <a href="/principal" class="col-auto">Volver al home</a>
         <br>
         <form:form action="/publicacion" method="post" modelAttribute="publicacion">
                 <p>
