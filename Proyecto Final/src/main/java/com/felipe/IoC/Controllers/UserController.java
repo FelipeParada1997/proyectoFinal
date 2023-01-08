@@ -34,16 +34,16 @@ public class UserController {
                                 BindingResult result, HttpSession session, Model model) {
         System.out.println(result.getAllErrors());
         if (result.hasErrors()) {
-            return "loginregister.jsp";
+            return "inicio";
         }
         boolean duplicated = userService.duplicatedUser(user.getEmail());
         if (duplicated) {
             model.addAttribute("error", "Correo electronico ya esta en uso! Por favor intenta denuevo con un correo diferente!");
-            return "loginregister.jsp";
+            return "inicio";
         }
         User u = userService.registerUser(user);
         session.setAttribute("userId", u.getId());
-        return "redirect:/home";
+        return "redirect:/userdentro";
     }
 
     @RequestMapping("/salir")
@@ -56,35 +56,25 @@ public class UserController {
 
     @GetMapping("/iniciasesion/registrate")
     public String vistaRegistro(Model model, HttpSession session, @ModelAttribute("user") User user) {
-        return "loginregister.jsp";
+        return "inicio";
     }
 
 
     @PostMapping("/loginpost")
-    public String indexlogin(@RequestParam("email") String email,
-                            @RequestParam("password") String password, Model model, HttpSession session) {
+    public String indexlogin(@Valid @RequestParam("email") String email,
+                            @RequestParam("password") String password, Model model, HttpSession session, @ModelAttribute("user")User user) {
         boolean authenticated = userService.authenticateUser(email, password);
         if (authenticated) {
             User u = userService.findByEmail(email);
             session.setAttribute("userId", u.getId());
-            return "redirect:/";
+            return "redirect:/userdentro";
         } else {
             model.addAttribute("error", "porfavor intente otra vez");
-            return "loginregister.jsp";
+            return "inicio";
         }
     }
 }
-
-    /*@GetMapping("/iniciasesion/registrate")
-    public String vistaLogin(){
-        return "loginregister.jsp";
-    }
-
     //---------------------------------------------Home--------------------------------------------------
 
 //para ver publicaciones en el home en general
 
-
-
-
-}*/

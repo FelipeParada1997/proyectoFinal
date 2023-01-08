@@ -1,10 +1,18 @@
 package com.felipe.IoC.Controllers;
 
+import java.util.List;
+
+import javax.servlet.http.HttpSession;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 
+import com.felipe.IoC.Models.Mascota;
+import com.felipe.IoC.Models.User;
 import com.felipe.IoC.Services.MascotaService;
 import com.felipe.IoC.Services.PublicacionService;
 import com.felipe.IoC.Services.UserService;
@@ -21,12 +29,29 @@ public class homeController {
         this.userService = userService;
     }
     
-    @GetMapping("/principal") //GET Mostrar publicaciones
-    public String principal(){
-    // (@PathVariable("id")Long id, Model model){
-    //     model.addAttribute("user",userService.findById(id));
-    //     model.addAttribute("publicacion", publicacionService.findById(id));
-    //     model.addAttribute("mascota", mascotaService.findById(id));
-        return "home2.jsp";
+    @GetMapping("/")
+    public String home(Model model, HttpSession session){
+    /* Long userId = (Long) session.getAttribute("userId");
+        User user = userService.findById(userId);
+        List<Publicacion> publicaciones = publicacionService.findAll();
+        model.addAttribute("user", user);
+        model.addAttribute("publicacionesItem", publicaciones); */
+
+        return "home";
     }
+
+    @GetMapping("/userdentro") //GET Mostrar publicaciones
+    public String principal(Model model, HttpSession session){
+        // Long id = (Long) session.getAttribute("userid");
+        // User u = userService.findById(id);
+        List<Mascota> mascota = mascotaService.findAll();
+        // model.addAttribute("user", u);
+        model.addAttribute("mascota", mascota);
+        return "home2";
+    }
+    @PostMapping("/userdentro")
+    public String principaluser(){
+        return "home2";
+    }
+
 }

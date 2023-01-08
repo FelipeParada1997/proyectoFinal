@@ -41,7 +41,7 @@ public class Mascota extends Base{
 
     private String personalidad;
 
-    private String energia;
+    private int energia;
 
 
     @OneToOne(mappedBy="mascota", cascade=CascadeType.ALL, fetch=FetchType.LAZY)

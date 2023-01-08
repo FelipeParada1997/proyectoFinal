@@ -13,13 +13,12 @@
 <body>
     hola (nombre usuario)
 
-    <h1>Publicaciones</h1>
+    <h1>home usuario</h1>
     <div>
-        <a href="/iniciasesion/registrate">login</a>
-        <a href="/iniciasesion/registrate">registro</a>
-        <a href="/publicacion">publicar</a>
-        <a href="/mimascota">mis mascotas</a>
-        <a href="/agregar">agregar</a>
+        <a href="/salir">deslogearse</a>
+        <a href="/adopcion">agregar</a>
+    </div>
+    <div>
         
     </div>
 </body>
