@@ -32,20 +32,18 @@ public class mascotaController{
         //Modificar
         //Eliminar
     }
-}
+
 //      //GET (Mostrar todas las mascotas asociadas al usuario)
 //         @GetMapping("/mis-mascotas")
 //         //     return "home2.jsp"; 
 //         // }
 
-//         @GetMapping("/ver/{id_mascota}") //GET (Mostrar una mascota en especifico)
-//         public String visualizarMascota(){
-//             return "home2.jsp";
-//         }
+         @GetMapping("/formulario") //GET (Mostrar una mascota en especifico)
+         public String visualizarMascota(){
+             return "adopcion.jsp";
+         }
 
-             @GetMapping("/agregar") //GET (Mostrar formulario de agregar)
-            public String formulAgregar(){
-            return "home2.jsp";
+
 //         }
 
 //         @PostMapping("/agregar") //POST (Agregar a base de datos)
@@ -74,4 +72,4 @@ public class mascotaController{
 //     public Mascota crearPublicacion(Mascota mascota){
 //             return mascotaService.save(mascota);
 //         }
-//     }
+   }
