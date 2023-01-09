@@ -28,11 +28,11 @@
                     <a class="nav-link active" aria-current="page" href="#">Inicio</a>
                 </li>
                 <li class="nav-item" style="display: inline-block;">
-                    <a class="nav-link text-white" href="#">¿Quiénes somos?</a>
+                    <a class="nav-link text-white" href="quienesSomos">Quienes somos?</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        ¿Cómo ayudar?
+                        Como ayudar?
                         </a>
                         <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="#">Dona</a></li>
@@ -42,12 +42,12 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Adoptame aquí!
+                    Adoptame aqui!
                     </a>
                     <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="#">Perros</a></li>
                     <li><a class="dropdown-item" href="#">Gatos</a></li>
-                    <li><a class="dropdown-item" href="#        ">Exóticos</a></li>
+                    <li><a class="dropdown-item" href="#        ">Exoticos</a></li>
                     </ul>
                 </li>
                 <li class="nav-item text-white">

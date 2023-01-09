@@ -34,11 +34,11 @@
                 <!-- STYLE -->
                 <!-- CREAR CSS PARA "#linknav"-->
                 <li id="linknav" class="nav-item" style="display: inline-block;">
-                    <a class="nav-link text-white" href="#">¿Quiénes somos?</a>
+                    <a class="nav-link text-white" href="quienesSomos">¿Quienes somos?</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        ¿Cómo ayudar?
+                        ¿Como ayudar?
                         </a>
                         <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="#">Dona</a></li>
@@ -53,7 +53,7 @@
                     <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="#">Perros</a></li>
                     <li><a class="dropdown-item" href="#">Gatos</a></li>
-                    <li><a class="dropdown-item" href="#">Exóticos</a></li>
+                    <li><a class="dropdown-item" href="#">Exoticos</a></li>
                     </ul>
                 </li>
                 <li class="nav-item text-white">
@@ -80,19 +80,19 @@
         <!-- CREAR CSS PARA ".main" -->
         <div class="main justify-content-center border border-secondary rounded p-5"  style="width: 40%;">
             <h1>Formulario de Adopcion</h1>
-            <form>
+            <form:form action="/publicacion" method="POST" modelAttribute="publicacion">
                 <div class="mb-3">
-                    <label class="form-label">Nombre</label>
-                    <input class="form-control" placeholder="Ejemplo: Canelita" type="text" aria-label="default input example">
+                    <form:label class="form-label">Nombre</form:label>
+                    <form:input class="form-control" placeholder="Ejemplo: Canelita" type="text" aria-label="default input example">
                 </div>
 
                 <div class="mb-3">
-                    <label class="form-label">Edad</label>
-                    <input class="form-control" type="text" placeholder="Ejemplo: 3" aria-label="default input example">
+                    <form:label class="form-label">Edad</form:label>
+                    <form:input class="form-control" type="text" placeholder="Ejemplo: 3" aria-label="default input example">
                 </div>
                     
                 <div>
-                    <label class="form-label">Tipo de Animal</label>
+                    <form:label class="form-label">Tipo de Animal</form:label>
                     <select class="form-select" aria-label="Default select example">
                         <option selected>Elige el tipo de animal</option>
                         <option value="1">Gato</option>
@@ -102,7 +102,7 @@
                 </div>
 
                 <div>
-                    <label class="form-label">Región</label>
+                    <form:label class="form-label">Región</form:label>
                     <select class="form-select" aria-label="Default select example">
                         <option selected>Elige la Región</option>
                         <option value="1">Region</option>
@@ -111,7 +111,7 @@
                 </div>
 
                 <div>
-                    <label class="form-label">Ciudad</label>
+                    <form:label class="form-label">Ciudad</form:label>
                     <select class="form-select" aria-label="Default select example">
                         <option selected>Elige la Ciudad</option>
                         <option value="1">Ciudad</option>
@@ -119,7 +119,7 @@
                 </div>
 
                 <div>
-                    <label class="form-label">Sexo</label>
+                    <form:label class="form-label">Sexo</form:label>
                     <select class="form-select" aria-label="Default select example">
                         <option selected>Elige el sexo de animal</option>
                         <option value="1">Hembra</option>
@@ -128,7 +128,7 @@
                 </div>
 
                 <div>
-                    <label class="form-label">Tamaño</label>
+                    <form:label class="form-label">Tamaño</form:label>
                     <select class="form-select" aria-label="Default select example">
                         <option selected>Elige el tamaño de animal</option>
                         <option value="1">Muy Pequeño</option>
@@ -141,31 +141,31 @@
 
                 <p>Esterilización</p>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                    <label class="form-check-label" for="flexRadioDefault1">
+                    <form:input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <form:label class="form-check-label" for="flexRadioDefault1">
                     Si
-                    </label>
+                    </form:label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                    <label class="form-check-label" for="flexRadioDefault2">
+                    <form:input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                    <form:label class="form-check-label" for="flexRadioDefault2">
                     No
-                    </label>
+                    </form:label>
                 </div>
 
                 <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label">Danos una breve descripcion del animal:</label>
+                    <form:label for="exampleFormControlTextarea1" class="form-label">Danos una breve descripcion del animal:</label>
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                 </div>
 
                 <div class="mb-3">
-                    <label for="formFile" class="form-label">Sube una foto en vertical de tu Animal</label>
-                    <input class="form-control" type="file" id="formFile">
+                    <form:label for="formFile" class="form-label">Sube una foto en vertical de tu Animal</label>
+                    <form:input class="form-control" type="file" id="formFile">
                 </div>
 
                 <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                <form:input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <form:label class="form-check-label" for="exampleCheck1">Check me out</label>
                 </div>
 
                 <button type="submit" class="btn btn-dark">Submit</button>

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <!-- css file -->
     <link rel="stylesheet" href="css/quienesSomos.css">
-    <title>Document</title>
+    <title>Quienes Somos</title>
 </head>
 <body>
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3">
@@ -23,14 +23,14 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav" style="margin-left: auto;">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    <a class="nav-link active" aria-current="page" href="/">Inicio</a>
                 </li>
                 <li class="nav-item" style="display: inline-block;">
-                    <a class="nav-link text-white" href="#">¿Quiénes somos?</a>
+                    <a class="nav-link text-white" href="#">Quienes somos?</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        ¿Cómo ayudar?
+                        Como ayudar?
                         </a>
                         <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="#">Dona</a></li>
@@ -40,7 +40,7 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Adoptame aquí!
+                    Adoptame aqui!
                     </a>
                     <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="#">Perros</a></li>
@@ -72,5 +72,6 @@
             <img src="https://www.webconsultas.com/sites/default/files/styles/wc_adaptive_curiosidad__small/public/articulos/perro-infecciones.jpg" alt="">
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 </html>
