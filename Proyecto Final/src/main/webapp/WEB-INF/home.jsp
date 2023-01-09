@@ -107,7 +107,7 @@ pageEncoding="UTF-8"%>
     <!-- Publicaciones -->
     <div class="main d-flex justify-content-center" id="seccion_cards">
         <div class="row">
-            <div class="col">
+            <div class="col card-content">
                 <div class="card">
                     <img src="imagenes/gatomaxi.jpg" class="card-img">
                     <div class="card-body">
@@ -118,7 +118,7 @@ pageEncoding="UTF-8"%>
                     </div>
                 </div>
             </div>
-            <div class="col">
+            <div class="col card-content">
                 <div class="card ">
                     <img src="imagenes/gatomaxi.jpg" class="card-img">
                     <div class="card-body">
@@ -129,7 +129,7 @@ pageEncoding="UTF-8"%>
                     </div>
                 </div>
             </div>
-            <div class="col">   
+            <div class="col card-content">   
                 <div class="card">
                     <img src="imagenes/gatomaxi.jpg" class="card-img">
                     <div class="card-body">
@@ -140,26 +140,33 @@ pageEncoding="UTF-8"%>
                     </div>
                 </div> 
             </div>
-        </div>    
-    </div>
-        <!-- div del row -->
         </div>
-
-
-        
-        <!-- pagination -->
-    
-
-
-
-
-
-
-
-
-
-
     </div>
+
+
+
+    <!-- Pagination -->
+
+<div class="pagination justify-content-center">
+    <div class="page-item previous-pag"><a href="#" class="page-link">Prev</a></div>
+    <div class="page-item current-page"><a href="#" class="page-link">1</a></div>
+    <div class="page-item dots"><a href="#" class="page-link">...</a></div>
+    <div class="page-item current-page"><a href="#" class="page-link">5</a></div>
+    <div class="page-item current-page"><a href="#" class="page-link">6</a></div>
+    <div class="page-item dots"><a href="#" class="page-link">...</a></div>
+    <div class="page-item current-page"><a href="#" class="page-link">10</a></div>
+    <div class="page-item next-page"><a href="#" class="page-link">Next</a></div>
+</div>
+
+
+
+
+
+
+
+
+
+
 
     <!-- Footer -->
     <footer class="footer fixed-down footer-expand-lg bg-dark p-md-3 mt-4">

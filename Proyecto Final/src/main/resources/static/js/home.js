@@ -7,4 +7,3 @@ var nav = document.querySelector('nav');
                 nav.classList.remove('bg-black', 'shadow');
             }
         });
-
