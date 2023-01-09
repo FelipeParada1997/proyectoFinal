@@ -26,7 +26,7 @@ public class Ciudad extends Base{
     private String nombre;
 
     @OneToMany(mappedBy="ciudad", fetch = FetchType.LAZY)
-    private List<Publicacion> publicacion;
+    private List<Publicacion> publicaciones;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="region_id")

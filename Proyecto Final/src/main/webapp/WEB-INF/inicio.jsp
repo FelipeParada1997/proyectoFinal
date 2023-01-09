@@ -12,10 +12,6 @@
 </head>
 <body>
     <h1>puede iniciar sesion o registrarte</h1>
-    <div class="container px-4 text-center">
-        <div class="row gx-5">
-            <div class="col">
-                <div class="p-3 border bg-light">
                     <form:form method="post" action="/registerpost" modelAttribute="user">
                         <p>
                             <form:label path="nombre">Name</form:label>

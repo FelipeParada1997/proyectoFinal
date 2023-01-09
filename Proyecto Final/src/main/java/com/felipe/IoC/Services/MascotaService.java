@@ -4,6 +4,7 @@ import org.springframework.stereotype.Service;
 
 import com.felipe.IoC.Models.Mascota;
 import com.felipe.IoC.Repositories.MascotaRepository;
+
 import com.felipe.IoC.Repositories.BaseRepository;
 
 @Service
@@ -15,5 +16,5 @@ public class MascotaService extends BaseService<Mascota>{
         super(baseRepository);
         this.mascotaRepository = mascotaRepository;
     }
-
+    
 }

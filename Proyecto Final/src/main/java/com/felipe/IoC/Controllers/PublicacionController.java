@@ -46,9 +46,19 @@ public class PublicacionController{
 
     // para ver el crear publicacion get
     @GetMapping("/publicacion")
-    public String vercreaPublicacion(@ModelAttribute("publicacion") Publicacion publicacion, Model model){
-        List<Mascota> mascotas = mascotaService.findAll();
-        model.addAttribute("mascotas", mascotas);
+    public String vercreaPublicacion(@ModelAttribute("publicacion") Publicacion publicacion, Model model,HttpSession session){
+        Long id = (Long) session.getAttribute("userId");
+        User u= userService.findById(id);
+
+        List<Mascota> mascota = u.getMascotas();
+        model.addAttribute("mascota", mascota);
+
+        List<Region> region = regionService.findAll();
+        model.addAttribute("region", region);
+
+        List<Ciudad> ciudades = ciudadService.findAll();
+        model.addAttribute("ciudad", ciudades);
+
         return "publicacion";
     }
     
@@ -56,23 +66,47 @@ public class PublicacionController{
     @PostMapping("/publicacion")
     public String crearPublicacion(@Valid @ModelAttribute("publicacion")Publicacion publicacion, BindingResult result, HttpSession session,Model model){
         if (result.hasErrors()) {
+
+            Long id = (Long) session.getAttribute("userId");
+            User u= userService.findById(id);
+            Region r = regionService.findById(id);
+            Ciudad c = ciudadService.findById(id);
+            publicacion.setUser(u);
+
             List<Region> region = regionService.findAll();
             model.addAttribute("region", region);
-            List<Ciudad> ciudad = ciudadService.findAll();
-            model.addAttribute("ciudad", ciudad);
-            List<Mascota> mascotas = mascotaService.findAll();
-            model.addAttribute("mascotas", mascotas);
+
+            List<Ciudad> ciudades = r.getCiudades();
+            model.addAttribute("ciudad", ciudades);
+
+            List<Mascota> mascota = u.getMascotas();
+            model.addAttribute("mascota", mascota);
+
             return "publicacion";
         }else{
+            Long id = (Long) session.getAttribute("userId");
+            User u= userService.findById(id);
+            publicacion.setUser(u);
             publicacionService.save(publicacion);
             return "redirect:/userdentro";
         }
     }
-    
-    //para borrar la publicacion
+    //para ver detalle de publicacion y mascota
+    @GetMapping("/detalle/{id}")
+    public String detallePublicyMascot(@PathVariable("id")Long id, Model model, HttpSession session){
+        Long userId = (Long) session.getAttribute("userId");
+        User user = userService.findById(userId);
+        model.addAttribute("user", user);
+        Mascota mascota = mascotaService.findById(id);
+        model.addAttribute("mascota", mascota);
+        Publicacion publicacion = publicacionService.findById(id);
+        model.addAttribute("publicacion", publicacion);
+        return "detalle";
+    }
+
     @GetMapping("/publicacion/{id}/delete")
     public String deletePublic(@PathVariable("id")Long id){
         publicacionService.delete(id);
-        return "redirect:/SecondChance";
+        return "redirect:/adopcion";
     }
 }

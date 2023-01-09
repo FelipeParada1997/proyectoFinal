@@ -8,3 +8,4 @@ import com.felipe.IoC.Models.Region;
 public interface RegionRepository extends BaseRepository<Region>{
 
 }
+

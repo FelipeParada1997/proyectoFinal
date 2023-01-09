@@ -2,13 +2,14 @@ package com.felipe.IoC.Services;
 
 import com.felipe.IoC.Repositories.BaseRepository;
 import com.felipe.IoC.Repositories.RegionRepository;
+
 import org.springframework.stereotype.Service;
 
 
 
 import com.felipe.IoC.Models.Region;
 
-import java.util.Optional;
+import java.util.List;
 
 @Service
 public class RegionService extends BaseService<Region>{
@@ -18,4 +19,6 @@ public class RegionService extends BaseService<Region>{
         super(baseRepository);
         this.regionRepository = regionRepository;
     }
+
 }
+

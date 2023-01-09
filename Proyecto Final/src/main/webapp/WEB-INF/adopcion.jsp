@@ -12,7 +12,7 @@
 </head>
 <body>
     <h1>adopta</h1>
-    <form:form method="post" action="/adopcion" modelAttribute="mascota">
+    <form:form method="post" action="/adopcion" modelAttribute="mascota" enctype="multipart/form-data">
         <p>
             <form:label path="nombre">Nombre</form:label>
             <form:errors path="nombre"/>
@@ -50,6 +50,8 @@
             <form:errors path="energia"/>
             <form:input type="number" path="energia" min="1" max="10"/>
         </p>
+        <p><input type="file" name="postFile"/></p> 
+
         <input type="submit" value="submit"/>
     </form:form>
 </body>

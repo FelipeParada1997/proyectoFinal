@@ -24,33 +24,40 @@
             <p>
                     <form:label path="descripcion">descripcion</form:label>
                     <form:errors path="descripcion"/>
-                    <form:input path="descripcion" class="form-control"/>
+                    <form:input path="descripcion" />
             </p>
             <p>
+                <form:label path="mascota">Mascotas</form:label>
                     <form:select path="mascota">
-                        <c:forEach items="${mascotas}" var="mascota" >
+                        <c:forEach items="${mascota}" var="mascota" >
                             <form:option value="${mascota.id}">
                                 <c:out value="${mascota.nombre}"/>
                             </form:option>
                         </c:forEach>
                     </form:select>
             </p>
-            <p>
-                <form:select path="ciudad">
-                    <c:forEach items="${ciudad}" var="ciudades">
-                        <form:option value="${ciudades.region.id}">
-                            <c:out value="${ciudades.region.nombre}"/>
-                        </form:option>
-                    </c:forEach>
-                </form:select>
             </p>
-
-            <input type="submit" value="submit" class="btn btn-primary"/>
+                <form:label path="ciudad">Ciudad</form:label>
+                    <form:select path="ciudad">
+                        <c:forEach items="${ciudad}" var="ciudades">
+                            <form:option value="${ciudades.id}">
+                                <c:out value="${ciudades.nombre}"/>
+                            </form:option>
+                        </c:forEach>
+                    </form:select>
+    <p>
+    <form:label path="ciudad">Region</form:label>
+        <form:select path="ciudad">
+            <c:forEach items="${region}" var="regiones">
+                <form:option value="${regiones.id}">
+                    <c:out value="${regiones.nombre}"/>
+                </form:option>
+            </c:forEach>
+        </form:select>
+    </p>
+            <input type="submit" value="submit"/>
             <a href="/userdentro" class="btn btn-primary">cancel</a>
         </form:form>
-            <c:forEach items="${ciudad}" var="ciudades">
-                <c:out value="${ciudades.nombre}"/>
-            </c:forEach>
             
         </div>
 </body> 

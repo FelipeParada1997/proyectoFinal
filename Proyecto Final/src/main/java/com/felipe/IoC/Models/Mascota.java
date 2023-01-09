@@ -43,6 +43,8 @@ public class Mascota extends Base{
 
     private int energia;
 
+    private String ubicacion;
+
 
     @OneToOne(mappedBy="mascota", cascade=CascadeType.ALL, fetch=FetchType.LAZY)
     private Publicacion publicacion;
@@ -66,6 +68,10 @@ public class Mascota extends Base{
     )
 
     private List<Vacuna> vacunas;
+
+    public boolean isPresent() {
+        return false;
+    }
 
     }
 

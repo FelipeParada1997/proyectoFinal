@@ -11,15 +11,17 @@
     <title>home de prueba</title>
 </head>
 <body>
-    hola (nombre usuario)
 
     <h1>home usuario</h1>
+    <h1><c:out value="${user.nombre}"/></h1>
     <div>
         <a href="/salir">deslogearse</a>
         <a href="/adopcion">agregar</a>
+        <a href="/publicacion">publicacion</a>
     </div>
     <div>
-        
+        <h1>Publicaciones todas</h1>
+
     </div>
 </body>
 </html>

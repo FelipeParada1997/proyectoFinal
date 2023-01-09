@@ -41,17 +41,17 @@ public class homeController {
     }
 
     @GetMapping("/userdentro") //GET Mostrar publicaciones
-    public String principal(Model model, HttpSession session){
-        // Long id = (Long) session.getAttribute("userid");
-        // User u = userService.findById(id);
+    public String principal(HttpSession session, Model model){
+        Long id = (Long)session.getAttribute("userId");
+        User user =  userService.findById(id);
         List<Mascota> mascota = mascotaService.findAll();
-        // model.addAttribute("user", u);
+        model.addAttribute("user", user);
         model.addAttribute("mascota", mascota);
         return "home2";
     }
-    @PostMapping("/userdentro")
-    public String principaluser(){
-        return "home2";
-    }
+    // @PostMapping("/userdentro")
+    // public String principaluser(Model model, HttpSession session){
+    //     return "home2";
+    // }
 
 }
