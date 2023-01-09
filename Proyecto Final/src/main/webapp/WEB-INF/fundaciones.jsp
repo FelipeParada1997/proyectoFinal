@@ -11,8 +11,8 @@ pageEncoding="UTF-8"%>
     <!-- Bootstrap css -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <!-- css file -->
-    <link rel="stylesheet" href="css/quienesSomos.css">
-    <title>Quíenes Somos</title>
+    <link rel="stylesheet" href="css/fundaciones.css">
+    <title>Fundaciones</title>
 </head>
 <body>
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3">
@@ -29,7 +29,7 @@ pageEncoding="UTF-8"%>
                     <a class="nav-link active" aria-current="page" href="/">Inicio</a>
                 </li>
                 <li class="nav-item" style="display: inline-block;">
-                    <a class="nav-link text-white" href="/quienesSomos">¿Quíenes somos?</a>
+                    <a class="nav-link text-white" href="#">¿Quíenes somos?</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -60,7 +60,7 @@ pageEncoding="UTF-8"%>
 
     <div class="row">
         <div class="cuerpo col">
-            <h1 class="titulo">Quienes Somos</h1>
+            <h1 class="titulo">Fundaciones que nos acompañan</h1>
             <h2 class="subTitulo ">Bienvenidos a Second Chance</h2>
 
             <p class="parrafo">Lorem ipsum dolor sit, amet consectetur adipisicing elit. At eaque natus eos aliquid, velit nisi laborum ad reprehenderit nam adipisci, tempore corporis iure quae sequi porro a tenetur non quam.</p>
