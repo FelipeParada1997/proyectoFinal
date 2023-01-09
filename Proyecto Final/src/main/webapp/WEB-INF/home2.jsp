@@ -11,7 +11,6 @@
     <title>home de prueba</title>
 </head>
 <body>
-
     <h1>home usuario</h1>
     <h1><c:out value="${user.nombre}"/></h1>
     <div>

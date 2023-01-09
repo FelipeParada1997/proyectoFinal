@@ -16,6 +16,9 @@
     <div>
         <a href="/iniciasesion/registrate">login/registro</a>
 
+        <c:if  test="${session.getAttribute(userId)== true}">
+            holiholiiiii
+        </c:if>
     </div>
 </body>
 </html>
