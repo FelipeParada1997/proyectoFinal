@@ -1,9 +1,11 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+pageEncoding="UTF-8"%>
 <!doctype html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Home</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <!-- Bootstrap css -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
@@ -28,33 +30,28 @@
                     <a class="nav-link active" aria-current="page" href="#">Inicio</a>
                 </li>
                 <li class="nav-item" style="display: inline-block;">
-                    <a class="nav-link text-white" href="#">¿Quiénes somos?</a>
+                    <a class="nav-link text-white" href="quienesSomos">¿Quíenes somos?</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        ¿Cómo ayudar?
+                        ¿Como ayudar?
                         </a>
                         <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Dona</a></li>
-                        <li><a class="dropdown-item" href="#">Hazte socio</a></li>
-                        <li><a class="dropdown-item" href="#">Fundaciones</a></li>
+                        <li><a class="dropdown-item" href="/dona">Dona</a></li>
+                        <li><a class="dropdown-item" href="/hazteSocio">Hazte socio</a></li>
+                        <li><a class="dropdown-item" href="/fundaciones">Fundaciones</a></li>
                         </ul>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Adoptame aquí!
+                <div>
+                    <a class="nav-link text-white" href="/como-Adoptar-A-Tu-Mascota" role="button"aria-expanded="false">
+                        ¿Como adoptar a tu mascota?
                     </a>
+                </div>
+                <li class="nav-item dropdown text-white">
+                    <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-person-fill"></i> Mi cuenta</a>
                     <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Perros</a></li>
-                    <li><a class="dropdown-item" href="#">Gatos</a></li>
-                    <li><a class="dropdown-item" href="#        ">Exóticos</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item text-white">
-                    <a class="nav-link text-white" href="#"><i class="bi bi-person-fill"></i> Mi cuenta</a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Registrate</a></li>
-                        <li><a class="dropdown-item" href="#">Inicia sesión</a></li>
+                        <li><a class="dropdown-item" href="/iniciasesion/registrate">Registrate</a></li>
+                        <li><a class="dropdown-item" href="/iniciasesion/registrate">Inicia sesión</a></li>
                     </ul>
                 </li>
                 </ul>

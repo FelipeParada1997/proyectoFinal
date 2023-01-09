@@ -56,6 +56,7 @@ public class PublicacionController{
             return "redirect:/home2";
         }
     }
+
     //para crear usuario publicacion por post
     // @PostMapping("/publucacion/nueva")
     // public String crearPublicacionu(@Valid @ModelAttribute("publicacion")Publicacion publicacion, BindingResult result, HttpSession session){
@@ -88,5 +89,24 @@ public class PublicacionController{
         return "home.jsp";
     }
 
+    @GetMapping("/dona")
+    public String donacion(){
+        return "dona.jsp";
+    }
+
+    @GetMapping("/hazteSocio")
+    public String hasteSocio(){
+        return "hazteSocio.jsp";
+    }
+
+    @GetMapping("/fundaciones")
+    public String fundaciones(){
+        return "fundaciones.jsp";
+    }
+
+    @GetMapping("/como-Adoptar-A-Tu-Mascota")
+    public String comoAdoptar(){
+        return "comoAdoptar.jsp";
+    }
 
 }

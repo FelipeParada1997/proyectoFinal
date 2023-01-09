@@ -11,8 +11,8 @@ pageEncoding="UTF-8"%>
     <!-- Bootstrap css -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <!-- css file -->
-    <link rel="stylesheet" href="css/quienesSomos.css">
-    <title>Quíenes Somos</title>
+    <link rel="stylesheet" href="css/hazteSocio.css">
+    <title>Hazte Socio</title>
 </head>
 <body>
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3">
@@ -38,7 +38,7 @@ pageEncoding="UTF-8"%>
                         <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="/dona">Dona</a></li>
                         <li><a class="dropdown-item" href="/hazteSocio">Hazte socio</a></li>
-                        <li><a class="dropdown-item" href="/fundaciones">Fundaciones</a></li>
+                        <li><a class="dropdown-item" href="fundaciones">Fundaciones</a></li>
                         </ul>
                 </li>
                 <div>
@@ -60,7 +60,7 @@ pageEncoding="UTF-8"%>
 
     <div class="row">
         <div class="cuerpo col">
-            <h1 class="titulo">Quienes Somos</h1>
+            <h1 class="titulo">Como comvertirte en socio</h1>
             <h2 class="subTitulo ">Bienvenidos a Second Chance</h2>
 
             <p class="parrafo">Lorem ipsum dolor sit, amet consectetur adipisicing elit. At eaque natus eos aliquid, velit nisi laborum ad reprehenderit nam adipisci, tempore corporis iure quae sequi porro a tenetur non quam.</p>
