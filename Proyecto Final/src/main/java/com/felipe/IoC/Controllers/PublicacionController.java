@@ -89,5 +89,24 @@ public class PublicacionController{
         return "home.jsp";
     }
 
+    @GetMapping("/dona")
+    public String donacion(){
+        return "dona.jsp";
+    }
+
+    @GetMapping("/hazteSocio")
+    public String hasteSocio(){
+        return "hazteSocio.jsp";
+    }
+
+    @GetMapping("/fundaciones")
+    public String fundaciones(){
+        return "fundaciones.jsp";
+    }
+
+    @GetMapping("/como-Adoptar-A-Tu-Mascota")
+    public String comoAdoptar(){
+        return "comoAdoptar.jsp";
+    }
 
 }
