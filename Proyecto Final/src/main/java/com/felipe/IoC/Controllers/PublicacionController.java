@@ -56,6 +56,7 @@ public class PublicacionController{
             return "redirect:/home2";
         }
     }
+
     //para crear usuario publicacion por post
     // @PostMapping("/publucacion/nueva")
     // public String crearPublicacionu(@Valid @ModelAttribute("publicacion")Publicacion publicacion, BindingResult result, HttpSession session){

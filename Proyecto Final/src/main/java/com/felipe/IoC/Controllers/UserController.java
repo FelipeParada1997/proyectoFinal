@@ -45,6 +45,10 @@ public class UserController {
         session.setAttribute("userId", u.getId());
         return "redirect:/home";
     }
+    @GetMapping("/quienesSomos")
+    public String mostrarQuienesSomos(){
+        return "quienesSomos.jsp";
+    }
 
     @RequestMapping("/salir")
     //para deslogearse
