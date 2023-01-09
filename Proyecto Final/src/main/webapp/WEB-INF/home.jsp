@@ -10,7 +10,7 @@ pageEncoding="UTF-8"%>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Second Chance</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <!-- Bootstrap css -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
@@ -19,11 +19,14 @@ pageEncoding="UTF-8"%>
 
 </head>
 <body>
+    
+
+
     <!-- Navbar -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3" >
         <div class="container-fluid">
             <a href="#" class="navbar-brand">
-                <img src="imagenes/Second Chance.png" id="logo" alt="logo home">
+                <img src="imagenes/Second Chance.png" class="logo" alt="logo home">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -31,7 +34,7 @@ pageEncoding="UTF-8"%>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav" style="margin-left: auto;">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    <a class="nav-link text-white" aria-current="page" href="#">Inicio</a>
                 </li>
                 <li class="nav-item" style="display: inline-block;">
                     <a class="nav-link text-white" href="#">¿Quiénes somos?</a>
@@ -54,8 +57,11 @@ pageEncoding="UTF-8"%>
                     Mi cuenta
                     </a>
                     <ul class="dropdown-menu">
+
                     <li><a class="dropdown-item" href="#">Registro</a></li>
                     <li><a class="dropdown-item" href="#">Inicio sesión</a></li>
+                    <li><a class="dropdown-item" href="#">Mi perfil</a></li>
+                    <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
                     </ul>
                 </li>
                 </ul>
@@ -85,17 +91,21 @@ pageEncoding="UTF-8"%>
     </div>
     <!-- end caption image -->
 
+
+    <!--start animales bajo video  -->
     <div class="container-lg">
         <div class="row">
-            <ul class="animals d-flex justify-content-center" style="height: 200px;">
-                <li><img src="imagenes/perrocollie.png" style="height: 80%;"></li>
-                <li><img src="imagenes/gatonaranja.png" style="height: 80%;"></li>
-                <li><img src="imagenes/conejo.png" style="height: 75%;"></li>
+            <h2 class="text-center mt-4">Escoge a tu próximo peludo</h2>
+            <ul class="animals d-flex justify-content-center " style="height: 120px; list-style: none;">
+                <li><img src="imagenes/perrocollie.png" style="height: 100%;"></li>
+                <li><img src="imagenes/gatonaranja.png" style="height: 100%;"></li>
+                <li><img src="imagenes/conejo.png" style="height: 95%;"></li>
             </ul>
         </div>
     </div>
 
-    <div class="main d-flex justify-content-center">
+    <!-- Publicaciones -->
+    <div class="main d-flex justify-content-center" id="seccion_cards">
         <div class="row">
             <div class="col">
                 <div class="card">
@@ -104,23 +114,21 @@ pageEncoding="UTF-8"%>
                         <h1 class="card-title">Nombre animal</h1>
                         <p class="card-sub-title">NOMBRE PERSONA PUBLICÓ</p>
                         <p class="card-info">INFORMACION</p>
-                    <button class="card-btn">Más informacion</button>
+                    <button class="btn btn-outline-light btn-lg">Más información</button>
                     </div>
                 </div>
             </div>
-
             <div class="col">
-                <div class="card">
+                <div class="card ">
                     <img src="imagenes/gatomaxi.jpg" class="card-img">
                     <div class="card-body">
                         <h1 class="card-title">Nombre animal</h1>
                         <p class="card-sub-title">NOMBRE PERSONA PUBLICÓ</p>
                         <p class="card-info">INFORMACION</p>
-                    <button class="card-btn">Más informacion</button>
+                    <button class="btn btn-outline-light btn-lg">Más información</button>
                     </div>
                 </div>
             </div>
-
             <div class="col">   
                 <div class="card">
                     <img src="imagenes/gatomaxi.jpg" class="card-img">
@@ -128,54 +136,54 @@ pageEncoding="UTF-8"%>
                         <h1 class="card-title">Nombre animal</h1>
                         <p class="card-sub-title">NOMBRE PERSONA PUBLICÓ</p>
                         <p class="card-info">INFORMACION</p>
-                    <button class="card-btn">Más informacion</button>
+                    <button class="btn btn-outline-light btn-lg">Más información</button>
                     </div>
                 </div> 
             </div>
         </div>    
     </div>
+        <!-- div del row -->
+        </div>
 
-    <div class="main d-flex justify-content-center">
-        <div class="row">
-            <div class="col">
-                <div class="card">
-                    <img src="imagenes/gatomaxi.jpg" class="card-img">
-                    <div class="card-body">
-                        <h1 class="card-title">Nombre animal</h1>
-                        <p class="card-sub-title">NOMBRE PERSONA PUBLICÓ</p>
-                        <p class="card-info">INFORMACION</p>
-                    <button class="card-btn">Más informacion</button>
-                    </div>
-                </div>
-            </div>
 
-            <div class="col">
-                <div class="card">
-                    <img src="imagenes/gatomaxi.jpg" class="card-img">
-                    <div class="card-body">
-                        <h1 class="card-title">Nombre animal</h1>
-                        <p class="card-sub-title">NOMBRE PERSONA PUBLICÓ</p>
-                        <p class="card-info">INFORMACION</p>
-                    <button class="card-btn">Más informacion</button>
-                    </div>
-                </div>
-            </div>
+        
+        <!-- pagination -->
+    
 
-            <div class="col">   
-                <div class="card">
-                    <img src="imagenes/gatomaxi.jpg" class="card-img">
-                    <div class="card-body">
-                        <h1 class="card-title">Nombre animal</h1>
-                        <p class="card-sub-title">NOMBRE PERSONA PUBLICÓ</p>
-                        <p class="card-info">INFORMACION</p>
-                    <button class="card-btn">Más informacion</button>
-                    </div>
-                </div> 
-            </div>
-        </div>    
+
+
+
+
+
+
+
+
+
     </div>
 
-
+    <!-- Footer -->
+    <footer class="footer fixed-down footer-expand-lg bg-dark p-md-3 mt-4">
+        <div class="container-fluid ">
+            <nav class="row">
+                <a href="" class="col-3 text-reset text-uppercase d-flex align-items-center">
+                    <img src="imagenes/Second Chance.png" alt="logo second chance" class="logo mr-2" >
+                </a>
+                <ul class="col-3 list-unstyled">
+                    <li class="font-weight-bold text-uppercase">Teléfonos</li>
+                    <li><a href="#" class="text-reset">(22) 37825605</a></li>
+                    <li><a href="#" class="text-reset">(+569) 83750182</a></li>
+                </ul>
+                <ul class="col-3 list-unstyled">
+                    <li class="font-weight-bold text-uppercase">Dirección</li>
+                    <li><a href="#" class="text-reset">Av. las rosas comuna La Dehesa</a></li>
+                </ul>
+                <ul class="col-3 list-unstyled">
+                    <li class="font-weight-bold text-uppercase">Email</li>
+                    <li><a href="#" class="text-reset">secondChance@gmail.com</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
 
     <script src="js/home.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>

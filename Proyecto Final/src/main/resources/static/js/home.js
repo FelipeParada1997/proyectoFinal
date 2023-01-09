@@ -1,4 +1,4 @@
-var nav = document.querySelector('nav');
+var nav = document.querySelector('nav'); 
 
         window.addEventListener('scroll', function() {
             if (window.pageYOffset > 100){
@@ -7,3 +7,4 @@ var nav = document.querySelector('nav');
                 nav.classList.remove('bg-black', 'shadow');
             }
         });
+
