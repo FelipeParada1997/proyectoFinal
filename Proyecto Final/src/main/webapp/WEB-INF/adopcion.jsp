@@ -135,44 +135,31 @@
                     <form:errors path="energia"/>
                 </p>
 
-                <div class="justify-content-center p-5" style="width: 40%;">
-                    <h1>Querido [NOMBRE_USUARIO]</h1>
-                    <h4>¡Muchas gracias por usar nuestra pagina de adopcion de animales!</h1>
-                    <br>
-                    <p>Estamos encantados que hay personas como tú que quieren dar un hogar a estos maravillosos seres.</p>
-                    <br>
-                    <p>Estamos decididos a ayudar a encontrar hogares seguros y amorosos para todos los animales que estan en nuestra pagina, y apreciamos mucho tu apoyo en esta mision.</p>
-                    <br>
-                    <p><strong>¡Gracias de nuevo por elegir nuestra pagina de adopcion de animales!</strong></p>
-                    <br>
-                    <p>Saludos cordiales,</p>
-                    <br>
-                    <p>Equipo Second Chance.</p>
-                </div>
-            </section>
-
-
+                
+                
                 <input type="submit" value="Register" class="btn btn-primary"/>
-
+                
                 <input type="file" class="form-control bottom" name="postFile">
-                </form:form>
-
+            </form:form>
+            
+            <div class="justify-content-center p-5" style="width: 40%;">
+                <h1>Querido [NOMBRE_USUARIO]</h1>
+                <h4>¡Muchas gracias por usar nuestra pagina de adopcion de animales!</h1>
+                <br>
+                <p>Estamos encantados que hay personas como tú que quieren dar un hogar a estos maravillosos seres.</p>
+                <br>
+                <p>Estamos decididos a ayudar a encontrar hogares seguros y amorosos para todos los animales que estan en nuestra pagina, y apreciamos mucho tu apoyo en esta mision.</p>
+                <br>
+                <p><strong>¡Gracias de nuevo por elegir nuestra pagina de adopcion de animales!</strong></p>
+                <br>
+                <p>Saludos cordiales,</p>
+                <br>
+                <p>Equipo Second Chance.</p>
+            </div>
+        </section>
             
         </div>
             
-
-
-
-
-
-
-
-
-
-
-
-
-
     <script src="js/home.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>

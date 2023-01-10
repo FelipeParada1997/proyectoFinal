@@ -106,7 +106,7 @@
         <div class="row">
             <h2 class="text-center mt-4">Escoge a tu próximo peludo</h2>
             <ul class="animals d-flex justify-content-center " style="height: 120px; list-style: none;">
-                <li><img src="imagenes/perrocollie.png" style="height: 100%;"></li>
+                <li><a href="/perro"><img src="imagenes/perrocollie.png" style="height: 100%;"></a></li>
                 <li><img src="imagenes/gatonaranja.png" style="height: 100%;"></li>
                 <li><img src="imagenes/conejo.png" style="height: 95%;"></li>
             </ul>
