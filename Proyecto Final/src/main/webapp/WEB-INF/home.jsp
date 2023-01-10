@@ -38,25 +38,31 @@ pageEncoding="UTF-8"%>
                     <a class="nav-link text-white" aria-current="page" href="#">Inicio</a>
                 </li>
                 <li class="nav-item" style="display: inline-block;">
-                    <a class="nav-link text-white" href="#">¿Quiénes somos?</a>
+                    <a class="nav-link text-white" href="quienesSomos">¿Quíenes somos?</a>
+                </li>
+                <li class="nav-item" style="display: inline-block;">
+                    <a class="nav-link text-white" href="#">¿Cómo adoptar a tu mascota?</a>
                 </li>
                 <li class="nav-item" style="display: inline-block;">
                     <a class="nav-link text-white" href="#">¿Cómo adoptar a tu mascota?</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        ¿Cómo ayudar?
+                        ¿Como ayudar?
                         </a>
                         <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Dona</a></li>
-                        <li><a class="dropdown-item" href="#">Hazte socio</a></li>
-                        <li><a class="dropdown-item" href="#">Fundaciones</a></li>
+                        <li><a class="dropdown-item" href="/dona">Dona</a></li>
+                        <li><a class="dropdown-item" href="/hazteSocio">Hazte socio</a></li>
+                        <li><a class="dropdown-item" href="/fundaciones">Fundaciones</a></li>
                         </ul>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-person-fill"></i>
                     Mi cuenta
                     </a>
+                </div>
+                <li class="nav-item dropdown text-white">
+                    <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-person-fill"></i> Mi cuenta</a>
                     <ul class="dropdown-menu">
 
                     <li><a class="dropdown-item" href="#">Registro</a></li>
