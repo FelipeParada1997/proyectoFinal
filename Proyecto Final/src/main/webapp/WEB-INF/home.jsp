@@ -35,7 +35,7 @@
                     <a class="nav-link text-white" aria-current="page" href="#">Inicio</a>
                 </li>
                 <li class="nav-item" style="display: inline-block;">
-                    <a class="nav-link text-white" href="#">¿Quiénes somos?</a>
+                    <a class="nav-link text-white" href="/quienesSomos">¿Quiénes somos?</a>
                 </li>
                 <li class="nav-item" style="display: inline-block;">
                     <a class="nav-link text-white" href="#">¿Cómo adoptar a tu mascota?</a>

@@ -67,7 +67,6 @@
                             <li><a class="dropdown-item" href="/salir">Cerrar sesión</a></li>
                         </ul>
                     </c:if>
-
                 </li>
                 </ul>
             </div>
@@ -84,65 +83,16 @@
     <section class="d-flex justify-content-around p-5">
         <!-- STYLE -->
         <!-- CREAR CSS PARA ".main" -->
-        <div class="main justify-content-center border border-secondary rounded p-5"  style="width: 40%;">
-            <h1>Formulario de Adopcion</h1>
-            <form:form action="/adopcion" method="POST" modelAttribute="mascota" enctype="multipart/form-data">
-                <div class="mb-3">
-                    <form:label path="nombre" class="form-label">Nombre</form:label>
-                    <form:errors path="nombre"/>
-                    <form:input path="nombre" class="form-control" placeholder="Ejemplo: Canelita" aria-label="default input example"/>
-                </div>
+        <div>
+            <form:form method="post" action="/adopcion" modelAttribute="mascota" enctype="multipart/form-data">
+                <p>
+                    <form:label path="nombre">Nombre</form:label>
+                    <form:input  path="nombre"/>
+                </p>
+                <input type="submit" value="Register" class="btn btn-primary"/>
 
-                <div class="mb-3">
-                    <form:label path="edad" class="form-label">Edad</form:label>
-                    <form:errors path="edad"/>
-                    <form:input path="edad" class="form-control" type="text" placeholder="Ejemplo: 3 meses" aria-label="default input example"/>
-                </div>
-                    
-                <div>
-                    <form:label class="form-label" path="tipoDeAnimal">Tipo de Animal</form:label>
-                    <form:select path="tipoDeAnimal" class="form-select" aria-label="Default select example">
-                        <c:forEach items="${tipos}" var="tipo" >
-                            <form:option value="${tipo.id}">
-                                <c:out value="${tipo.tipoDeAnimal}"/>
-                            </form:option>
-                        </c:forEach>
-                    </form:select>
-                </div>
-                <div>
-                        <form:label  class="form-label" path="personalidad">Personalidad</form:label>
-                        <form:errors path="personalidad"/>
-                        <form:input class="form-control" path="personalidad"/>
-                </div>
-
-                <div>
-                    <form:label path="sexo" class="form-label">Sexo</form:label>
-                    <select path="sexo" class="form-select" aria-label="Default select example">
-                        <option selected>Elige el sexo de animal</option>
-                        <option value="hembra">Hembra</option>
-                        <option value="macho">Macho</option>
-                    </select>
-                </div>
-
-                <div>
-                    <form:label path="tamano" class="form-label">Tamaño</form:label>
-                    <select path="tamano" class="form-select" aria-label="Default select example">
-                        <option selected>Elige el tamaño de animal</option>
-                        <option value="muy pequeno">Muy Pequeño</option>
-                        <option value="pequeno">Pequeño</option>
-                        <option value="mediano">Mediano</option>
-                        <option value="Grande">Grande</option>
-                        <option value="muy grande">Muy Grande</option>
-                    </select>
-                </div>
-
-                <div class="mb-3">
-                    <p class="form-label">No olvides de agregar una foto de tu mascota</p>
-                    <input class="form-control" type="file" id="postFile" name="postFile"/>
-                </div>
-
-                <input type="submit" value="Next" class="btn btn-dark"/>
-            </form:form>
+                <input type="file" class="form-control bottom" name="postFile">
+                </form:form>
         </div>
 
         <div class="justify-content-center p-5" style="width: 40%;">
@@ -160,5 +110,8 @@
             <p>Equipo Second Chance.</p>
         </div>
     </section>
+
+    <script src="js/adopcion.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 </html>

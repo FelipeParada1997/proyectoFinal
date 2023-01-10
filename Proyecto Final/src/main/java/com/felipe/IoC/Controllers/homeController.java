@@ -42,14 +42,14 @@ public class homeController {
         return "home";
     }
 
-    // @GetMapping("/userdentro") //GET Mostrar publicaciones
-    // public String principal(HttpSession session, Model model){
-    //     Long id = (Long)session.getAttribute("userId");
-    //     User user =  userService.findById(id);
-    //     List<Mascota> mascota = mascotaService.findAll();
-    //     model.addAttribute("user", user);
-    //     model.addAttribute("mascota", mascota);
-    //     return "home2";
-    // }
+    @GetMapping("/quienesSomos")
+    public String quienSomos(Model model, HttpSession session){
+        Long id = (Long)session.getAttribute("userId");
+        if (id!=null) {
+            User user =  userService.findById(id);
+            model.addAttribute("user", user);
+        }
+        return "quienesSomos";
+    }
 
 }

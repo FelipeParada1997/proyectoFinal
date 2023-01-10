@@ -87,6 +87,7 @@ public class mascotaaController {
             User u = userService.findById(userId);
             if(u != null){
                 if (result.hasErrors()) {
+                    System.out.println("errorrr");
                     return "adopcion";
                 }
                 if(postFile.isEmpty() == false){
