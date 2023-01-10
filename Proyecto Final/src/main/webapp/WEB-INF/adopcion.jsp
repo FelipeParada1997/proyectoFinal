@@ -135,7 +135,21 @@
                     <form:errors path="energia"/>
                 </p>
 
-
+                <div class="justify-content-center p-5" style="width: 40%;">
+                    <h1>Querido [NOMBRE_USUARIO]</h1>
+                    <h4>¡Muchas gracias por usar nuestra pagina de adopcion de animales!</h1>
+                    <br>
+                    <p>Estamos encantados que hay personas como tú que quieren dar un hogar a estos maravillosos seres.</p>
+                    <br>
+                    <p>Estamos decididos a ayudar a encontrar hogares seguros y amorosos para todos los animales que estan en nuestra pagina, y apreciamos mucho tu apoyo en esta mision.</p>
+                    <br>
+                    <p><strong>¡Gracias de nuevo por elegir nuestra pagina de adopcion de animales!</strong></p>
+                    <br>
+                    <p>Saludos cordiales,</p>
+                    <br>
+                    <p>Equipo Second Chance.</p>
+                </div>
+            </section>
 
 
                 <input type="submit" value="Register" class="btn btn-primary"/>
