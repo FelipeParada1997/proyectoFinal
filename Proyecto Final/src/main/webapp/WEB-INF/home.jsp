@@ -144,6 +144,81 @@ pageEncoding="UTF-8"%>
     </div>
 
 
+    <div class="main d-flex justify-content-center" id="seccion_cards">
+        <div class="row">
+            <div class="col card-content">
+                <div class="card">
+                    <img src="imagenes/gatomaxi.jpg" class="card-img">
+                    <div class="card-body">
+                        <h1 class="card-title">Nombre animal</h1>
+                        <p class="card-sub-title">NOMBRE PERSONA PUBLICÓ</p>
+                        <p class="card-info">INFORMACION</p>
+                    <button class="btn btn-outline-light btn-lg">Más información</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col card-content">
+                <div class="card ">
+                    <img src="imagenes/gatomaxi.jpg" class="card-img">
+                    <div class="card-body">
+                        <h1 class="card-title">Nombre animal</h1>
+                        <p class="card-sub-title">NOMBRE PERSONA PUBLICÓ</p>
+                        <p class="card-info">INFORMACION</p>
+                    <button class="btn btn-outline-light btn-lg">Más información</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col card-content">   
+                <div class="card">
+                    <img src="imagenes/gatomaxi.jpg" class="card-img">
+                    <div class="card-body">
+                        <h1 class="card-title">Nombre animal</h1>
+                        <p class="card-sub-title">NOMBRE PERSONA PUBLICÓ</p>
+                        <p class="card-info">INFORMACION</p>
+                    <button class="btn btn-outline-light btn-lg">Más información</button>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+
+    <div class="main d-flex justify-content-center" id="seccion_cards">
+        <div class="row">
+            <div class="col card-content">
+                <div class="card">
+                    <img src="imagenes/gatomaxi.jpg" class="card-img">
+                    <div class="card-body">
+                        <h1 class="card-title">Nombre animal</h1>
+                        <p class="card-sub-title">NOMBRE PERSONA PUBLICÓ</p>
+                        <p class="card-info">INFORMACION</p>
+                    <button class="btn btn-outline-light btn-lg">Más información</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col card-content">
+                <div class="card ">
+                    <img src="imagenes/gatomaxi.jpg" class="card-img">
+                    <div class="card-body">
+                        <h1 class="card-title">Nombre animal</h1>
+                        <p class="card-sub-title">NOMBRE PERSONA PUBLICÓ</p>
+                        <p class="card-info">INFORMACION</p>
+                    <button class="btn btn-outline-light btn-lg">Más información</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col card-content">   
+                <div class="card">
+                    <img src="imagenes/gatomaxi.jpg" class="card-img">
+                    <div class="card-body">
+                        <h1 class="card-title">Nombre animal</h1>
+                        <p class="card-sub-title">NOMBRE PERSONA PUBLICÓ</p>
+                        <p class="card-info">INFORMACION</p>
+                    <button class="btn btn-outline-light btn-lg">Más información</button>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
 
     <!-- Pagination -->
 

@@ -80,11 +80,12 @@ video{
 .card{
     height: 400px;
     width: 300px;
-    border-radius: 20px;
+    border-radius: 25px;
     overflow: hidden;
     border: 9px solid #1ebba3; 
     position: relative;
-    margin-top: 20px;
+    margin-top: 30px;
+    margin-left: 40px;
 }
 
 .card-img{
@@ -155,7 +156,7 @@ video{
 }
 
 .previous-page, .next-page{
-    background: #0AB1CE;
+    background: #0;
     width: 80px;
     border-radius: 85px;
     cursor: pointer;
