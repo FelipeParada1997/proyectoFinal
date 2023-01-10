@@ -106,14 +106,15 @@
         <div class="row">
             <h2 class="text-center mt-4">Escoge a tu próximo peludo</h2>
             <ul class="animals d-flex justify-content-center " style="height: 120px; list-style: none;">
-                <li><a href="/perro"><img src="imagenes/perrocollie.png" style="height: 100%;"></a></li>
-                <li><img src="imagenes/gatonaranja.png" style="height: 100%;"></li>
-                <li><img src="imagenes/conejo.png" style="height: 95%;"></li>
+                <li> <a href="/perro"><img src="imagenes/perrocollie.png" style="height: 100%;"></a></li>
+                <li><a href="/gato"><img src="imagenes/gatonaranja.png" style="height: 100%;"></a> </li>
+                <li> <a href="/exoticos"><img src="imagenes/conejo.png" style="height: 95%;"></a></li>
             </ul>
         </div>
     </div>
 
     <!-- Publicaciones -->
+    
     <div class="main d-flex justify-content-center" id="seccion_cards">
         <div class="row">
             <div class="col card-content">
@@ -126,105 +127,6 @@
                     <button class="btn btn-outline-light btn-lg">Más información</button>
                     </div>
                 </div>
-            </div>
-            <div class="col card-content">
-                <div class="card ">
-                    <img src="imagenes/gatomaxi.jpg" class="card-img">
-                    <div class="card-body">
-                        <h1 class="card-title">Nombre animal</h1>
-                        <p class="card-sub-title">NOMBRE PERSONA PUBLICÓ</p>
-                        <p class="card-info">INFORMACION</p>
-                    <button class="btn btn-outline-light btn-lg">Más información</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col card-content">   
-                <div class="card">
-                    <img src="imagenes/gatomaxi.jpg" class="card-img">
-                    <div class="card-body">
-                        <h1 class="card-title">Nombre animal</h1>
-                        <p class="card-sub-title">NOMBRE PERSONA PUBLICÓ</p>
-                        <p class="card-info">INFORMACION</p>
-                    <button class="btn btn-outline-light btn-lg">Más información</button>
-                    </div>
-                </div> 
-            </div>
-        </div>
-    </div>
-
-
-    <div class="main d-flex justify-content-center" id="seccion_cards">
-        <div class="row">
-            <div class="col card-content">
-                <div class="card">
-                    <img src="imagenes/gatomaxi.jpg" class="card-img">
-                    <div class="card-body">
-                        <h1 class="card-title">Nombre animal</h1>
-                        <p class="card-sub-title">NOMBRE PERSONA PUBLICÓ</p>
-                        <p class="card-info">INFORMACION</p>
-                    <button class="btn btn-outline-light btn-lg">Más información</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col card-content">
-                <div class="card ">
-                    <img src="imagenes/gatomaxi.jpg" class="card-img">
-                    <div class="card-body">
-                        <h1 class="card-title">Nombre animal</h1>
-                        <p class="card-sub-title">NOMBRE PERSONA PUBLICÓ</p>
-                        <p class="card-info">INFORMACION</p>
-                    <button class="btn btn-outline-light btn-lg">Más información</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col card-content">   
-                <div class="card">
-                    <img src="imagenes/gatomaxi.jpg" class="card-img">
-                    <div class="card-body">
-                        <h1 class="card-title">Nombre animal</h1>
-                        <p class="card-sub-title">NOMBRE PERSONA PUBLICÓ</p>
-                        <p class="card-info">INFORMACION</p>
-                    <button class="btn btn-outline-light btn-lg">Más información</button>
-                    </div>
-                </div> 
-            </div>
-        </div>
-    </div>
-
-    <div class="main d-flex justify-content-center" id="seccion_cards">
-        <div class="row">
-            <div class="col card-content">
-                <div class="card">
-                    <img src="imagenes/gatomaxi.jpg" class="card-img">
-                    <div class="card-body">
-                        <h1 class="card-title">Nombre animal</h1>
-                        <p class="card-sub-title">NOMBRE PERSONA PUBLICÓ</p>
-                        <p class="card-info">INFORMACION</p>
-                    <button class="btn btn-outline-light btn-lg">Más información</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col card-content">
-                <div class="card ">
-                    <img src="imagenes/gatomaxi.jpg" class="card-img">
-                    <div class="card-body">
-                        <h1 class="card-title">Nombre animal</h1>
-                        <p class="card-sub-title">NOMBRE PERSONA PUBLICÓ</p>
-                        <p class="card-info">INFORMACION</p>
-                    <button class="btn btn-outline-light btn-lg">Más información</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col card-content">   
-                <div class="card">
-                    <img src="imagenes/gatomaxi.jpg" class="card-img">
-                    <div class="card-body">
-                        <h1 class="card-title">Nombre animal</h1>
-                        <p class="card-sub-title">NOMBRE PERSONA PUBLICÓ</p>
-                        <p class="card-info">INFORMACION</p>
-                    <button class="btn btn-outline-light btn-lg">Más información</button>
-                    </div>
-                </div> 
             </div>
         </div>
     </div>
