@@ -98,7 +98,7 @@
         <div>
             <form:form method="post" action="/adopcion" modelAttribute="mascota" enctype="multipart/form-data">
                 <p>
-                    <form:label path="nombre">Nombre de mascota:</form:label>
+                    <form:label path="nombre">Nombre:</form:label>
                     <form:input path="nombre" type="text"  name="nombre"/>
                     <form:errors path="nombre"/>
                 </p>
@@ -115,16 +115,6 @@
                     <form:label path="edad">Edad:</form:label>
                     <form:input  path="tamano" type="text"  name="edad"/>
                     <form:errors path="edad"/>
-                </p>
-                <p>
-                    <form:label path="tipoDeAnimal">Tipo de Animal</form:label>
-                    <form:select path="tipoDeAnimal" >
-                        <c:forEach items="${tipos}" var="tipo" >
-                            <form:option value="${tipo.id}">
-                                <c:out value="${tipo.tipoDeAnimal}"/>
-                            </form:option>
-                        </c:forEach>
-                    </form:select>
                 </p>
                 <p>
                     <form:label path="sexo">Sexo:</form:label>
@@ -145,12 +135,6 @@
                     <form:errors path="energia"/>
                 </p>
 
-                <input type="submit" value="Siguiente" />
-
-                <input type="file"  name="postFile">
-
-                </form:form>
-
                 <div class="justify-content-center p-5" style="width: 40%;">
                     <h1>Querido [NOMBRE_USUARIO]</h1>
                     <h4>¡Muchas gracias por usar nuestra pagina de adopcion de animales!</h1>
@@ -166,6 +150,12 @@
                     <p>Equipo Second Chance.</p>
                 </div>
             </section>
+
+
+                <input type="submit" value="Register" class="btn btn-primary"/>
+
+                <input type="file" class="form-control bottom" name="postFile">
+                </form:form>
 
             
         </div>
