@@ -12,9 +12,11 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.felipe.IoC.Models.Mascota;
+import com.felipe.IoC.Models.TipoAnimal;
 import com.felipe.IoC.Models.User;
 import com.felipe.IoC.Services.MascotaService;
 import com.felipe.IoC.Services.PublicacionService;
+import com.felipe.IoC.Services.TipoAnimalService;
 import com.felipe.IoC.Services.UserService;
 
 @Controller
@@ -22,21 +24,31 @@ public class homeController {
     private final PublicacionService publicacionService;
     private final MascotaService mascotaService;
     private final UserService userService;
+    private final TipoAnimalService tipoAnimalService;
 
-    public homeController(PublicacionService publicacionService, MascotaService mascotaService, UserService userService){
+    public homeController(PublicacionService publicacionService, MascotaService mascotaService, UserService userService, TipoAnimalService tipoAnimalService){
         this.publicacionService = publicacionService;
         this.mascotaService = mascotaService;
         this.userService = userService;
+        this.tipoAnimalService = tipoAnimalService;
     }
     
-    @GetMapping("/")
-    public String home(Model model, HttpSession session){
+    @GetMapping(value ={"/{tipodeanimal}","/"})
+    public String home(@PathVariable(value = "tipodeanimal", required = false)String tipodeanimal,
+                        Model model, HttpSession session){
         Long id = (Long)session.getAttribute("userId");
         if (id!=null) {
             User user =  userService.findById(id);
             model.addAttribute("user", user);
         }
-        List<Mascota> mascota = mascotaService.findAll();
+        List<Mascota> mascota;
+        if (tipodeanimal == null){
+            mascota = mascotaService.findAll();
+        }else{
+            TipoAnimal tipoAnimal = tipoAnimalService.findTipoAnimalBytipoDeAnimal(tipodeanimal);
+            mascota = mascotaService.findAllByTipoAnimal(tipoAnimal);
+            System.out.println(mascota);
+        }
         model.addAttribute("mascota", mascota);
 
         return "home";
