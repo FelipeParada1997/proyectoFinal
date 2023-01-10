@@ -54,7 +54,7 @@
                     <c:if test="${userId == null}">
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-person-fill"></i>
-                            Binevenido
+                            Bienvenido
                             </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="/iniciasesion/registrate">Registro/Inicio</a></li>
