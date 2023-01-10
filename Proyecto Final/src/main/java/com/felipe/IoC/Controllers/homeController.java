@@ -31,26 +31,24 @@ public class homeController {
     
     @GetMapping("/")
     public String home(Model model, HttpSession session){
-    /* Long userId = (Long) session.getAttribute("userId");
-        User user = userService.findById(userId);
-        List<Publicacion> publicaciones = publicacionService.findAll();
-        model.addAttribute("user", user);
-        model.addAttribute("publicacionesItem", publicaciones); */
+        Long id = (Long)session.getAttribute("userId");
+        if (id!=null) {
+            User user =  userService.findById(id);
+            model.addAttribute("user", user);
+        }
+        List<Mascota> mascota = mascotaService.findAll();
+        model.addAttribute("mascota", mascota);
 
         return "home";
     }
 
-    @GetMapping("/userdentro") //GET Mostrar publicaciones
-    public String principal(HttpSession session, Model model){
-        Long id = (Long)session.getAttribute("userId");
-        User user =  userService.findById(id);
-        List<Mascota> mascota = mascotaService.findAll();
-        model.addAttribute("user", user);
-        model.addAttribute("mascota", mascota);
-        return "home2";
-    }
-    // @PostMapping("/userdentro")
-    // public String principaluser(Model model, HttpSession session){
+    // @GetMapping("/userdentro") //GET Mostrar publicaciones
+    // public String principal(HttpSession session, Model model){
+    //     Long id = (Long)session.getAttribute("userId");
+    //     User user =  userService.findById(id);
+    //     List<Mascota> mascota = mascotaService.findAll();
+    //     model.addAttribute("user", user);
+    //     model.addAttribute("mascota", mascota);
     //     return "home2";
     // }
 

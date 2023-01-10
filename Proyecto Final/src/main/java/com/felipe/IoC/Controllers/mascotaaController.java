@@ -22,10 +22,12 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.felipe.IoC.Models.Imagen;
 import com.felipe.IoC.Models.Mascota;
+import com.felipe.IoC.Models.TipoAnimal;
 import com.felipe.IoC.Models.User;
 import com.felipe.IoC.Services.ImagenService;
 import com.felipe.IoC.Services.MascotaService;
 import com.felipe.IoC.Services.PublicacionService;
+import com.felipe.IoC.Services.TipoAnimalService;
 import com.felipe.IoC.Services.UserService;
 
 @Controller
@@ -34,12 +36,14 @@ public class mascotaaController {
     private final UserService userService;
     private final PublicacionService publicacionService;
     private final ImagenService imagenService;
+    private final TipoAnimalService tipoAnimalService;
 
-    public mascotaaController(PublicacionService publicacionService, MascotaService mascotaService, UserService userService, ImagenService imagenService){
+    public mascotaaController(PublicacionService publicacionService, MascotaService mascotaService, UserService userService, ImagenService imagenService, TipoAnimalService tipoAnimalService){
         this.publicacionService = publicacionService;
         this.mascotaService = mascotaService;
         this.userService = userService;
         this.imagenService = imagenService;
+        this.tipoAnimalService = tipoAnimalService;
         }
 
     //mostrar todas las mescotas asociacdas al usuario
@@ -57,6 +61,8 @@ public class mascotaaController {
     public String vercreaMascota(@ModelAttribute("mascota") Mascota mascota, Model model, HttpSession session){
         Long id = (Long) session.getAttribute("userId");
         User u = userService.findById(id);
+        List <TipoAnimal> t = tipoAnimalService.findAll();
+        model.addAttribute("tipos", t);
         model.addAttribute("user", u);
         return "adopcion";
     }
@@ -103,6 +109,8 @@ public class mascotaaController {
                         System.out.println("El archivo se ha cargado con exito");
                         mascota.setUbicacion(ubicacion + "/" + fileName);
                         mascota.setUser(u);
+                        List <TipoAnimal> t = tipoAnimalService.findAll();
+                        model.addAttribute("tipos", t);
                         mascotaService.save(mascota);
                     } catch (IOException e) {
                         e.printStackTrace();
@@ -113,28 +121,38 @@ public class mascotaaController {
         }
         return "redirect:/publicacion";
     }
-    
-    //para editar info de mascota ver
-    // @GetMapping("/mascota/{id}/edit")
-    // public String editMascota(@PathVariable("id")Long id, Model model){
-    //     Mascota mascota = mascotaService.findById(id);
-    //     model.addAttribute("mascota", mascota);
-    //     return "edit.jsp";
-    // }
-    // @PutMapping("/mascota/{id}/edit")
-    // public String editarMascota(@Valid @ModelAttribute("mascota") Mascota mascota,BindingResult result, HttpSession session){
-    //     if (result.hasErrors()) {
-    //         return "edit.jsp";
-    //     }else{
-    // Long mascotaId = (Long)session.getAttribute("mascotaId");
-    //         User user = userService.findById(mascotaId);
-    //         mascota.setUser(user);
-    //         mascotaService.save(mascota);
-    //         return "redirect:/mismascotas"; 
-    //     }
-    // }
-    //para editar post info
-
-    //para borrar mascota con notificaicon incluida
+     //paraborrar mascota y publicacion funciona 
+    @GetMapping("/mascota/{id}/borrar")
+    public String deleteMascot(@PathVariable("id")Long id){
+        mascotaService.delete(id);
+        publicacionService.delete(id);
+        return "redirect:/";
     }
+
+    //para editar info de mascota ver
+    @GetMapping("/mascota/{id}/edit")
+    public String editMascota(@PathVariable("id")Long id, Model model){
+        Mascota mascota = mascotaService.findById(id);
+        model.addAttribute("mascota", mascota);
+        List <TipoAnimal> t = tipoAnimalService.findAll();
+        model.addAttribute("tipos", t);
+        return "edit";
+    }
+
+    //para editar info put
+    @PutMapping("/mascota/{id}/edit")
+    public String editarMascota(@Valid @ModelAttribute("mascota") Mascota mascota,BindingResult result, HttpSession session,Model model){
+        if (result.hasErrors()) {
+            return "edit";
+        }else{
+        Long mascotaId = (Long)session.getAttribute("mascotaId");
+        User user = userService.findById(mascotaId);
+        mascota.setUser(user);
+        List <TipoAnimal> t = tipoAnimalService.findAll();
+        model.addAttribute("tipos", t);
+        mascotaService.save(mascota);
+        return "redirect:/publicacion/{id}/edit"; 
+        }
+    }
+}
 

@@ -13,7 +13,7 @@
 <body>
     <h1>Detalles mascotas</h1>
 
-    <a href="/userdentro">Volver al home</a>
+    <a href="/">Volver al home</a>
 
     <h2><c:out value="${mascota.publicacion.titulo}"></c:out></h2>
     <h2><c:out value="${mascota.publicacion.descripcion}"></c:out></h2>
@@ -21,6 +21,10 @@
     <img src="${mascota.ubicacion}" alt="${mascota.ubicacion}">
 
 
-    <a href="">Borrar</a>
+    <c:if  test="${userId == user.publicacionId}">
+            <a href="/mascota/${id}/borrar">Borrar</a>
+            <a href="/mascota/${mascota.id}/edit">editar mascota</a>
+    </c:if>
+
 </body>
 </html>

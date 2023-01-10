@@ -43,7 +43,7 @@ public class UserController {
         }
         User u = userService.registerUser(user);
         session.setAttribute("userId", u.getId());
-        return "redirect:/userdentro";
+        return "redirect:/";
     }
 
     @RequestMapping("/salir")
@@ -67,7 +67,7 @@ public class UserController {
         if (authenticated) {
             User u = userService.findByEmail(email);
             session.setAttribute("userId", u.getId());
-            return "redirect:/userdentro";
+            return "redirect:/";
         } else {
             model.addAttribute("error", "porfavor intente otra vez");
             return "inicio";

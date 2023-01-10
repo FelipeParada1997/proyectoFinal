@@ -7,70 +7,94 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registrate o inicia</title>
+    <meta path="viewport" content="width=device-width, initial-scale=1.0">
+        <!---- bootstrap ----->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <!-- Css -->
+<link rel="stylesheet" href="/css/loginregister.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <title>Inicia sesión | Registrate</title>
 </head>
 <body>
-    <h1>puede iniciar sesion o registrarte</h1>
-                    <form:form method="post" action="/registerpost" modelAttribute="user">
-                        <p>
-                            <form:label path="nombre">Name</form:label>
-                            <form:errors path="nombre"/>
-                            <form:input  path="nombre" class="form-control form-control-sm"/>
-                        </p>
-                        <p>
-                            <form:label path="apellido">apellido</form:label>
-                            <form:errors path="apellido"/>
-                            <form:input  path="apellido" />
-                        </p>
-                        <p>
-                            <form:label path="celular">celular</form:label>
-                            <form:errors path="celular"/>
-                            <form:input  path="celular" />
-                        </p>
-                        <p>
-                            <form:label path="fechaNacimiento">Fecha Nacimiento</form:label>
-                            <form:errors path="fechaNacimiento"/>
-                            <form:input type="date"  path="fechaNacimiento" />
-                        </p>
-                        <p>
-                            <form:label path="email">Email</form:label>
-                            <form:errors path="email"/>
-                            <form:input type="email"  path="email" class="form-control form-control-sm"/>
-                        </p>
-                        <p>
-                            <form:label path="password">Password</form:label>
-                            <form:errors path="password"/>
-                            <form:input type ="password" path="password" class="form-control form-control-sm"/>
-                        </p>
-                        <p>
-                            <form:label path="passwordConfirm">Password Confirmar</form:label>
-                            <form:errors path="passwordConfirm"/>
-                            <form:input type="password" path="passwordConfirm"/>
-                        </p>
-                        <input type="submit" value="Register" class="btn btn-primary"/>
-                        </form:form>
-    </div>
-        </div>
-<div class="col">
-    <div class="p-3 border bg-light">
-        <h2>Login</h2>
-            <p><c:out value="${error}" /></p>
-                <form method="post" action="/loginpost">
-                    <p>
-                        <label for="email">Email</label>
-                        <input type="text" id="email" name="email" class="form-control form-control-sm"/>
-                    </p>
-                    <p>
-                        <label for="password">Password</label>
-                        <input type="password" id="password" name="password" class="form-control form-control-sm"/>
-                    </p>
-                    <input type="submit" value="Login!" class="btn btn-primary"/>
-                </form>
-    </div>
-        </div>
-            </div>
+
+    <div class="wrapper">
+        <div class="form-wrapper sign-in" >
+            <form method="post" action="/loginpost">
+                <h2>Inicia sesión</h2>
+
+                <div class="input-group">
+                    <input  type="text" id="email" name="email" >
+                    <label  for="email">Correo electrónico</label>
                 </div>
-    </div>
+
+                <div class="input-group">
+                    <input  type="password" id="password" name="password" >
+                    <label  for="password">Contraseña</label>
+                </div>
+
+                <div class="remember">
+                    <label><input type="checkbox">  Recuérdame</label>
+                </div>
+                <button type="submit">Inicia sesión</button>
+                <div class="signUp-link">
+                    <p>¿No tienes una cuenta?<a href="#" class="signUpBtn-link">  Únete</a></p>
+                </div>
+                <div class="social-platform">
+                    <p>O inicia sesión con</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-google"></i></a>
+                </div>
+                </div>
+            </form>
+        </div>
+
+            <div class="form-wrapper sign-up">
+                <form:form method="post" action="/registerpost" modelAttribute="user">
+                    <h2>Únete</h2>
+                    <div class="input-group">
+                        <form:input type="text"  path="nombre" />
+                        <form:label path="nombre">Nombre</form:label>
+                    </div>
+                    <div class="input-group">
+                        <form:input type="text"  path="apellido" />
+                        <form:label path="apellido">Apellido</form:label>
+                    </div>
+
+                    <div class="input-group">
+                        <form:input type="date"  path="fechaNacimiento"/>
+                        <form:label path="fechaNacimiento">Fecha de nacimiento</form:label>
+                    </div>
+                    <div class="input-group">
+                        <form:input type="email"  path="email" />
+                        <form:label path="email">Correo electrónico</form:label>
+                    </div>
+                    <div class="input-group">
+                        <form:input type="int"  path="celular" />
+                        <form:label path="celular">Celular</form:label>
+                    </div>
+                    <div class="input-group">
+                        <form:input type="password"  path="password" />
+                        <form:label path="password">Contraseña</form:label>
+                    </div>
+                    <div class="input-group">
+                        <form:input type="password"  path="passwordConfirm" />
+                        <form:label path="passwordConfirm">Confirma contraseña</form:label>
+                    </div>
+
+
+                            <div class="remember">
+                                <label><input type="checkbox"> Acepto los términos y condiciones</label>
+                            </div>
+                            <button type="submit">Registrate</button>
+                            <div class="signUp-link">
+                                <p>¿Ya tienes cuenta?<a href="#" class="signInBtn-link">  Inicia sesión</a></p>
+                            </div>
+                    </form:form>
+                </div>
+        </div>
+
+        <script src="/js/loginregister.js"></script>
 </body>
 </html>
