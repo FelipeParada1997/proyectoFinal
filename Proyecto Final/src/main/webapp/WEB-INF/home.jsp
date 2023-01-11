@@ -136,6 +136,17 @@
             </div>
         </div>
     </c:forEach>
+
+    </div>
+    <div class="container-lg">
+        <div class="row">
+            <h2 class="text-center mt-4">Escoge a tu próximo peludo</h2>
+            <ul class="animals d-flex justify-content-center " style="height: 120px; list-style: none;">
+                <li> <a href="/XVARICAYPARINACOTA">Arica</a></li>
+                <li><a href="/">nada</a></li>
+                <li> <a href="/">nada</a></li>
+            </ul>
+        </div>
     </div>
 
     <!-- Pagination -->
