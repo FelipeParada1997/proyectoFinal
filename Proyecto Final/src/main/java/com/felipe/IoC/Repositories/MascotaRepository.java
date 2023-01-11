@@ -16,5 +16,4 @@ public interface MascotaRepository extends BaseRepository<Mascota>{
 
     List<Mascota> findAllByTipoDeAnimal(TipoAnimal tipoAnimal);
 
-    List<Mascota> findAllByPublicacionByCiudad(Ciudad Ciudad); 
 }

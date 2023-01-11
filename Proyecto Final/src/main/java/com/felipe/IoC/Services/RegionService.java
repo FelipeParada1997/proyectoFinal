@@ -20,14 +20,14 @@ public class RegionService extends BaseService<Region>{
         super(baseRepository);
         this.regionRepository = regionRepository;
     }
-    public Region findRegionByNombre(String nombre) {
-        Optional<Region> r = regionRepository.findByRegion(nombre);
-        if(r.isPresent()) {
-            return r.get();
-        } else {
-            return null;
-        }
-    }
+    // public Region findRegionByNombre(String nombre) {
+    //     Optional<Region> r = regionRepository.findByRegion(nombre);
+    //     if(r.isPresent()) {
+    //         return r.get();
+    //     } else {
+    //         return null;
+    //     }
+    // }
 
 }
 

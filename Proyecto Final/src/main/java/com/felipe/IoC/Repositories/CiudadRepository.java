@@ -8,5 +8,6 @@ import com.felipe.IoC.Models.Ciudad;
 
 @Repository
 public interface CiudadRepository extends BaseRepository<Ciudad>{
-    Optional <Ciudad> findByCiudad(String nombre);
+
+    // Optional <Ciudad> findByCiudad(String nombre);
 }

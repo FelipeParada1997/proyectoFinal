@@ -16,13 +16,13 @@ public class CiudadService extends BaseService<Ciudad>{
         super(baseRepository);
         this.ciudadRepository = ciudadRepository;
     }
-    public Ciudad findCiudadByNombre(String nombre) {
-        Optional<Ciudad> c = ciudadRepository.findByCiudad(nombre);
-        if(c.isPresent()) {
-            return c.get();
-        } else {
-            return null;
-        }
-    }
+    // public Ciudad findCiudadByNombre(String nombre) {
+    //     Optional<Ciudad> c = ciudadRepository.findByCiudad(nombre);
+    //     if(c.isPresent()) {
+    //         return c.get();
+    //     } else {
+    //         return null;
+    //     }
+    // }
 }
 
