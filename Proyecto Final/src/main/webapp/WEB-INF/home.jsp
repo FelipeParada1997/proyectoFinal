@@ -45,7 +45,7 @@
                         ¿Cómo ayudar?
                         </a>
                         <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Dona</a></li>
+                        <li><a class="dropdown-item" href="/dona">Dona</a></li>
                         <li><a class="dropdown-item" href="#">Hazte socio</a></li>
                         <li><a class="dropdown-item" href="#">Fundaciones</a></li>
                         </ul>
@@ -67,6 +67,7 @@
                             </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">Mi perfil</a></li>
+                            <li><a class="dropdown-item" href="/misesion">Mi sesion</a></li>
                             <li><a class="dropdown-item" href="/adopcion">Crear publicacion</a></li>
                             <li><a class="dropdown-item" href="/salir">Cerrar sesión</a></li>
                         </ul>
