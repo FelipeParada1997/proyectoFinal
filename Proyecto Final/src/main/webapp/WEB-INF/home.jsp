@@ -114,21 +114,27 @@
     </div>
 
     <!-- Publicaciones desde 117 a 131 forich-->
-    <div class="main d-flex justify-content-center" id="seccion_cards">
+    <div class="main d-flex flex-wrap justify-content-evenly" id="seccion_cards">
+        <c:forEach items="${mascota}" var="mascota">
         <div class="row">
-            <div class="col card-content">
-                <div class="card">
-                    <img src="imagenes/gatomaxi.jpg" class="card-img">
-                    <div class="card-body">
-                        <h1 class="card-title">Nombre Mascota</h1>
-                        <p class="card-sub-title">NOMBRE PERSONA PUBLICÓ </p>
-                        <p class="card-info">INFORMACION</p>
-                    <button class="btn btn-outline-light btn-lg">Más información</button>
+            <div class=" col-md card-content">
+                    <div class="card">
+                        <img src="${mascota.ubicacion}" class="card-img">
+                        <div class="card-body">
+                            <h2 class="card-title"><c:out value="${mascota.nombre}"/></h2>
+                            <p class="card-sub-title"><c:out value="${mascota.user.nombre} ${mascota.user.apellido}"/></p>
+                            <p class="card-info"><c:out value="${mascota.publicacion.titulo}"/></p>
+                            <c:if test="${userId == null}">
+                                <a href="/iniciasesion/registrate" class="btn btn-outline-light btn-lg">Mas Informacion</a>
+                            </c:if>
+                            <c:if test="${userId != null}">
+                                <a href="/detalle/${mascota.id}" class="btn btn-outline-light btn-lg">Mas Informacion</a>
+                            </c:if>
+                        </div>
                     </div>
-                </div>
             </div>
         </div>
-
+    </c:forEach>
     </div>
 
     <!-- Pagination -->

@@ -21,7 +21,7 @@
     <img src="${mascota.ubicacion}" alt="${mascota.ubicacion}">
 
 
-    <c:if  test="${userId == user.publicacionId}">
+    <c:if  test="${userId == publicacion.user.id}">
             <a href="/mascota/${id}/borrar">Borrar</a>
             <a href="/mascota/${mascota.id}/edit">editar mascota</a>
     </c:if>

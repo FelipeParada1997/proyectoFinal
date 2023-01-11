@@ -64,4 +64,44 @@ public class homeController {
         return "quienesSomos";
     }
 
+    @GetMapping("/dona")
+    public String donacion(Model model,HttpSession session){
+        Long id = (Long)session.getAttribute("userId");
+        if (id!=null) {
+            User user =  userService.findById(id);
+            model.addAttribute("user", user);
+        }
+        return "dona";
+    }
+
+    @GetMapping("/hazteSocio")
+    public String hasteSocio(Model model,HttpSession session){
+        Long id = (Long)session.getAttribute("userId");
+        if (id!=null) {
+            User user =  userService.findById(id);
+            model.addAttribute("user", user);
+        }
+        return "hazteSocio";
+    }
+
+    @GetMapping("/fundaciones")
+    public String fundaciones(Model model, HttpSession session){
+        Long id = (Long)session.getAttribute("userId");
+        if (id!=null) {
+            User user =  userService.findById(id);
+            model.addAttribute("user", user);
+        }
+        return "fundaciones";
+    }
+
+    @GetMapping("/como-Adoptar-A-Tu-Mascota")
+    public String comoAdoptar(Model model, HttpSession session){
+        Long id = (Long)session.getAttribute("userId");
+        if (id!=null) {
+            User user =  userService.findById(id);
+            model.addAttribute("user", user);
+        }
+        return "comoAdoptar";
+    }
+
 }
