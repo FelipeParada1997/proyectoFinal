@@ -16,6 +16,7 @@ import com.felipe.IoC.Models.TipoAnimal;
 import com.felipe.IoC.Models.User;
 import com.felipe.IoC.Services.MascotaService;
 import com.felipe.IoC.Services.PublicacionService;
+import com.felipe.IoC.Services.RegionService;
 import com.felipe.IoC.Services.TipoAnimalService;
 import com.felipe.IoC.Services.UserService;
 
@@ -25,12 +26,14 @@ public class homeController {
     private final MascotaService mascotaService;
     private final UserService userService;
     private final TipoAnimalService tipoAnimalService;
+    private final  RegionService regionService;
 
-    public homeController(PublicacionService publicacionService, MascotaService mascotaService, UserService userService, TipoAnimalService tipoAnimalService){
+    public homeController(PublicacionService publicacionService, MascotaService mascotaService, UserService userService, TipoAnimalService tipoAnimalService, RegionService regionService){
         this.publicacionService = publicacionService;
         this.mascotaService = mascotaService;
         this.userService = userService;
         this.tipoAnimalService = tipoAnimalService;
+        this.regionService = regionService;
     }
     
     @GetMapping(value ={"/{tipodeanimal}","/"})
@@ -50,9 +53,29 @@ public class homeController {
             System.out.println(mascota);
         }
         model.addAttribute("mascota", mascota);
-
         return "home";
     }
+
+    //para intentar filtrar las regiones
+    // @GetMapping(value ={"/{region}","/"})
+    // public String homee(@PathVariable(value = "region", required = false)String region,
+    //                     Model model, HttpSession session){
+    //     Long id = (Long)session.getAttribute("userId");
+    //     if (id!=null) {
+    //         User user =  userService.findById(id);
+    //         model.addAttribute("user", user);
+    //     }
+    //     List<Mascota> mascota;
+    //     if (region == null){
+    //         mascota = mascotaService.findAll();
+    //     }else{
+    //         Region regione = regionService.findRegionByNombre(region);
+    //         mascota = mascotaService.findAllByRegion();
+    //         System.out.println(mascota);
+    //     }
+    //     model.addAttribute("mascota", mascota);
+    //     return "home";
+    // }
 
     @GetMapping("/quienesSomos")
     public String quienSomos(Model model, HttpSession session){
