@@ -82,7 +82,7 @@
 
 <div class="wrapper">
 	<div class="header">
-		<ul>
+		<ul style="list-style: none;">
 			<li class="active form_1_progessbar">
 				<div>
 					<p>1</p>
@@ -105,7 +105,7 @@
 			<h2>Información de la Mascota</h2>
 				<div class="form_container">
 					<div class="input_wrap">
-						<form:label id="label" path="nombre">Nombre:</form:label>
+						<form:label id="label" path="nombre">Nombre de la mascota:</form:label>
                         <form:errors path="nombre"/>
 						<form:input class="input" path="nombre" type="text" id="nombre"/>
                     </div>
@@ -119,8 +119,8 @@
 						</select>
 					</div>
 					<div class="input_wrap">
-						<form:label path="tipoDeAnimal">Tipo de Animal</form:label>
-						<form:select path="tipoDeAnimal">
+						<form:label id="label" path="tipoDeAnimal">Tipo de Animal</form:label>
+						<form:select class="input" path="tipoDeAnimal">
 							<c:forEach items="${tipos}" var="tipo">
 								<form:option value="${tipo.id}">
 									<c:out value="${tipo.tipoDeAnimal}"/>
@@ -134,22 +134,22 @@
 			<h2>Información de la Mascota</h2>
 				<div class="form_container">
 					<div class="input_wrap">
-						<form:label path="edad">Edad:</form:label>
+						<form:label id="label" path="edad">Edad:</form:label>
 						<form:errors path="edad"/>
-						<form:input class="input" path="edad" type="text"  name="edad" id="edad"/>
+						<form:input class="input" path="edad" type="text"  name="edad" id="edad" placeholder="Ejemplo: 2 meses"/>
 					</div>
 					<div class="input_wrap">
 						<form:label path="sexo">Sexo:</form:label>
 						<form:errors path="sexo"/>
-						<form:select path="sexo">
+						<form:select class="input" path="sexo">
 							<option>Hembra</option>
 							<option>Macho</option>
 						</form:select>
 					</div>
 					<div class="input_wrap">
-						<form:label path="personalidad">Personalidad</form:label>
+						<form:label id="label" path="personalidad">Personalidad</form:label>
 						<form:errors path="personalidad"/>
-						<form:input class="input" path="personalidad" type="text"  name="personalidad" id="personalidad"/>
+						<form:input class="input" path="personalidad" type="text"  name="personalidad" id="personalidad" placeholder="Ejemplo: Travieso"/>
 					</div>
 				</div>
 		</div>
@@ -157,12 +157,12 @@
 			<h2>Información de la Mascota</h2>
 				<div class="form_container">
 					<div class="input_wrap">
-						<form:label path="energia">Energia</form:label>
+						<form:label id="label" path="energia">Energia</form:label>
 						<form:errors path="energia"/>
 						<form:input class="input" path="energia" type="number" min="1" max="10"  name="energia" id="energia"/>
 					</div>
 					<div class="input_wrap">
-						<input type="file" class="form-control bottom" name="postFile">
+						<input class="input" type="file" class="form-control bottom" name="postFile">
 					</div>
 				</div>
 		</div>

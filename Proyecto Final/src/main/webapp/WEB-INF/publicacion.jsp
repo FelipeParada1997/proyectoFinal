@@ -82,8 +82,8 @@
 
     <div class="wrapper">
         <div class="header">
-            <ul>
-                <li class="active form_1_progessbar">
+            <ul style="list-style: none;">
+                <li class="active form_1_progessbar" >
                     <div>
                         <p>1</p>
                     </div>
@@ -102,17 +102,17 @@
         </div>
         <div class="form_wrap">
             <div class="form_1 data_info">
-                <h2>Información de la Mascota</h2>
+                <h2>Sube tu Publicación</h2>
                     <div class="form_container">
                         <div class="input_wrap">
                             <form:label id="label" path="titulo">Título Publicación:</form:label>
                             <form:errors path="titulo"/>
-                            <form:input class="input" path="titulo" type="text" id="titulo"/>
+                            <form:input class="input" path="titulo" type="text" id="titulo" placeholder="Título" />
                         </div>
                         <div class="input_wrap">
                             <form:label id="label" path="descripcion">Descripción:</form:label>
                             <form:errors path="descripcion"/>
-                            <form:textarea class="input" path="descripcion" id="descripcion" rows="3"></form:textarea>
+                            <form:input class="input" path="descripcion" class="textarea" id="descripcion" rows="3" placeholder="Ejemplo: Pequeño" />
                         </div>
                         <div class="input_wrap">
                             <form:label path="mascota">Mascota:</form:label>
@@ -126,7 +126,7 @@
                         </div>
                     </div>
             </div>
-            <div class="form_3 data_info" style="display: none;">
+            <div class="form_2 data_info" style="display: none;">
                 <h2>Información de la Mascota</h2>
                     <div class="form_container">
                         <div class="input_wrap">
@@ -155,7 +155,7 @@
             <div class="common_btns form_1_btns">
                 <button type="button" class="btn_next">Siguiente<span class="icon"><ion-icon name="arrow-forward-sharp"></ion-icon></span></button>
             </div>
-            <div class="common_btns form_3_btns" style="display: none;">
+            <div class="common_btns form_2_btns" style="display: none;">
                 <button type="button" class="btn_back"><span class="icon"><ion-icon name="arrow-back-sharp"></ion-icon></span>Volver</button>
                 <input type="submit" value="Siguiente" type="button" class="btn_done"/>
             </div>
