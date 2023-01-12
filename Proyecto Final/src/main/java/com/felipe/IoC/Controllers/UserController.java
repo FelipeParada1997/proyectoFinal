@@ -63,7 +63,7 @@ public class UserController {
 
     @PostMapping("/loginpost")
     public String indexlogin(@Valid @RequestParam("email") String email,
-                             @RequestParam("password") String password, Model model, HttpSession session, @ModelAttribute("user")User user) {
+                            @RequestParam("password") String password, Model model, HttpSession session, @ModelAttribute("user")User user) {
         boolean authenticated = userService.authenticateUser(email, password);
         if (authenticated) {
             User u = userService.findByEmail(email);
@@ -75,17 +75,6 @@ public class UserController {
         }
     }
 }
-
-    /*@GetMapping("/iniciasesion/registrate")
-    public String vistaLogin(){
-        return "loginregister.jsp";
-    }
-
     //---------------------------------------------Home--------------------------------------------------
 
 //para ver publicaciones en el home en general
-
-
-
-
-}*/

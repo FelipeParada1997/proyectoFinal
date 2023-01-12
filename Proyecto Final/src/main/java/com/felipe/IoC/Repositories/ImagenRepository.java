@@ -1,7 +1,8 @@
 package com.felipe.IoC.Repositories;
 
-import com.felipe.IoC.Models.Imagen;
 import org.springframework.stereotype.Repository;
+
+import com.felipe.IoC.Models.Imagen;
 
 @Repository
 public interface ImagenRepository extends BaseRepository<Imagen>{

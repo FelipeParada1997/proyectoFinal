@@ -41,7 +41,9 @@ public class Mascota extends Base{
 
     private String personalidad;
 
-    private String energia;
+    private int energia;
+
+    private String ubicacion;
 
 
     @OneToOne(mappedBy="mascota", cascade=CascadeType.ALL, fetch=FetchType.LAZY)
@@ -58,8 +60,6 @@ public class Mascota extends Base{
     @JoinColumn(name="user_id")
     private User user;
 
-    private String ubicacion;
-
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
             name = "vacunas_animales",
@@ -69,5 +69,9 @@ public class Mascota extends Base{
 
     private List<Vacuna> vacunas;
 
-}
+    public boolean isPresent() {
+        return false;
+    }
+
+    }
 

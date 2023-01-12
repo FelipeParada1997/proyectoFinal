@@ -1,9 +1,11 @@
 package com.felipe.IoC.Services;
 
-import com.felipe.IoC.Models.TipoAnimal;
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 import com.felipe.IoC.Models.Mascota;
+import com.felipe.IoC.Models.TipoAnimal;
 import com.felipe.IoC.Repositories.MascotaRepository;
 import com.felipe.IoC.Repositories.BaseRepository;
 
@@ -19,7 +21,7 @@ public class MascotaService extends BaseService<Mascota>{
         super(baseRepository);
         this.mascotaRepository = mascotaRepository;
     }
-
+    
     public List<Mascota> findAllByTipoAnimal(TipoAnimal tipoAnimal){
         return mascotaRepository.findAllByTipoDeAnimal(tipoAnimal);
     }

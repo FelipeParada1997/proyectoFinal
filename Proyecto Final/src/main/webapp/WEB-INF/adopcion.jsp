@@ -1,40 +1,42 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-<%@ page isErrorPage="true" %>  
-<!DOCTYPE html>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ page isErrorPage="true" %>
+
+
+
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>adopcion demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <!-- CSS FILE -->
     <link rel="stylesheet" href="css/adopcion.css">
-</head>
-<body>
-    <!-- STYLE -->
-    <!-- CREAR CSS PARA "nav" -->
-    <nav class="d-flex bg-dark navbar fixed-top navbar-expand-lg navbar-dark p-md-3" style="background-image: url(https://www.solidbackgrounds.com/images/2560x1440/2560x1440-sea-blue-solid-color-background.jpg);">
+
+  </head>
+  <body>
+
+     <!-- Navbar -->
+     <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3"  >
         <div class="container-fluid">
             <a href="#" class="navbar-brand">
-                <!-- STYLE -->
-                <!-- CREAR CSS PARA "#logo"-->
-                <img src="Second Chance.png" id="logo" alt="logo home" style="width: 30%;">
+                <img src="imagenes/Second Chance.png" class="logo" alt="logo home">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="justify-content-end collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav" style="margin-left: auto;">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    <a class="nav-link text-white" aria-current="page" href="#">Inicio</a>
                 </li>
-                <!-- STYLE -->
-                <!-- CREAR CSS PARA "#linknav"-->
-                <li id="linknav" class="nav-item" style="display: inline-block;">
-                    <a class="nav-link text-white" href="quienesSomos">¿Quienes somos?</a>
+                <li class="nav-item" style="display: inline-block;">
+                    <a class="nav-link text-white" href="/quienesSomos">¿Quiénes somos?</a>
+                </li>
+                <li class="nav-item" style="display: inline-block;">
+                    <a class="nav-link text-white" href="#">¿Cómo adoptar a tu mascota?</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -46,146 +48,151 @@
                         <li><a class="dropdown-item" href="#">Fundaciones</a></li>
                         </ul>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Adoptame aquí!
-                    </a>
-                    <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Perros</a></li>
-                    <li><a class="dropdown-item" href="#">Gatos</a></li>
-                    <li><a class="dropdown-item" href="#">Exoticos</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item text-white">
-                    <a class="nav-link text-white" href="#"><i class="bi bi-person-fill"></i> Mi cuenta</a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Registrate</a></li>
-                        <li><a class="dropdown-item" href="#">Inicia sesión</a></li>
-                    </ul>
+
+                    <c:if test="${userId == null}">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-person-fill"></i>
+                            Bienvenido
+                            </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/iniciasesion/registrate">Registro/Inicio</a></li>
+                        </ul>
+                    </c:if>
+                    <c:if test="${userId != null}">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-person-fill"></i>
+                            <c:out value="${user.nombre}"></c:out>
+                            </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Mi perfil</a></li>
+                            <li><a class="dropdown-item" href="/adopcion">Crear publicacion</a></li>
+                            <li><a class="dropdown-item" href="/salir">Cerrar sesión</a></li>
+                        </ul>
+                    </c:if>
+
                 </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <section>
-        <div class="position-relative">
-            <img src="https://www.purina.es/sites/default/files/2021-12/Alimentos_y_plantas_toxicas%281%29_0_0.jpg" alt="" srcset="" style="height: 600px; width: 100%; filter: brightness(0.7)">
-            <!-- STYLE -->
-            <!-- CREAR CSS PARA "#textoimg"-->
-            <div id="textoimg" class="position-absolute top-50 start-50 translate-middle" style="font-family: Arial, Helvetica, sans-serif; font-size: 80px; color: white; -webkit-text-stroke: 1px black; -webkit-text-fill-color: white; -webkit-text-stroke: 2px black;;">"No Compres, adopta"</div>
-        </div>
-    </section>
-    <section class="d-flex justify-content-around p-5">
-        <!-- STYLE -->
-        <!-- CREAR CSS PARA ".main" -->
-        <div class="main justify-content-center border border-secondary rounded p-5"  style="width: 40%;">
-            <h1>Formulario de Adopcion</h1>
-            <form:form action="/publicacion" method="POST" modelAttribute="publicacion">
-                <div class="mb-3">
-                    <form:label class="form-label">Nombre</form:label>
-                    <form:input class="form-control" placeholder="Ejemplo: Canelita" type="text" aria-label="default input example">
-                </div>
 
-                <div class="mb-3">
-                    <form:label class="form-label">Edad</form:label>
-                    <form:input class="form-control" type="text" placeholder="Ejemplo: 3" aria-label="default input example">
-                </div>
-                    
-                <div>
-                    <form:label class="form-label">Tipo de Animal</form:label>
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Elige el tipo de animal</option>
-                        <option value="1">Gato</option>
-                        <option value="2">Perro</option>
-                        <option value="3">Otro</option>
-                    </select>
-                </div>
 
-                <div>
-                    <form:label class="form-label">Región</form:label>
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Elige la Región</option>
-                        <option value="1">Region</option>
-   
-                    </select>
-                </div>
+<!-- Formulario -->
+<form:form method="post" action="/adopcion" modelAttribute="mascota" enctype="multipart/form-data">
 
-                <div>
-                    <form:label class="form-label">Ciudad</form:label>
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Elige la Ciudad</option>
-                        <option value="1">Ciudad</option>
-                    </select>
-                </div>
+<div class="wrapper">
+	<div class="header">
+		<ul>
+			<li class="active form_1_progessbar">
+				<div>
+					<p>1</p>
+				</div>
+			</li>
+			<li class="form_2_progessbar">
+				<div>
+					<p>2</p>
+				</div>
+			</li>
+			<li class="form_3_progessbar">
+				<div>
+					<p>3</p>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div class="form_wrap">
+		<div class="form_1 data_info">
+			<h2>Información de la Mascota</h2>
+				<div class="form_container">
+					<div class="input_wrap">
+						<form:label id="label" path="nombre">Nombre:</form:label>
+                        <form:errors path="nombre"/>
+						<form:input class="input" path="nombre" type="text" id="nombre"/>
+                    </div>
+					<div class="input_wrap">
+						<form:label id="label" path="tamano">Tamaño:</form:label>
+						<form:errors path="tamano"/>
+						<select class="input" name="tamano" id="tamano">
+							<option value="pequeño">Pequeño</option>
+							<option value="mediano">Mediano</option>
+							<option value="grande">Grande</option>
+						</select>
+					</div>
+					<div class="input_wrap">
+						<form:label path="tipoDeAnimal">Tipo de Animal</form:label>
+						<form:select path="tipoDeAnimal">
+							<c:forEach items="${tipos}" var="tipo">
+								<form:option value="${tipo.id}">
+									<c:out value="${tipo.tipoDeAnimal}"/>
+								</form:option>
+							</c:forEach>
+						</form:select>
+					</div>
+				</div>
+		</div>
+		<div class="form_2 data_info" style="display: none;">
+			<h2>Información de la Mascota</h2>
+				<div class="form_container">
+					<div class="input_wrap">
+						<form:label path="edad">Edad:</form:label>
+						<form:errors path="edad"/>
+						<form:input class="input" path="edad" type="text"  name="edad" id="edad"/>
+					</div>
+					<div class="input_wrap">
+						<form:label path="sexo">Sexo:</form:label>
+						<form:errors path="sexo"/>
+						<form:select path="sexo">
+							<option>Hembra</option>
+							<option>Macho</option>
+						</form:select>
+					</div>
+					<div class="input_wrap">
+						<form:label path="personalidad">Personalidad</form:label>
+						<form:errors path="personalidad"/>
+						<form:input class="input" path="personalidad" type="text"  name="personalidad" id="personalidad"/>
+					</div>
+				</div>
+		</div>
+		<div class="form_3 data_info" style="display: none;">
+			<h2>Información de la Mascota</h2>
+				<div class="form_container">
+					<div class="input_wrap">
+						<form:label path="energia">Energia</form:label>
+						<form:errors path="energia"/>
+						<form:input class="input" path="energia" type="number" min="1" max="10"  name="energia" id="energia"/>
+					</div>
+					<div class="input_wrap">
+						<input type="file" class="form-control bottom" name="postFile">
+					</div>
+				</div>
+		</div>
+	</div>
+	<div class="btns_wrap">
+		<div class="common_btns form_1_btns">
+			<button type="button" class="btn_next">Siguiente<span class="icon"><ion-icon name="arrow-forward-sharp"></ion-icon></span></button>
+		</div>
+		<div class="common_btns form_2_btns" style="display: none;">
+			<button type="button" class="btn_back"><span class="icon"><ion-icon name="arrow-back-sharp"></ion-icon></span>Volver</button>
+			<button type="button" class="btn_next">Siguiente<span class="icon"><ion-icon name="arrow-forward-sharp"></ion-icon></span></button>
+		</div>
+		<div class="common_btns form_3_btns" style="display: none;">
+			<button type="button" class="btn_back"><span class="icon"><ion-icon name="arrow-back-sharp"></ion-icon></span>Volver</button>
+			<input type="submit" value="Siguiente" type="button" class="btn_done"/>
+		</div>
+	</div>
+</div>
+<div class="modal_wrapper">
+	<div class="shadow"></div>
+	<div class="success_wrap">
+		<span class="modal_icon"><ion-icon name="checkmark-sharp"></ion-icon></span>
+		<p>Has completado la informacion correctamente</p>
+	</div>
+</div>
 
-                <div>
-                    <form:label class="form-label">Sexo</form:label>
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Elige el sexo de animal</option>
-                        <option value="1">Hembra</option>
-                        <option value="2">Macho</option>
-                    </select>
-                </div>
+</form:form>
 
-                <div>
-                    <form:label class="form-label">Tamaño</form:label>
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Elige el tamaño de animal</option>
-                        <option value="1">Muy Pequeño</option>
-                        <option value="2">Pequeño</option>
-                        <option value="2">Mediano</option>
-                        <option value="2">Grande</option>
-                        <option value="2">Muy Grande</option>
-                    </select>
-                </div>
 
-                <p>Esterilización</p>
-                <div class="form-check">
-                    <form:input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                    <form:label class="form-check-label" for="flexRadioDefault1">
-                    Si
-                    </form:label>
-                </div>
-                <div class="form-check">
-                    <form:input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                    <form:label class="form-check-label" for="flexRadioDefault2">
-                    No
-                    </form:label>
-                </div>
-
-                <div class="mb-3">
-                    <form:label for="exampleFormControlTextarea1" class="form-label">Danos una breve descripcion del animal:</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                </div>
-
-                <div class="mb-3">
-                    <form:label for="formFile" class="form-label">Sube una foto en vertical de tu Animal</label>
-                    <form:input class="form-control" type="file" id="formFile">
-                </div>
-
-                <div class="mb-3 form-check">
-                <form:input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <form:label class="form-check-label" for="exampleCheck1">Check me out</label>
-                </div>
-
-                <button type="submit" class="btn btn-dark">Submit</button>
-            </form>
-        </div>
-
-        <div class="justify-content-center p-5" style="width: 40%;">
-            <h1>Querido [NOMBRE_USUARIO]</h1>
-            <h4>¡Muchas gracias por usar nuestra pagina de adopcion de animales!</h1>
-            <br>
-            <p>Estamos encantados que hay personas como tú que quieren dar un hogar a estos maravillosos seres.</p>
-            <br>
-            <p>Estamos decididos a ayudar a encontrar hogares seguros y amorosos para todos los animales que estan en nuestra pagina, y apreciamos mucho tu apoyo en esta mision.</p>
-            <br>
-            <p><strong>¡Gracias de nuevo por elegir nuestra pagina de adopcion de animales!</strong></p>
-            <br>
-            <p>Saludos cordiales,</p>
-            <br>
-            <p>Equipo Second Chance.</p>
-        </div>
-    </section>
+    <script src="/js/adopcion.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 </html>

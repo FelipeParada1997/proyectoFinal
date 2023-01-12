@@ -68,7 +68,7 @@ video{
 
 /* imagenes pie video animales */
 .animals li {
-    cursor: pointer;
+    cursor: pointer; 
 }
 /* .animals li img{max-width: 100px; }  */
 
@@ -82,7 +82,7 @@ video{
     width: 300px;
     border-radius: 25px;
     overflow: hidden;
-    border: 9px solid #1ebba3;
+    border: 9px solid #1ebba3; 
     position: relative;
     margin-top: 30px;
     margin-left: 40px;
@@ -127,6 +127,72 @@ video{
     font-size: 14px;
     font-weight: 300;
 }
+
+.card-info{
+    font-size: 16px;
+    line-height: 25px;
+    margin: 30px 0;
+    font-weight: 400;
+}
+
+/* Paginacion */
+.pagination{
+    text-align: center;
+    margin: 30px 30px 60px;
+    user-select: none;
+}
+
+.pagination li{
+    display: inline-block;
+    margin: 5px;
+    box-shadow: 0 5px 25px rgb(1 1 1/ 20%);
+}
+
+.pagination li a{
+    color: #0AB1CE;
+    text-decoration: none;
+    font-size: 1.2rem;
+    line-height: 35px;
+}
+
+.previous-page, .next-page{
+    background: 0;
+    width: 80px;
+    border-radius: 85px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.previous-page:hover{
+    transform: translateX(-5px);
+}
+
+.next-page:hover{
+    transform: translateX(5px);
+}
+
+.current-page, .dots{
+    background: rgb(187, 185, 185);
+    width: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.active{
+    background: #0AB1CE;
+}
+
+.disable{
+    background: rgb(187, 185, 185);
+}
+
+.card-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
 
 .card-info{
     font-size: 16px;

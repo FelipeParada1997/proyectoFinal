@@ -17,9 +17,6 @@
 
 </head>
 <body>
-
-
-
     <!-- Navbar -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3" >
         <div class="container-fluid">
@@ -49,8 +46,7 @@
                         <li><a class="dropdown-item" href="#">Hazte socio</a></li>
                         <li><a class="dropdown-item" href="#">Fundaciones</a></li>
                         </ul>
-                </li>
-
+                </li>            
                     <c:if test="${userId == null}">
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-person-fill"></i>
@@ -192,23 +188,3 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

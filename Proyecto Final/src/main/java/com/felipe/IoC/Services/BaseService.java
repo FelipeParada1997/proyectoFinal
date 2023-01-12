@@ -5,6 +5,8 @@ import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
+import com.felipe.IoC.Models.Mascota;
+import com.felipe.IoC.Models.User;
 import com.felipe.IoC.Repositories.BaseRepository;
 
 import lombok.RequiredArgsConstructor;

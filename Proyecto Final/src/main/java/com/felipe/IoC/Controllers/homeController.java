@@ -1,16 +1,25 @@
 package com.felipe.IoC.Controllers;
 
-import com.felipe.IoC.Models.Mascota;
-import com.felipe.IoC.Models.TipoAnimal;
-import com.felipe.IoC.Models.User;
-import com.felipe.IoC.Services.*;
+import java.util.List;
+
+import javax.servlet.http.HttpSession;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 
-import javax.servlet.http.HttpSession;
-import java.util.List;
+import com.felipe.IoC.Models.Mascota;
+import com.felipe.IoC.Models.Publicacion;
+import com.felipe.IoC.Models.TipoAnimal;
+import com.felipe.IoC.Models.User;
+import com.felipe.IoC.Services.MascotaService;
+import com.felipe.IoC.Services.PublicacionService;
+import com.felipe.IoC.Services.RegionService;
+import com.felipe.IoC.Services.TipoAnimalService;
+import com.felipe.IoC.Services.UserService;
 
 @Controller
 public class homeController {
@@ -30,9 +39,9 @@ public class homeController {
 
     @GetMapping(value ={"/"})
     public String home_inicial(Model model, HttpSession session){
-        Long id = (Long)session.getAttribute("userId");
-        if (id!=null) {
-            User user =  userService.findById(id);
+        if ((Long)session.getAttribute("userId")!=null) {
+            
+            User user =  userService.findById((Long)session.getAttribute("userId"));
             model.addAttribute("user", user);
         }
         List<Mascota> mascota;

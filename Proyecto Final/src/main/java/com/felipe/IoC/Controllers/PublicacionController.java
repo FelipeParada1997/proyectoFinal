@@ -10,10 +10,24 @@ import com.felipe.IoC.Services.*;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+
+import com.felipe.IoC.Models.Ciudad;
+import com.felipe.IoC.Models.Mascota;
+import com.felipe.IoC.Models.Publicacion;
+import com.felipe.IoC.Models.Region;
+import com.felipe.IoC.Models.User;
+import com.felipe.IoC.Services.CiudadService;
+import com.felipe.IoC.Services.MascotaService;
+import com.felipe.IoC.Services.PublicacionService;
+import com.felipe.IoC.Services.RegionService;
+import com.felipe.IoC.Services.UserService;
 
 import java.util.List;
-
 
 @Controller
 public class PublicacionController {
@@ -24,7 +38,7 @@ public class PublicacionController {
     private final RegionService regionService;
 
     public PublicacionController(PublicacionService publicacionService, MascotaService mascotaService,
-                                 UserService userService, CiudadService ciudadService, RegionService regionService) {
+            UserService userService, CiudadService ciudadService, RegionService regionService) {
         this.publicacionService = publicacionService;
         this.mascotaService = mascotaService;
         this.userService = userService;
@@ -35,7 +49,7 @@ public class PublicacionController {
     // para ver el crear publicacion get
     @GetMapping("/publicacion")
     public String vercreaPublicacion(@ModelAttribute("publicacion") Publicacion publicacion, Model model,
-                                     HttpSession session) {
+            HttpSession session) {
         Long id = (Long) session.getAttribute("userId");
         User u = userService.findById(id);
 
@@ -54,7 +68,7 @@ public class PublicacionController {
     // para crear publicacion por post(muestra la mascota en lista)
     @PostMapping("/publicacion")
     public String crearPublicacion(@Valid @ModelAttribute("publicacion") Publicacion publicacion, BindingResult result,
-                                   HttpSession session, Model model) {
+            HttpSession session, Model model) {
         if (result.hasErrors()) {
 
             Long id = (Long) session.getAttribute("userId");
@@ -95,7 +109,7 @@ public class PublicacionController {
 
         Publicacion publicacion = publicacionService.findById(id);
         model.addAttribute("publicacion", publicacion);
-
+        
         return "detalle";
     }
 
@@ -107,7 +121,7 @@ public class PublicacionController {
         model.addAttribute("publicacion", publicacion);
         Region r = regionService.findById(id);
         User u = userService.findById(id);
-
+        
 
         List<Region> region = regionService.findAll();
         model.addAttribute("region", region);
@@ -117,6 +131,7 @@ public class PublicacionController {
 
         List<Mascota> mascota = u.getMascotas();
         model.addAttribute("mascota", mascota);
+        System.out.println(mascota);
 
         return "editP";
     }
@@ -124,7 +139,7 @@ public class PublicacionController {
     // para editar info publicacion put
     @PutMapping("/publicacion/{id}/edit")
     public String editarPublic(@Valid @ModelAttribute("publicacion") Publicacion publicacion, BindingResult result,
-                               HttpSession session, Model model) {
+            HttpSession session, Model model) {
         if (result.hasErrors()) {
 
             Long id = (Long) session.getAttribute("userId");
@@ -145,35 +160,10 @@ public class PublicacionController {
         } else {
             Long id = (Long) session.getAttribute("userId");
             User u = userService.findById(id);
+
             publicacion.setUser(u);
             publicacionService.save(publicacion);
             return "redirect:/";
         }
     }
-
-    @GetMapping("/quienesSomos")
-    public String mostrarQuienesSomos(){
-        return "quienesSomos.jsp";
-    }
-
-    @GetMapping("/dona")
-    public String donacion(){
-        return "dona.jsp";
-    }
-
-    @GetMapping("/hazteSocio")
-    public String hasteSocio(){
-        return "hazteSocio.jsp";
-    }
-
-    @GetMapping("/fundaciones")
-    public String fundaciones(){
-        return "fundaciones.jsp";
-    }
-
-    @GetMapping("/como-Adoptar-A-Tu-Mascota")
-    public String comoAdoptar(){
-        return "comoAdoptar.jsp";
-    }
-
 }
