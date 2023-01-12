@@ -119,11 +119,11 @@
 						</select>
 					</div>
 					<div class="input_wrap">
-						<form:label path="mascota">Tipo de Animal</form:label>
-						<form:select path="tipoanimal">
-							<c:forEach items="${tipodeanimal}" var="tipodeanimal">
-								<form:option value="${tipodeanimal.id}">
-									<c:out value="${tipodeanimal.nombre}"/>
+						<form:label path="tipoDeAnimal">Tipo de Animal</form:label>
+						<form:select path="tipoDeAnimal">
+							<c:forEach items="${tipos}" var="tipo">
+								<form:option value="${tipo.id}">
+									<c:out value="${tipo.tipoDeAnimal}"/>
 								</form:option>
 							</c:forEach>
 						</form:select>
@@ -141,7 +141,10 @@
 					<div class="input_wrap">
 						<form:label path="sexo">Sexo:</form:label>
 						<form:errors path="sexo"/>
-						<form:input class="input" path="sexo" type="text"  name="sexo" id="sexo"/>
+						<form:select path="sexo">
+							<option>Hembra</option>
+							<option>Macho</option>
+						</form:select>
 					</div>
 					<div class="input_wrap">
 						<form:label path="personalidad">Personalidad</form:label>
@@ -156,7 +159,7 @@
 					<div class="input_wrap">
 						<form:label path="energia">Energia</form:label>
 						<form:errors path="energia"/>
-						<form:input class="input" path="energia" type="number"  name="energia" id="energia"/>
+						<form:input class="input" path="energia" type="number" min="1" max="10"  name="energia" id="energia"/>
 					</div>
 					<div class="input_wrap">
 						<input type="file" class="form-control bottom" name="postFile">
@@ -182,7 +185,7 @@
 	<div class="shadow"></div>
 	<div class="success_wrap">
 		<span class="modal_icon"><ion-icon name="checkmark-sharp"></ion-icon></span>
-		<p>Has completado exitosamente el proyecto.</p>
+		<p>Has completado la informacion correctamente</p>
 	</div>
 </div>
 

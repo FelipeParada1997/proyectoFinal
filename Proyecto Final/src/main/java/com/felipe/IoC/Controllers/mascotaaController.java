@@ -67,19 +67,7 @@ public class mascotaaController {
         return "adopcion";
     }
     
-    //para crear publicacion  por post(muestra la mascota en lista)
-    // @PostMapping("/adopcion")
-    // public String crearMascota(@Valid @ModelAttribute("mascota")Mascota mascota, BindingResult result, HttpSession session,Model model){
-    //     if (result.hasErrors()) {
-    //         return "adopcion";
-    //     }else{
-    //         Long id = (Long) session.getAttribute("userId");
-    //         User u = userService.findById(id);
-    //         mascota.setUser(u);
-    //         mascotaService.save(mascota);
-    //         return "redirect:/publicacion";
-    //     }
-    // }
+
     @PostMapping("/adopcion")
     public String imagenMascot(@Valid @ModelAttribute("mascota")Mascota mascota,BindingResult result, HttpSession session, Model model, @RequestParam("postFile") MultipartFile postFile){
         Long userId = (Long) session.getAttribute("userId");
@@ -142,18 +130,41 @@ public class mascotaaController {
 
     //para editar info put
     @PutMapping("/mascota/{id}/edit")
-    public String editarMascota(@Valid @ModelAttribute("mascota") Mascota mascota,BindingResult result, HttpSession session,Model model){
+    public String editarMascota(@Valid @ModelAttribute("mascota") Mascota mascota,BindingResult result, HttpSession session,Model model, @RequestParam("postFile") MultipartFile postFile){
+        Long userId =(Long) session.getAttribute("userId");
+        User u = userService.findById(userId);
         if (result.hasErrors()) {
             return "edit";
-        }else{
-        Long mascotaId = (Long)session.getAttribute("mascotaId");
-        User user = userService.findById(mascotaId);
-        mascota.setUser(user);
-        List <TipoAnimal> t = tipoAnimalService.findAll();
-        model.addAttribute("tipos", t);
-        mascotaService.save(mascota);
+        }
+        if(postFile.isEmpty() == false){
+            String fileName = postFile.getOriginalFilename();
+            String ubicacion = "/image/" + userId;
+            File directory = new File("src/main/resources/static" + ubicacion);
+            if(directory.exists() == false){
+                directory.mkdirs();
+            }
+            try {
+                byte[] bytes = postFile.getBytes();
+                BufferedOutputStream outputStream = new BufferedOutputStream(
+                    new FileOutputStream(
+                        new File(directory.getAbsolutePath() + "/" + fileName)
+                    )
+                );
+                outputStream.write(bytes);
+                outputStream.flush();
+                outputStream.close();
+                System.out.println("El archivo se ha cargado con exito");
+                mascota.setUbicacion(ubicacion + "/" + fileName);
+                mascota.setUser(u);
+                List <TipoAnimal> t = tipoAnimalService.findAll();
+                model.addAttribute("tipos", t);
+                mascotaService.save(mascota);
+            } catch (IOException e) {
+                e.printStackTrace();
+                System.out.println("ocurrio un error al cargar la imagen." + e);
+            }
+        }
         return "redirect:/publicacion/{id}/edit"; 
         }
     }
-}
 
