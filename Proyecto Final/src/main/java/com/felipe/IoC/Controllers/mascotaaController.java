@@ -46,16 +46,7 @@ public class mascotaaController {
         this.tipoAnimalService = tipoAnimalService;
         }
 
-    //mostrar todas las mescotas asociacdas al usuario
 
-
-    //para ver una mascota en especifico
-    // @GetMapping("/mascota/{id}")
-    // public String verUnaMascota(@PathVariable("id")Long id, Model model){
-    //     Mascota mascota = mascotaService.findById(id);
-    //     model.addAttribute("mascota", mascota);
-    //     return "";
-    // }
     //para ver formulario para agregar mascotas
     @GetMapping("/adopcion")
     public String vercreaMascota(@ModelAttribute("mascota") Mascota mascota, Model model, HttpSession session){
@@ -164,7 +155,7 @@ public class mascotaaController {
                 System.out.println("ocurrio un error al cargar la imagen." + e);
             }
         }
-        return "redirect:/publicacion/{id}/edit"; 
+        return "redirect:/"; 
         }
     }
 
