@@ -67,19 +67,7 @@ public class mascotaaController {
         return "adopcion";
     }
     
-    //para crear publicacion  por post(muestra la mascota en lista)
-    // @PostMapping("/adopcion")
-    // public String crearMascota(@Valid @ModelAttribute("mascota")Mascota mascota, BindingResult result, HttpSession session,Model model){
-    //     if (result.hasErrors()) {
-    //         return "adopcion";
-    //     }else{
-    //         Long id = (Long) session.getAttribute("userId");
-    //         User u = userService.findById(id);
-    //         mascota.setUser(u);
-    //         mascotaService.save(mascota);
-    //         return "redirect:/publicacion";
-    //     }
-    // }
+
     @PostMapping("/adopcion")
     public String imagenMascot(@Valid @ModelAttribute("mascota")Mascota mascota,BindingResult result, HttpSession session, Model model, @RequestParam("postFile") MultipartFile postFile){
         Long userId = (Long) session.getAttribute("userId");

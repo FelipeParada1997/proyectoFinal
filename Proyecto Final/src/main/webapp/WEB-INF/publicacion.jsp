@@ -108,7 +108,7 @@
             <p>
                     <form:label path="descripcion">descripcion</form:label>
                     <form:errors path="descripcion"/>
-                    <form:input path="descripcion" />
+                    <form:textarea path="descripcion" />
             </p>
             <p>
                 <form:label path="mascota">Mascotas</form:label>
