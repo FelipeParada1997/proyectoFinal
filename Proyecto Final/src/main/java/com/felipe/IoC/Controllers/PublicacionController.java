@@ -97,10 +97,8 @@ public class PublicacionController {
     @GetMapping("/detalle/{id}")
     public String detallePublicyMascot(@PathVariable("id") Long id, Model model, HttpSession session) {
         Long userId = (Long) session.getAttribute("userId");
-        if (userId!=null) {
             User user =  userService.findById(userId);
             model.addAttribute("user", user);
-        }
 
         Mascota mascota = mascotaService.findById(id);
         model.addAttribute("mascota", mascota);

@@ -18,6 +18,7 @@
     <h2><c:out value="${mascota.publicacion.titulo}"></c:out></h2>
     <h2><c:out value="${mascota.publicacion.descripcion}"></c:out></h2>
     <h2><c:out value="${mascota.nombre}"></c:out></h2>
+    <h2><c:out value="${publicacion.user.celular}"></c:out></h2>
     <img src="${mascota.ubicacion}" alt="${mascota.ubicacion}">
 
 
