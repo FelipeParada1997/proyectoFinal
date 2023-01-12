@@ -18,7 +18,7 @@
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3" >
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3 me-5" >
         <div class="container-fluid">
             <a href="#" class="navbar-brand">
                 <img src="/imagenes/Second Chance.png" class="logo" alt="logo home">
@@ -62,7 +62,6 @@
                             <c:out value="${user.nombre}"></c:out>
                             </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Mi perfil</a></li>
                             <li><a class="dropdown-item" href="/misesion">Mi sesion</a></li>
                             <li><a class="dropdown-item" href="/adopcion">Crear publicacion</a></li>
                             <li><a class="dropdown-item" href="/salir">Cerrar sesión</a></li>
@@ -167,7 +166,7 @@
                 <a href="" class="col-3 text-reset text-uppercase d-flex align-items-center">
                     <img src="/imagenes/Second Chance.png" alt="logo second chance" class="logo mr-2" >
                 </a>
-                <ul class="col-3 list-unstyled">
+                <ul class="col-3 list-unstyled" >
                     <li class="font-weight-bold text-uppercase">Teléfonos</li>
                     <li><a href="#" class="text-reset">(22) 37825605</a></li>
                     <li><a href="#" class="text-reset">(+569) 83750182</a></li>

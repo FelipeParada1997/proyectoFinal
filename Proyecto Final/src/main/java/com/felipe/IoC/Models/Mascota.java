@@ -35,13 +35,16 @@ public class Mascota extends Base{
     @NotBlank
     private String tamano;
 
+    @NotBlank
     private String edad;
-
+    @NotBlank
     private String sexo;
 
+    @NotBlank
     private String personalidad;
 
     private int energia;
+
 
     private String ubicacion;
 

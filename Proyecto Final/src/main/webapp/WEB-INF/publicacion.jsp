@@ -64,7 +64,7 @@
                             <c:out value="${user.nombre}"></c:out>
                             </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Mi perfil</a></li>
+                            <li><a class="dropdown-item" href="/misesion">Mi sesion</a></li>
                             <li><a class="dropdown-item" href="/adopcion">Crear publicacion</a></li>
                             <li><a class="dropdown-item" href="/salir">Cerrar sesión</a></li>
                         </ul>
@@ -80,7 +80,7 @@
     <!-- Formulario -->
 <form:form method="post" action="/publicacion" modelAttribute="publicacion" enctype="multipart/form-data">
 
-    <div class="wrapper">
+    <div class="wrapper ">
         <div class="header">
             <ul style="list-style: none;">
                 <li class="active form_1_progessbar" >
@@ -162,6 +162,8 @@
             <span class="modal_icon"><ion-icon name="checkmark-sharp"></ion-icon></span>
             <p>Has completado la informacion correctamente</p>
         </div>
+
+
     </div>
     
     </form:form>
