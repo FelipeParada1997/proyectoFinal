@@ -1,7 +1,8 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-<%@ page isErrorPage="true" %>
+<%@ page isErrorPage="true"%>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,8 +18,8 @@
 </head>
 <body>
 
-    <!-- Navbar -->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3" >
+     <!-- Navbar -->
+     <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3"  >
         <div class="container-fluid">
             <a href="#" class="navbar-brand">
                 <img src="imagenes/Second Chance.png" class="logo" alt="logo home">
@@ -47,7 +48,7 @@
                         <li><a class="dropdown-item" href="#">Fundaciones</a></li>
                         </ul>
                 </li>
-                
+
                     <c:if test="${userId == null}">
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-person-fill"></i>
@@ -74,24 +75,6 @@
             </div>
         </div>
     </nav>
-
-
-    <!-- Fondo navbar -->
-    <section>
-        <div class="position-relative">
-            <img src="imagenes/conejofondo.jpg" alt="" srcset="" style="height: 600px; width: 100%; filter: brightness(0.7)">
-            <div id="textoimg" class="position-absolute top-50 start-50 translate-middle">"No Compres, adopta"</div> 
-        </div>
-    </section>
-
-        <!-- Banner image start -->
-        <div class="imagen-background">
-                <div id="imagen">
-                    <img src="imagenes/conejofondo.jpg" alt="fondo de conejo">
-                    <h1 class="caption text-center">No compres, adopta</h1>
-                </div>
-        </div>
-
 
 
     <!-- Formulario -->
