@@ -21,7 +21,7 @@
   <body>
     <!-- Navbar -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3" >
-        <div class="container-fluid">
+        <div class="container-fluid" style="margin-right: 100px;">
             <a href="/" class="navbar-brand">
                 <img src="/imagenes/Second Chance.png" class="logo" alt="logo home">
             </a>
@@ -64,7 +64,6 @@
                             <c:out value="${user.nombre}"></c:out>
                             </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Mi perfil</a></li>
                             <li><a class="dropdown-item" href="/misesion">Mi sesion</a></li>
                             <li><a class="dropdown-item" href="/adopcion">Crear publicacion</a></li>
                             <li><a class="dropdown-item" href="/salir">Cerrar sesión</a></li>
