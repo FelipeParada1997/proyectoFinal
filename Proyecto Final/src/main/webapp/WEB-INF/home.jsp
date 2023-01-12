@@ -35,7 +35,7 @@
                     <a class="nav-link text-white" href="/quienesSomos">¿Quiénes somos?</a>
                 </li>
                 <li class="nav-item" style="display: inline-block;">
-                    <a class="nav-link text-white" href="#">¿Cómo adoptar a tu mascota?</a>
+                    <a class="nav-link text-white" href="como-Adoptar-A-Tu-Mascota">¿Cómo adoptar a tu mascota?</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -43,8 +43,8 @@
                         </a>
                         <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="/dona">Dona</a></li>
-                        <li><a class="dropdown-item" href="#">Hazte socio</a></li>
-                        <li><a class="dropdown-item" href="#">Fundaciones</a></li>
+                        <li><a class="dropdown-item" href="hazteSocio">Hazte socio</a></li>
+                        <li><a class="dropdown-item" href="/fundaciones">Fundaciones</a></li>
                         </ul>
                 </li>            
                     <c:if test="${userId == null}">

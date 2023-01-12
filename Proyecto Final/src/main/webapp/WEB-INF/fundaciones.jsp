@@ -40,8 +40,8 @@ pageEncoding="UTF-8"%>
                             </a>
                             <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="/dona">Dona</a></li>
-                            <li><a class="dropdown-item" href="#">Hazte socio</a></li>
-                            <li><a class="dropdown-item" href="#">Fundaciones</a></li>
+                            <li><a class="dropdown-item" href="/hazteSocio">Hazte socio</a></li>
+                            <li><a class="dropdown-item" href="/fundaciones">Fundaciones</a></li>
                             </ul>
                     </li>
 

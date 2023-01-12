@@ -15,34 +15,59 @@ pageEncoding="UTF-8"%>
     <title>Quíenes Somos</title>
 </head>
 <body>
-   <!-- Navbar -->
-   <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3" >
-    <div class="container-fluid me-5">
-        <a href="#" class="navbar-brand">
-            <img src="/imagenes/Second Chance.png" class="logo" alt="logo home">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav" style="margin-left: auto;">
-            <li class="nav-item">
-                <a class="nav-link text-white" aria-current="page" href="#">Inicio</a>
-            </li>
-            <li class="nav-item" style="display: inline-block;">
-                <a class="nav-link text-white" href="/quienesSomos">¿Quiénes somos?</a>
-            </li>
-            <li class="nav-item" style="display: inline-block;">
-                <a class="nav-link text-white" href="/Como-Adotar-A-Tu-Mascota">¿Cómo adoptar a tu mascota?</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-white" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    ¿Cómo ayudar?
-                    </a>
-                    <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="/dona">Dona</a></li>
-                    <li><a class="dropdown-item" href="/hazteSocio">Hazte socio</a></li>
-                    <li><a class="dropdown-item" href="/fundaciones">Fundaciones</a></li>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3" >
+            <div class="container-fluid">
+                <a href="#" class="navbar-brand">
+                    <img src="/imagenes/Second Chance.png" class="logo" alt="logo home">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav" style="margin-left: auto;">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" aria-current="page" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item" style="display: inline-block;">
+                        <a class="nav-link text-white" href="/quienesSomos">¿Quiénes somos?</a>
+                    </li>
+                    <li class="nav-item" style="display: inline-block;">
+                        <a class="nav-link text-white" href="/como-Adoptar-A-Tu-Mascota">¿Cómo adoptar a tu mascota?</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            ¿Cómo ayudar?
+                            </a>
+                            <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/dona">Dona</a></li>
+                            <li><a class="dropdown-item" href="/hazteSocio">Hazte socio</a></li>
+                            <li><a class="dropdown-item" href="/fundaciones">Fundaciones</a></li>
+                            </ul>
+                    </li>
+
+                        <c:if test="${userId == null}">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-person-fill"></i>
+                                Bienvenido
+                                </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="/iniciasesion/registrate">Registro/Inicio</a></li>
+                            </ul>
+                        </c:if>
+                        <c:if test="${userId != null}">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-person-fill"></i>
+                                <c:out value="${user.nombre}"></c:out>
+                                </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Mi perfil</a></li>
+                                <li><a class="dropdown-item" href="/misesion">Mi sesion</a></li>
+                                <li><a class="dropdown-item" href="/adopcion">Crear publicacion</a></li>
+                                <li><a class="dropdown-item" href="/salir">Cerrar sesión</a></li>
+                            </ul>
+                        </c:if>
+
+                    </li>
                     </ul>
             </li>            
                 <c:if test="${userId == null}">
@@ -82,6 +107,9 @@ pageEncoding="UTF-8"%>
                 los tipicos vacios que quedan a la hora de adoptar en otras redes sociales las cuales no estan hechas especialmente para esto.
                 </p><p>Nuestra organizacion es sin fines de lucro por lo que las donaciones se van directamente para mejorar nuestra pagina, y asi ir 
                     prosperando y agilizando las adopciones para todos los animalitos.</p>
+                    <p>Misión: Nuestra misión es mejorar la vida de los animales no deseados a través de la adopción consciente y el cuidado responsable. Trabajamos incansablemente para encontrar hogares amorosos y permanentes para cada animal que entra en nuestra organización, y educar a la comunidad sobre la importancia de la esterilización y el cuidado apropiado de los animales.
+
+                        </p> <p>Visión: Nuestra visión es un mundo en el que todos los animales sean valorados y cuidados adecuadamente, y donde no haya más animales sin hogar. Trabajamos para alcanzar esta visión mediante la promoción de la adopción responsable, la esterilización y el cuidado apropiado de los animales, y la educación a la comunidad. Juntos, creemos que podemos lograr un futuro en el que todos los animales tengan un hogar seguro y amoroso.</p>
             
         </div>
         <div class="animacion col">
