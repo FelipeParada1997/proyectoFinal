@@ -17,6 +17,7 @@
         <br>
         <form:form action="" method="post" modelAttribute="publicacion">
         <input type="hidden" name="_method" value="put">
+        <form:input path="mascota"></form:input>
                 <p>
                     <form:label path="titulo">titulo</form:label>
                     <form:errors path="titulo"/>
