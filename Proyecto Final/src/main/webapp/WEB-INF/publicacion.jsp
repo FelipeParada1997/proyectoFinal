@@ -1,7 +1,8 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-<%@ page isErrorPage="true" %>
+<%@ page isErrorPage="true"%>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +19,7 @@
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3" >
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3 ml-4"  >
         <div class="container-fluid">
             <a href="#" class="navbar-brand">
                 <img src="imagenes/Second Chance.png" class="logo" alt="logo home">
@@ -47,7 +48,7 @@
                         <li><a class="dropdown-item" href="#">Fundaciones</a></li>
                         </ul>
                 </li>
-                
+
                     <c:if test="${userId == null}">
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-person-fill"></i>
@@ -76,77 +77,96 @@
     </nav>
 
 
-    <!-- Fondo navbar -->
-    <section>
-        <div class="position-relative">
-            <img src="imagenes/conejofondo.jpg" alt="" srcset="" style="height: 600px; width: 100%; filter: brightness(0.7)">
-            <div id="textoimg" class="position-absolute top-50 start-50 translate-middle">"No Compres, adopta"</div> 
-        </div>
-    </section>
-
-        <!-- Banner image start -->
-        <div class="imagen-background">
-                <div id="imagen">
-                    <img src="imagenes/conejofondo.jpg" alt="fondo de conejo">
-                    <h1 class="caption text-center">No compres, adopta</h1>
-                </div>
-        </div>
-
-
-
     <!-- Formulario -->
-    <div class="container-sm">
-        <h1>Nueva Publicacion</h1>
-        <a href="/" class="col-auto">Volver al home</a>
-        <br>
-        <form:form action="/publicacion" method="post" modelAttribute="publicacion">
-                <p>
-                    <form:label path="titulo">titulo</form:label>
-                    <form:errors path="titulo"/>
-                    <form:input path="titulo"/>
-            </p>
-            <p>
-                    <form:label path="descripcion">descripcion</form:label>
-                    <form:errors path="descripcion"/>
-                    <form:textarea path="descripcion" />
-            </p>
-            <p>
-                <form:label path="mascota">Mascotas</form:label>
-                    <form:select path="mascota">
-                        <c:forEach items="${mascota}" var="mascota" >
-                            <form:option value="${mascota.id}">
-                                <c:out value="${mascota.nombre}"/>
-                            </form:option>
-                        </c:forEach>
-                    </form:select>
-            </p>
-            </p>
-                <form:label path="ciudad">Ciudad</form:label>
-                    <form:select path="ciudad">
-                        <c:forEach items="${ciudad}" var="ciudades">
-                            <form:option value="${ciudades.id}">
-                                <c:out value="${ciudades.nombre}"/>
-                            </form:option>
-                        </c:forEach>
-                    </form:select>
-    <p>
-    <form:label path="ciudad">Region</form:label>
-        <form:select path="ciudad">
-            <c:forEach items="${region}" var="regiones">
-                <form:option value="${regiones.id}">
-                    <c:out value="${regiones.nombre}"/>
-                </form:option>
-            </c:forEach>
-        </form:select>
-    </p>
-            <input type="submit" value="submit"/>
-            <a href="/" class="btn btn-primary">cancel</a>
-        </form:form>
+<form:form method="post" action="/publicacion" modelAttribute="publicacion" enctype="multipart/form-data">
 
-        <a href="/mascota/{mascota.id}/edit">editar mascota</a>
+    <div class="wrapper">
+        <div class="header">
+            <ul style="list-style: none;">
+                <li class="active form_1_progessbar" >
+                    <div>
+                        <p>1</p>
+                    </div>
+                </li>
+                <li class="form_2_progessbar">
+                    <div>
+                        <p>2</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="form_wrap">
+            <div class="form_1 data_info">
+                <h2>Sube tu Publicación</h2>
+                    <div class="form_container">
+                        <div class="input_wrap">
+                            <form:label id="label" path="titulo">Título Publicación:</form:label>
+                            <form:errors path="titulo"/>
+                            <form:input class="input" path="titulo" type="text" id="titulo" placeholder="Título" />
+                        </div>
+                        <div class="input_wrap">
+                            <form:label id="label" path="descripcion">Descripción:</form:label>
+                            <form:errors path="descripcion"/>
+                            <form:input class="input" path="descripcion" id="descripcion" rows="3" placeholder="Ejemplo: Pequeño" />
+                        </div>
+                        <div class="input_wrap">
+                            <form:label id="label" path="mascota">Mascota:</form:label>
+                            <form:select class="input" path="mascota">
+                                <c:forEach items="${mascota}" var="mascota">
+                                    <form:option value="${mascota.id}">
+                                        <c:out value="${mascota.nombre}"/>
+                                    </form:option>
+                                </c:forEach>
+                            </form:select>
+                        </div>
+                    </div>
+            </div>
+            <div class="form_2 data_info" style="display: none;">
+                <h2>Información de la Mascota</h2>
+                    <div class="form_container">
+                        <div class="input_wrap">
+                            <form:label id="label" path="ciudad">Mascota:</form:label>
+                            <form:select class="input" path="ciudad">
+                                <c:forEach items="${ciudad}" var="ciudades">
+                                    <form:option value="${ciudades.id}">
+                                        <c:out value="${ciudades.nombre}"/>
+                                    </form:option>
+                                </c:forEach>
+                            </form:select>
+                        </div>
+                        <div class="input_wrap">
+                            <form:label id="label" path="ciudad">Region:</form:label>
+                            <form:select class="input" path="ciudad">
+                                <c:forEach items="${region}" var="regiones">
+                                    <form:option value="${regiones.id}">
+                                        <c:out value="${regiones.nombre}"/>
+                                    </form:option>
+                                </c:forEach>
+                            </form:select>
+                        </div>
+                    </div>
+            </div>
+        <div class="btns_wrap">
+            <div class="common_btns form_1_btns">
+                <button type="button" class="btn_next">Siguiente<span class="icon"><ion-icon name="arrow-forward-sharp"></ion-icon></span></button>
+            </div>
+            <div class="common_btns form_2_btns" style="display: none;">
+                <button type="button" class="btn_back"><span class="icon"><ion-icon name="arrow-back-sharp"></ion-icon></span>Volver</button>
+                <input type="submit" value="Siguiente" type="button" class="btn_done"/>
+            </div>
+        </div>
     </div>
+    <div class="modal_wrapper">
+        <div class="shadow"></div>
+        <div class="success_wrap">
+            <span class="modal_icon"><ion-icon name="checkmark-sharp"></ion-icon></span>
+            <p>Has completado la informacion correctamente</p>
+        </div>
+    </div>
+    
+    </form:form>
 
-    <script src="js/home.js"></script>
+    <script src="js/publicacion.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body> 
 </html>
