@@ -13,7 +13,7 @@
     <!-- Bootstrap css -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <!-- css file -->
-    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="/css/home.css">
 
 </head>
 <body>
@@ -24,7 +24,7 @@
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3" >
         <div class="container-fluid">
             <a href="#" class="navbar-brand">
-                <img src="imagenes/Second Chance.png" class="logo" alt="logo home">
+                <img src="/imagenes/Second Chance.png" class="logo" alt="logo home">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -84,7 +84,7 @@
         <div class="video-wrap">
             <div id="video">
                 <video id="bgvid" autoplay loop muted playsinline>
-                    <source src="imagenes/videofondo.mp4" type="video/mp4">
+                    <source src="/imagenes/videofondo.mp4" type="video/mp4">
                 </video>
             </div>
         </div>
@@ -107,9 +107,9 @@
         <div class="row">
             <h2 class="text-center mt-4">Escoge a tu próximo peludo</h2>
             <ul class="animals d-flex justify-content-center " style="height: 120px; list-style: none;">
-                <li> <a href="/perro"><img src="imagenes/perrocollie.png" style="height: 100%;"></a></li>
-                <li><a href="/gato"><img src="imagenes/gatonaranja.png" style="height: 100%;"></a> </li>
-                <li> <a href="/exoticos"><img src="imagenes/conejo.png" style="height: 95%;"></a></li>
+                <li> <a href="/filtroanimal/perro"><img src="/imagenes/perrocollie.png" style="height: 100%;"></a></li>
+                <li><a href="/filtroanimal/gato"><img src="/imagenes/gatonaranja.png" style="height: 100%;"></a> </li>
+                <li> <a href="/filtroanimal/exoticos"><img src="/imagenes/conejo.png" style="height: 95%;"></a></li>
             </ul>
         </div>
     </div>
@@ -169,7 +169,7 @@
         <div class="container-fluid ">
             <nav class="row">
                 <a href="" class="col-3 text-reset text-uppercase d-flex align-items-center">
-                    <img src="imagenes/Second Chance.png" alt="logo second chance" class="logo mr-2" >
+                    <img src="/imagenes/Second Chance.png" alt="logo second chance" class="logo mr-2" >
                 </a>
                 <ul class="col-3 list-unstyled">
                     <li class="font-weight-bold text-uppercase">Teléfonos</li>
@@ -188,7 +188,7 @@
         </div>
     </footer>
 
-    <script src="js/home.js"></script>
+    <script src="/js/home.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 </html>

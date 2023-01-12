@@ -119,9 +119,14 @@
 						</select>
 					</div>
 					<div class="input_wrap">
-						<form:label path="edad">Edad:</form:label>
-						<form:errors path="edad"/>
-						<form:input class="input" path="tamano" type="text"  name="edad" id="edad"/>
+						<form:label path="mascota">Tipo de Animal</form:label>
+						<form:select path="tipoanimal">
+							<c:forEach items="${tipodeanimal}" var="tipodeanimal">
+								<form:option value="${tipodeanimal.id}">
+									<c:out value="${tipodeanimal.nombre}"/>
+								</form:option>
+							</c:forEach>
+						</form:select>
 					</div>
 				</div>
 		</div>
@@ -129,16 +134,19 @@
 			<h2>Información de la Mascota</h2>
 				<div class="form_container">
 					<div class="input_wrap">
-						<label for="user_name">User Name</label>
-						<input type="text" name="User Name" class="input" id="user_name">
+						<form:label path="edad">Edad:</form:label>
+						<form:errors path="edad"/>
+						<form:input class="input" path="edad" type="text"  name="edad" id="edad"/>
 					</div>
 					<div class="input_wrap">
-						<label for="first_name">First Name</label>
-						<input type="text" name="First Name" class="input" id="first_name">
+						<form:label path="sexo">Sexo:</form:label>
+						<form:errors path="sexo"/>
+						<form:input class="input" path="sexo" type="text"  name="sexo" id="sexo"/>
 					</div>
 					<div class="input_wrap">
-						<label for="last_name">Last Name</label>
-						<input type="text" name="Last Name" class="input" id="last_name">
+						<form:label path="personalidad">Personalidad</form:label>
+						<form:errors path="personalidad"/>
+						<form:input class="input" path="personalidad" type="text"  name="personalidad" id="personalidad"/>
 					</div>
 				</div>
 		</div>
@@ -146,31 +154,27 @@
 			<h2>Información de la Mascota</h2>
 				<div class="form_container">
 					<div class="input_wrap">
-						<label for="company">Current Company</label>
-						<input type="text" name="Current Company" class="input" id="company">
+						<form:label path="energia">Energia</form:label>
+						<form:errors path="energia"/>
+						<form:input class="input" path="energia" type="number"  name="energia" id="energia"/>
 					</div>
 					<div class="input_wrap">
-						<label for="experience">Total Experience</label>
-						<input type="text" name="Total Experience" class="input" id="experience">
-					</div>
-					<div class="input_wrap">
-						<label for="designation">Designation</label>
-						<input type="text" name="Designation" class="input" id="designation">
+						<input type="file" class="form-control bottom" name="postFile">
 					</div>
 				</div>
 		</div>
 	</div>
 	<div class="btns_wrap">
 		<div class="common_btns form_1_btns">
-			<button type="button" class="btn_next">Next <span class="icon"><ion-icon name="arrow-forward-sharp"></ion-icon></span></button>
+			<button type="button" class="btn_next">Siguiente<span class="icon"><ion-icon name="arrow-forward-sharp"></ion-icon></span></button>
 		</div>
 		<div class="common_btns form_2_btns" style="display: none;">
-			<button type="button" class="btn_back"><span class="icon"><ion-icon name="arrow-back-sharp"></ion-icon></span>Back</button>
-			<button type="button" class="btn_next">Next <span class="icon"><ion-icon name="arrow-forward-sharp"></ion-icon></span></button>
+			<button type="button" class="btn_back"><span class="icon"><ion-icon name="arrow-back-sharp"></ion-icon></span>Volver</button>
+			<button type="button" class="btn_next">Siguiente<span class="icon"><ion-icon name="arrow-forward-sharp"></ion-icon></span></button>
 		</div>
 		<div class="common_btns form_3_btns" style="display: none;">
-			<button type="button" class="btn_back"><span class="icon"><ion-icon name="arrow-back-sharp"></ion-icon></span>Back</button>
-			<button type="button" class="btn_done">Done</button>
+			<button type="button" class="btn_back"><span class="icon"><ion-icon name="arrow-back-sharp"></ion-icon></span>Volver</button>
+			<input type="submit" value="Siguiente" type="button" class="btn_done"/>
 		</div>
 	</div>
 </div>

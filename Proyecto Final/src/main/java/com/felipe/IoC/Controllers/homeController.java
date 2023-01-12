@@ -35,10 +35,23 @@ public class homeController {
         this.tipoAnimalService = tipoAnimalService;
         this.regionService = regionService;
     }
-    
-    @GetMapping(value ={"/{tipodeanimal}","/"})
-    public String home(@PathVariable(value = "tipodeanimal", required = false)String tipodeanimal,
-                        Model model, HttpSession session){
+
+    @GetMapping(value ={"/"})
+    public String home_inicial(Model model, HttpSession session){
+        Long id = (Long)session.getAttribute("userId");
+        if (id!=null) {
+            User user =  userService.findById(id);
+            model.addAttribute("user", user);
+        }
+        List<Mascota> mascota;
+        mascota = mascotaService.findAll();
+        model.addAttribute("mascota", mascota);
+        return "home";
+    }
+
+
+    @GetMapping(value ={"/filtroanimal/{tipodeanimal}"})
+    public String homeFiltroMascota(@PathVariable(value = "tipodeanimal", required = false) String tipodeanimal, Model model, HttpSession session){
         Long id = (Long)session.getAttribute("userId");
         if (id!=null) {
             User user =  userService.findById(id);
@@ -52,13 +65,14 @@ public class homeController {
             mascota = mascotaService.findAllByTipoAnimal(tipoAnimal);
             System.out.println(mascota);
         }
+
         model.addAttribute("mascota", mascota);
         return "home";
     }
 
     //para intentar filtrar las regiones
-    // @GetMapping(value ={"/{region}","/"})
-    // public String homee(@PathVariable(value = "region", required = false)String region,
+    // @GetMapping(value ={"/filtroregion/{region}"})
+    // public String homeeregion(@PathVariable(value = "region", required = false)Long regionId,
     //                     Model model, HttpSession session){
     //     Long id = (Long)session.getAttribute("userId");
     //     if (id!=null) {
@@ -126,5 +140,4 @@ public class homeController {
         }
         return "comoAdoptar";
     }
-
 }
