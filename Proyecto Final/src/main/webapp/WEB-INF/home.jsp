@@ -104,7 +104,7 @@
             <ul class="animals d-flex justify-content-center " style="height: 120px; list-style: none;">
                 <li> <a href="/filtroanimal/perro"><img src="/imagenes/perrocollie.png" style="height: 100%;"></a></li>
                 <li><a href="/filtroanimal/gato"><img src="/imagenes/gatonaranja.png" style="height: 100%;"></a> </li>
-                <li> <a href="/filtroanimal/exoticos"><img src="/imagenes/conejo.png" style="height: 95%;"></a></li>
+                <li> <a href="/filtroanimal/conejo"><img src="/imagenes/conejo.png" style="height: 95%;"></a></li>
             </ul>
         </div>
     </div>
