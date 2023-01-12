@@ -18,10 +18,10 @@
     <link rel="stylesheet" href="css/dona.css">
 </head>
   <body>
-     <!-- Navbar -->
-     <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3" >
+    <!-- Navbar -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3" >
         <div class="container-fluid">
-            <a href="#" class="navbar-brand">
+            <a href="/" class="navbar-brand">
                 <img src="/imagenes/Second Chance.png" class="logo" alt="logo home">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,13 +30,13 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav" style="margin-left: auto;">
                 <li class="nav-item">
-                    <a class="nav-link text-white" aria-current="page" href="#">Inicio</a>
+                    <a class="nav-link text-white" aria-current="page" href="/">Inicio</a>
                 </li>
                 <li class="nav-item" style="display: inline-block;">
                     <a class="nav-link text-white" href="/quienesSomos">¿Quiénes somos?</a>
                 </li>
                 <li class="nav-item" style="display: inline-block;">
-                    <a class="nav-link text-white" href="como-Adoptar-A-Tu-Mascota">¿Cómo adoptar a tu mascota?</a>
+                    <a class="nav-link text-white" href="/como-Adoptar-A-Tu-Mascota">¿Cómo adoptar a tu mascota?</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -44,7 +44,7 @@
                         </a>
                         <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="/dona">Dona</a></li>
-                        <li><a class="dropdown-item" href="hazteSocio">Hazte socio</a></li>
+                        <li><a class="dropdown-item" href="/hazteSocio">Hazte socio</a></li>
                         <li><a class="dropdown-item" href="/fundaciones">Fundaciones</a></li>
                         </ul>
                 </li>            
