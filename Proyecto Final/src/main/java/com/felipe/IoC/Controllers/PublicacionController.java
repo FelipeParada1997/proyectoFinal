@@ -158,6 +158,7 @@ public class PublicacionController {
         } else {
             Long id = (Long) session.getAttribute("userId");
             User u = userService.findById(id);
+
             publicacion.setUser(u);
             publicacionService.save(publicacion);
             return "redirect:/";

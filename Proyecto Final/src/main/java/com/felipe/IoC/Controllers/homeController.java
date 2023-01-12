@@ -39,14 +39,12 @@ public class homeController {
 
     @GetMapping(value ={"/"})
     public String home_inicial(Model model, HttpSession session){
-        Long id = (Long)session.getAttribute("userId");
-        if (id!=null) {
-            User user =  userService.findById(id);
+        if ((Long)session.getAttribute("userId")!=null) {
+            
+            User user =  userService.findById((Long)session.getAttribute("userId"));
             model.addAttribute("user", user);
         }
         List<Mascota> mascota;
-        Publicacion publicacion = publicacionService.findById(id);
-        model.addAttribute("publicacion", publicacion);
         mascota = mascotaService.findAll();
         model.addAttribute("mascota", mascota);
         return "home";
