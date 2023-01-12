@@ -17,7 +17,7 @@ public abstract class BaseService<T> implements IService<T>{
     private final BaseRepository<T> baseRepository;
 
 
-//-----------------------------------------------------------------------------------------------
+    //-----------------------------------------------------------------------------------------------
     @Override
     public void delete(Long id) {
         T entity = findById(id);
@@ -28,7 +28,7 @@ public abstract class BaseService<T> implements IService<T>{
 
     @Override
     public List<T> findAll() {
-    return baseRepository.findAll();
+        return baseRepository.findAll();
     }
 
     @Override
@@ -48,3 +48,4 @@ public abstract class BaseService<T> implements IService<T>{
     }
 
 }
+

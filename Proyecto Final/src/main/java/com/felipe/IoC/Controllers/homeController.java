@@ -1,26 +1,135 @@
 package com.felipe.IoC.Controllers;
 
+import com.felipe.IoC.Models.Mascota;
+import com.felipe.IoC.Models.TipoAnimal;
+import com.felipe.IoC.Models.User;
+import com.felipe.IoC.Services.*;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
-import com.felipe.IoC.Services.MascotaService;
-import com.felipe.IoC.Services.PublicacionService;
-import com.felipe.IoC.Services.UserService;
+import javax.servlet.http.HttpSession;
+import java.util.List;
 
 @Controller
 public class homeController {
     private final PublicacionService publicacionService;
     private final MascotaService mascotaService;
     private final UserService userService;
+    private final TipoAnimalService tipoAnimalService;
+    private final RegionService regionService;
 
-    public homeController(PublicacionService publicacionService, MascotaService mascotaService, UserService userService){
+    public homeController(PublicacionService publicacionService, MascotaService mascotaService, UserService userService, TipoAnimalService tipoAnimalService, RegionService regionService){
         this.publicacionService = publicacionService;
         this.mascotaService = mascotaService;
         this.userService = userService;
+        this.tipoAnimalService = tipoAnimalService;
+        this.regionService = regionService;
     }
-    
-    @GetMapping("/principal") //GET Mostrar publicaciones
-    public String principal(){
-        return "home2.jsp";
+
+    @GetMapping(value ={"/"})
+    public String home_inicial(Model model, HttpSession session){
+        Long id = (Long)session.getAttribute("userId");
+        if (id!=null) {
+            User user =  userService.findById(id);
+            model.addAttribute("user", user);
+        }
+        List<Mascota> mascota;
+        mascota = mascotaService.findAll();
+        model.addAttribute("mascota", mascota);
+        return "home";
+    }
+
+
+    @GetMapping(value ={"/filtroanimal/{tipodeanimal}"})
+    public String homeFiltroMascota(@PathVariable(value = "tipodeanimal", required = false) String tipodeanimal, Model model, HttpSession session){
+        Long id = (Long)session.getAttribute("userId");
+        if (id!=null) {
+            User user =  userService.findById(id);
+            model.addAttribute("user", user);
+        }
+        List<Mascota> mascota;
+        if (tipodeanimal == null){
+            mascota = mascotaService.findAll();
+        }else{
+            TipoAnimal tipoAnimal = tipoAnimalService.findTipoAnimalBytipoDeAnimal(tipodeanimal);
+            mascota = mascotaService.findAllByTipoAnimal(tipoAnimal);
+            System.out.println(mascota);
+        }
+
+        model.addAttribute("mascota", mascota);
+        return "home";
+    }
+
+    //para intentar filtrar las regiones
+    // @GetMapping(value ={"/filtroregion/{region}"})
+    // public String homeeregion(@PathVariable(value = "region", required = false)Long regionId,
+    //                     Model model, HttpSession session){
+    //     Long id = (Long)session.getAttribute("userId");
+    //     if (id!=null) {
+    //         User user =  userService.findById(id);
+    //         model.addAttribute("user", user);
+    //     }
+    //     List<Mascota> mascota;
+    //     if (region == null){
+    //         mascota = mascotaService.findAll();
+    //     }else{
+    //         Region regione = regionService.findRegionByNombre(region);
+    //         mascota = mascotaService.findAllByRegion();
+    //         System.out.println(mascota);
+    //     }
+    //     model.addAttribute("mascota", mascota);
+    //     return "home";
+    // }
+
+    @GetMapping("/quienesSomos")
+    public String quienSomos(Model model, HttpSession session){
+        Long id = (Long)session.getAttribute("userId");
+        if (id!=null) {
+            User user =  userService.findById(id);
+            model.addAttribute("user", user);
+        }
+        return "quienesSomos";
+    }
+
+    @GetMapping("/dona")
+    public String donacion(Model model,HttpSession session){
+        Long id = (Long)session.getAttribute("userId");
+        if (id!=null) {
+            User user =  userService.findById(id);
+            model.addAttribute("user", user);
+        }
+        return "dona";
+    }
+
+    @GetMapping("/hazteSocio")
+    public String hasteSocio(Model model,HttpSession session){
+        Long id = (Long)session.getAttribute("userId");
+        if (id!=null) {
+            User user =  userService.findById(id);
+            model.addAttribute("user", user);
+        }
+        return "hazteSocio";
+    }
+
+    @GetMapping("/fundaciones")
+    public String fundaciones(Model model, HttpSession session){
+        Long id = (Long)session.getAttribute("userId");
+        if (id!=null) {
+            User user =  userService.findById(id);
+            model.addAttribute("user", user);
+        }
+        return "fundaciones";
+    }
+
+    @GetMapping("/como-Adoptar-A-Tu-Mascota")
+    public String comoAdoptar(Model model, HttpSession session){
+        Long id = (Long)session.getAttribute("userId");
+        if (id!=null) {
+            User user =  userService.findById(id);
+            model.addAttribute("user", user);
+        }
+        return "comoAdoptar";
     }
 }

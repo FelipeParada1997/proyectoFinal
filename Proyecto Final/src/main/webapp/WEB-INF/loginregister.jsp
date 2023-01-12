@@ -29,35 +29,47 @@ integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav" style="margin-left: auto;">
                     <li class="nav-item">
-                        <a class="nav-link text-white" aria-current="page" href="/">Inicio</a>
+                        <a class="nav-link text-white" aria-current="page" href="#">Inicio</a>
                     </li>
                     <li class="nav-item" style="display: inline-block;">
-                        <a class="nav-link text-white" href="/quienesSomos">¿Quíenes somos?</a>
+                        <a class="nav-link text-white" href="/quienesSomos">¿Quiénes somos?</a>
                     </li>
                     <li class="nav-item" style="display: inline-block;">
-                        <a class="nav-link text-white" href="/como-Adoptar-A-Tu-Mascota">¿Cómo adoptar a tu mascota?</a>
+                        <a class="nav-link text-white" href="#">¿Cómo adoptar a tu mascota?</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            ¿Como ayudar?
+                            ¿Cómo ayudar?
                             </a>
                             <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="/dona">Dona</a></li>
-                            <li><a class="dropdown-item" href="/hazteSocio">Hazte socio</a></li>
-                            <li><a class="dropdown-item" href="/fundaciones">Fundaciones</a></li>
+                            <li><a class="dropdown-item" href="#">Hazte socio</a></li>
+                            <li><a class="dropdown-item" href="#">Fundaciones</a></li>
                             </ul>
                     </li>
-                    <li class="nav-item dropdown text-white">
-                        <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-person-fill"></i> Mi cuenta</a>
-                        <ul class="dropdown-menu">
 
-                         <%-- colocar un if --%>
-                        <li><a class="dropdown-item" href="/iniciasesion/registrate">Registro</a></li>
-                        <li><a class="dropdown-item" href="/iniciasesion/registrate">Inicio sesión</a></li>
+                        <c:if test="${userId == null}">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-person-fill"></i>
+                                Bienvenido
+                                </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="/iniciasesion/registrate">Registro/Inicio</a></li>
+                            </ul>
+                        </c:if>
+                        <c:if test="${userId != null}">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-person-fill"></i>
+                                <c:out value="${user.nombre}"></c:out>
+                                </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Mi perfil</a></li>
+                                <li><a class="dropdown-item" href="/misesion">Mi sesion</a></li>
+                                <li><a class="dropdown-item" href="/adopcion">Crear publicacion</a></li>
+                                <li><a class="dropdown-item" href="/salir">Cerrar sesión</a></li>
+                            </ul>
+                        </c:if>
 
-                        <li><a class="dropdown-item" href="/miPerfil">Mi perfil</a></li>
-                        <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
-                        </ul>
                     </li>
                     </ul>
                 </div>

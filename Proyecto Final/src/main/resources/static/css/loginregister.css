@@ -16,16 +16,6 @@ body{
     background-size: cover;
 }
 
-.navbar{
-    background-color: black;
-
-}
-.logo{
-    width: 160px;
-}
-.contenedorDeTodo{
-     margin-top: 100px;
-}
 .wrapper{
     position: relative;
     width: 400px;
@@ -177,4 +167,3 @@ button{
 .social-icons a:hover i {
     color: rgba(0, 0, 0, .3);
 }
-

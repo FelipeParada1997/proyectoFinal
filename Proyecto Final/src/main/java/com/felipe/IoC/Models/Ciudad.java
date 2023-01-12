@@ -15,12 +15,8 @@ import lombok.Setter;
 @Getter
 @Entity
 @Table(name = "ciudades")
-public class Ciudad{
+public class Ciudad extends Base{
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    
     @NotBlank
     private String nombre;
 

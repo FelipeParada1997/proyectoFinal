@@ -68,7 +68,7 @@ video{
 
 /* imagenes pie video animales */
 .animals li {
-    cursor: pointer; 
+    cursor: pointer;
 }
 /* .animals li img{max-width: 100px; }  */
 
@@ -82,7 +82,7 @@ video{
     width: 300px;
     border-radius: 25px;
     overflow: hidden;
-    border: 9px solid #1ebba3; 
+    border: 9px solid #1ebba3;
     position: relative;
     margin-top: 30px;
     margin-left: 40px;
@@ -118,7 +118,7 @@ video{
 
 .card-title{
     text-transform: uppercase;
-    font-size: 50px;
+    font-size: 30px;
     font-weight: 500;
 }
 
@@ -156,7 +156,7 @@ video{
 }
 
 .previous-page, .next-page{
-    background: #000;
+    background: 0;
     width: 80px;
     border-radius: 85px;
     cursor: pointer;
@@ -185,8 +185,6 @@ video{
 .disable{
     background: rgb(187, 185, 185);
 }
-
-
 
 
 

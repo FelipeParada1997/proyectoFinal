@@ -15,16 +15,12 @@ import lombok.Setter;
 @Getter
 @Entity
 @Table(name = "regiones")
-public class Region{
+public class Region extends Base {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    
     @NotBlank
     private String nombre;
 
     @OneToMany(mappedBy="region", fetch = FetchType.LAZY)
     private List<Ciudad> ciudades;
-    
+
 }

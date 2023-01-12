@@ -58,14 +58,16 @@ public class Mascota extends Base{
     @JoinColumn(name="user_id")
     private User user;
 
+    private String ubicacion;
+
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
-        name = "vacunas_animales", 
-        joinColumns = @JoinColumn(name = "animal_id"), 
-        inverseJoinColumns = @JoinColumn(name = "vacunas_id")
+            name = "vacunas_animales",
+            joinColumns = @JoinColumn(name = "animal_id"),
+            inverseJoinColumns = @JoinColumn(name = "vacunas_id")
     )
 
     private List<Vacuna> vacunas;
 
-    }
+}
 

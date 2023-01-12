@@ -48,5 +48,5 @@ public class Publicacion extends Base{
     @JoinColumn(name="ciudad_id")
     private Ciudad ciudad;
 
-    
+
 }
