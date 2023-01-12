@@ -18,8 +18,8 @@
 </head>
 <body>
 
-     <!-- Navbar -->
-     <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3"  >
+    <!-- Navbar -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3 ml-4"  >
         <div class="container-fluid">
             <a href="#" class="navbar-brand">
                 <img src="imagenes/Second Chance.png" class="logo" alt="logo home">
@@ -93,11 +93,6 @@
                         <p>2</p>
                     </div>
                 </li>
-                <li class="form_3_progessbar">
-                    <div>
-                        <p>3</p>
-                    </div>
-                </li>
             </ul>
         </div>
         <div class="form_wrap">
@@ -112,11 +107,11 @@
                         <div class="input_wrap">
                             <form:label id="label" path="descripcion">Descripción:</form:label>
                             <form:errors path="descripcion"/>
-                            <form:input class="input" path="descripcion" class="textarea" id="descripcion" rows="3" placeholder="Ejemplo: Pequeño" />
+                            <form:input class="input" path="descripcion" id="descripcion" rows="3" placeholder="Ejemplo: Pequeño" />
                         </div>
                         <div class="input_wrap">
-                            <form:label path="mascota">Mascota:</form:label>
-                            <form:select path="mascota">
+                            <form:label id="label" path="mascota">Mascota:</form:label>
+                            <form:select class="input" path="mascota">
                                 <c:forEach items="${mascota}" var="mascota">
                                     <form:option value="${mascota.id}">
                                         <c:out value="${mascota.nombre}"/>
@@ -130,8 +125,8 @@
                 <h2>Información de la Mascota</h2>
                     <div class="form_container">
                         <div class="input_wrap">
-                            <form:label path="ciudad">Mascota:</form:label>
-                            <form:select path="ciudad">
+                            <form:label id="label" path="ciudad">Mascota:</form:label>
+                            <form:select class="input" path="ciudad">
                                 <c:forEach items="${ciudad}" var="ciudades">
                                     <form:option value="${ciudades.id}">
                                         <c:out value="${ciudades.nombre}"/>
@@ -140,8 +135,8 @@
                             </form:select>
                         </div>
                         <div class="input_wrap">
-                            <form:label path="ciudad">Region:</form:label>
-                            <form:select path="ciudad">
+                            <form:label id="label" path="ciudad">Region:</form:label>
+                            <form:select class="input" path="ciudad">
                                 <c:forEach items="${region}" var="regiones">
                                     <form:option value="${regiones.id}">
                                         <c:out value="${regiones.nombre}"/>
