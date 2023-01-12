@@ -108,7 +108,7 @@
 
         <!-- Footer -->
         <footer class="footer fixed-down footer-expand-lg bg-dark p-md-3 mt-4">
-            <div class="container-fluid ">
+            <div class="container-fluid text-white">
                 <nav class="row">
                     <a href="" class="col-3 text-reset text-uppercase d-flex align-items-center">
                         <img src="/imagenes/Second Chance.png" width="30%" alt="logo second chance" class="logo mr-2" >
