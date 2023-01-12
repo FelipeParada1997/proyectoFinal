@@ -77,7 +77,7 @@
 
 <!-- MAIN -->
 <div class="container">
-    <div class="row row-cols-2">
+    <div class="row">
       <div class="col">
         <h1 class="titulo">Cómo adoptar a tu mascota</h1>
         <h2 class="subTitulo ">Bienvenidos a Second Chance</h2>
@@ -85,12 +85,12 @@
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. At eaque natus eos aliquid, velit nisi laborum ad reprehenderit nam adipisci, tempore corporis iure quae sequi porro a tenetur non quam.</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis quidem aspernatur numquam, excepturi vero, officia architecto voluptas quasi temporibus sed eaque reprehenderit explicabo. Harum, fugit cupiditate! Iste ratione eius odio.</p>
       
-    </div>
-      <div class="col">
+        </div>
+
         
       </div>
-    </div>
-  </div>
+</div>
+
 
 
       <!-- Footer -->
