@@ -105,7 +105,7 @@
     <!--start animales bajo video  -->
     <div class="container-lg">
         <div class="row">
-            <h2 class="text-center mt-4">Escoge a tu próximo peludo</h2>
+            <h2 class="text-center mt-4">Busca a tu próximo compañero</h2>
             <ul class="animals d-flex justify-content-center " style="height: 120px; list-style: none;">
                 <li> <a href="/filtroanimal/perro"><img src="/imagenes/perrocollie.png" style="height: 100%;"></a></li>
                 <li><a href="/filtroanimal/gato"><img src="/imagenes/gatonaranja.png" style="height: 100%;"></a> </li>
@@ -137,36 +137,10 @@
         </div>
     </c:forEach>
 
-    </div>
-    <div class="container-lg">
-        <div class="row">
-            <h2 class="text-center mt-4">Escoge a tu próximo peludo</h2>
-            <ul class="animals d-flex justify-content-center " style="height: 120px; list-style: none;">
-                <li> <a href="/XVARICAYPARINACOTA">Arica</a></li>
-                <li><a href="/">nada</a></li>
-                <li> <a href="/">nada</a></li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- Pagination -->
-
-<div class="pagination justify-content-center">
-    <div class="page-item previous-pag"><a href="#" class="page-link">Prev</a></div>
-    <div class="page-item current-page"><a href="#" class="page-link">1</a></div>
-    <div class="page-item dots"><a href="#" class="page-link">...</a></div>
-    <div class="page-item current-page"><a href="#" class="page-link">5</a></div>
-    <div class="page-item current-page"><a href="#" class="page-link">6</a></div>
-    <div class="page-item dots"><a href="#" class="page-link">...</a></div>
-    <div class="page-item current-page"><a href="#" class="page-link">10</a></div>
-    <div class="page-item next-page"><a href="#" class="page-link">Next</a></div>
-</div>
-
-
 
     <!-- Footer -->
     <footer class="footer fixed-down footer-expand-lg bg-dark p-md-3 mt-4">
-        <div class="container-fluid ">
+        <div class="container-fluid text-white">
             <nav class="row">
                 <a href="" class="col-3 text-reset text-uppercase d-flex align-items-center">
                     <img src="/imagenes/Second Chance.png" alt="logo second chance" class="logo mr-2" >

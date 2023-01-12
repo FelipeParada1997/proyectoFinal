@@ -191,6 +191,30 @@
 
 </form:form>
 
+    <!-- Footer -->
+    <footer class="footer fixed-down footer-expand-lg bg-dark p-md-3 mt-4">
+        <div class="container-fluid text-white">
+            <nav class="row">
+                <a href="" class="col-3 text-reset text-uppercase d-flex align-items-center">
+                    <img src="/imagenes/Second Chance.png" alt="logo second chance" class="logo mr-2" >
+                </a>
+                <ul class="col-3 list-unstyled">
+                    <li class="font-weight-bold text-uppercase">Teléfonos</li>
+                    <li><a href="#" class="text-reset">(22) 37825605</a></li>
+                    <li><a href="#" class="text-reset">(+569) 83750182</a></li>
+                </ul>
+                <ul class="col-3 list-unstyled">
+                    <li class="font-weight-bold text-uppercase">Dirección</li>
+                    <li><a href="#" class="text-reset">Av. las rosas comuna La Dehesa</a></li>
+                </ul>
+                <ul class="col-3 list-unstyled">
+                    <li class="font-weight-bold text-uppercase">Email</li>
+                    <li><a href="#" class="text-reset">secondChance@gmail.com</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
 
     <script src="/js/adopcion.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
