@@ -17,7 +17,7 @@ pageEncoding="UTF-8"%>
 <body>
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3" >
             <div class="container-fluid">
-                <a href="#" class="navbar-brand">
+                <a href="/" class="navbar-brand">
                     <img src="/imagenes/Second Chance.png" class="logo" alt="logo home">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,7 +32,7 @@ pageEncoding="UTF-8"%>
                         <a class="nav-link text-white" href="/quienesSomos">¿Quiénes somos?</a>
                     </li>
                     <li class="nav-item" style="display: inline-block;">
-                        <a class="nav-link text-white" href="#">¿Cómo adoptar a tu mascota?</a>
+                        <a class="nav-link text-white" href="/como-Adoptar-A-Tu-Mascota">¿Cómo adoptar a tu mascota?</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -40,8 +40,8 @@ pageEncoding="UTF-8"%>
                             </a>
                             <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="/dona">Dona</a></li>
-                            <li><a class="dropdown-item" href="#">Hazte socio</a></li>
-                            <li><a class="dropdown-item" href="#">Fundaciones</a></li>
+                            <li><a class="dropdown-item" href="hazteSocio">Hazte socio</a></li>
+                            <li><a class="dropdown-item" href="fundaciones">Fundaciones</a></li>
                             </ul>
                     </li>
 

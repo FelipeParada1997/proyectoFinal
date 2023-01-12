@@ -36,7 +36,7 @@
                     <a class="nav-link text-white" href="/quienesSomos">¿Quiénes somos?</a>
                 </li>
                 <li class="nav-item" style="display: inline-block;">
-                    <a class="nav-link text-white" href="#">¿Cómo adoptar a tu mascota?</a>
+                    <a class="nav-link text-white" href="como-Adoptar-A-Tu-Mascota">¿Cómo adoptar a tu mascota?</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

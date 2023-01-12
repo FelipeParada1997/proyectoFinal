@@ -32,7 +32,7 @@ pageEncoding="UTF-8"%>
                         <a class="nav-link text-white" href="/quienesSomos">¿Quiénes somos?</a>
                     </li>
                     <li class="nav-item" style="display: inline-block;">
-                        <a class="nav-link text-white" href="#">¿Cómo adoptar a tu mascota?</a>
+                        <a class="nav-link text-white" href="/como-Adoptar-A-Tu-Mascota">¿Cómo adoptar a tu mascota?</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -40,8 +40,8 @@ pageEncoding="UTF-8"%>
                             </a>
                             <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="/dona">Dona</a></li>
-                            <li><a class="dropdown-item" href="#">Hazte socio</a></li>
-                            <li><a class="dropdown-item" href="#">Fundaciones</a></li>
+                            <li><a class="dropdown-item" href="/hazteSocio">Hazte socio</a></li>
+                            <li><a class="dropdown-item" href="/fundaciones">Fundaciones</a></li>
                             </ul>
                     </li>
 
@@ -83,6 +83,9 @@ pageEncoding="UTF-8"%>
                 los tipicos vacios que quedan a la hora de adoptar en otras redes sociales las cuales no estan hechas especialmente para esto.
                 </p><p>Nuestra organizacion es sin fines de lucro por lo que las donaciones se van directamente para mejorar nuestra pagina, y asi ir 
                     prosperando y agilizando las adopciones para todos los animalitos.</p>
+                    <p>Misión: Nuestra misión es mejorar la vida de los animales no deseados a través de la adopción consciente y el cuidado responsable. Trabajamos incansablemente para encontrar hogares amorosos y permanentes para cada animal que entra en nuestra organización, y educar a la comunidad sobre la importancia de la esterilización y el cuidado apropiado de los animales.
+
+                        </p> <p>Visión: Nuestra visión es un mundo en el que todos los animales sean valorados y cuidados adecuadamente, y donde no haya más animales sin hogar. Trabajamos para alcanzar esta visión mediante la promoción de la adopción responsable, la esterilización y el cuidado apropiado de los animales, y la educación a la comunidad. Juntos, creemos que podemos lograr un futuro en el que todos los animales tengan un hogar seguro y amoroso.</p>
             
         </div>
         <div class="animacion col">
