@@ -166,6 +166,4 @@ public class PublicacionController {
             return "redirect:/";
         }
     }
-
-
 }
