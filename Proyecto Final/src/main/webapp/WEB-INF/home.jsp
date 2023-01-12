@@ -111,7 +111,7 @@
     </div>
 
     <!-- Publicaciones desde 117 a 131 forich-->
-    <div class="main d-flex flex-wrap justify-content-evenly" id="seccion_cards">
+    <div class="main d-flex flex-wrap justify-content-evenly mx-5" id="seccion_cards">
         <c:forEach items="${mascota}" var="mascota">
         <div class="row">
             <div class=" col-md card-content">
@@ -135,27 +135,13 @@
 
     </div>
     <div class="container-lg">
-        <div class="row">
-            <h2 class="text-center mt-4">Escoge a tu próximo peludo</h2>
-            <ul class="animals d-flex justify-content-center " style="height: 120px; list-style: none;">
-                <li> <a href="/XVARICAYPARINACOTA">Arica</a></li>
-                <li><a href="/">nada</a></li>
-                <li> <a href="/">nada</a></li>
-            </ul>
-        </div>
+
     </div>
 
     <!-- Pagination -->
 
 <div class="pagination justify-content-center">
-    <div class="page-item previous-pag"><a href="#" class="page-link">Prev</a></div>
-    <div class="page-item current-page"><a href="#" class="page-link">1</a></div>
-    <div class="page-item dots"><a href="#" class="page-link">...</a></div>
-    <div class="page-item current-page"><a href="#" class="page-link">5</a></div>
-    <div class="page-item current-page"><a href="#" class="page-link">6</a></div>
-    <div class="page-item dots"><a href="#" class="page-link">...</a></div>
-    <div class="page-item current-page"><a href="#" class="page-link">10</a></div>
-    <div class="page-item next-page"><a href="#" class="page-link">Next</a></div>
+
 </div>
 
 

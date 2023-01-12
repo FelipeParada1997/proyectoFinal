@@ -78,7 +78,7 @@
     </nav>
 
 
-    <div class="container">
+    <div class="container" style="margin-bottom: 150px;">
         <div class="row row-cols-2">
           <div class="col">
                 <h1 class="titulo">Quienes Somos</h1>

@@ -23,7 +23,7 @@
             <form:label path="tamano">tamaño</form:label>
             <form:errors path="tamano"/>
             <form:select  path="tamano">
-                <form:option value="pequeño"/>
+                <form:option value="Pequeño"/>
                 <form:option value="Mediano"/>
                 <form:option value="Grande"/>
             </form:select>

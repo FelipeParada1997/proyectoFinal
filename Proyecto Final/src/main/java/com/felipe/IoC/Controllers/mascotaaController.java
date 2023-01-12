@@ -164,7 +164,7 @@ public class mascotaaController {
                 System.out.println("ocurrio un error al cargar la imagen." + e);
             }
         }
-        return "redirect:/publicacion/{id}/edit"; 
+        return "redirect:/"; 
         }
     }
 

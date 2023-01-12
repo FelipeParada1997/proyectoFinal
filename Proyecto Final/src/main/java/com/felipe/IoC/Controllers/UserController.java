@@ -1,5 +1,7 @@
 package com.felipe.IoC.Controllers;
 
+import java.util.List;
+
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
@@ -12,7 +14,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.felipe.IoC.Models.Mascota;
 import com.felipe.IoC.Models.User;
+import com.felipe.IoC.Services.MascotaService;
 import com.felipe.IoC.Services.PublicacionService;
 import com.felipe.IoC.Services.UserService;
 
@@ -20,10 +24,12 @@ import com.felipe.IoC.Services.UserService;
 public class UserController {
     private final UserService userService;
     private final PublicacionService publicacionService;
+    private final MascotaService mascotaService;
 
-    public UserController(UserService userService, PublicacionService publicacionService) {
+    public UserController(UserService userService, PublicacionService publicacionService, MascotaService mascotaService) {
         this.userService = userService;
         this.publicacionService = publicacionService;
+        this.mascotaService = mascotaService;
     }
 
 
@@ -73,6 +79,16 @@ public class UserController {
             model.addAttribute("error", "porfavor intente otra vez");
             return "inicio";
         }
+    }
+
+    @GetMapping("/userSesion")
+    public String userSesion(Model model, HttpSession session){
+    Long userId = (Long) session.getAttribute("userId");
+    User u = userService.findById(userId);
+    model.addAttribute("user", u);
+    List<Mascota> m = mascotaService.findAll();
+    model.addAttribute("mascota", m);
+    return "Mi_Cuenta";
     }
 }
     //---------------------------------------------Home--------------------------------------------------

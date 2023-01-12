@@ -125,7 +125,7 @@
                 <h2>Información de la Mascota</h2>
                     <div class="form_container">
                         <div class="input_wrap">
-                            <form:label id="label" path="ciudad">Mascota:</form:label>
+                            <form:label id="label" path="ciudad">Ciudad:</form:label>
                             <form:select class="input" path="ciudad">
                                 <c:forEach items="${ciudad}" var="ciudades">
                                     <form:option value="${ciudades.id}">
