@@ -82,8 +82,22 @@
         <h1 class="titulo">Cómo adoptar a tu mascota</h1>
         <h2 class="subTitulo ">Bienvenidos a Second Chance</h2>
 
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. At eaque natus eos aliquid, velit nisi laborum ad reprehenderit nam adipisci, tempore corporis iure quae sequi porro a tenetur non quam.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis quidem aspernatur numquam, excepturi vero, officia architecto voluptas quasi temporibus sed eaque reprehenderit explicabo. Harum, fugit cupiditate! Iste ratione eius odio.</p>
+        <p>Cómo tener una adopcion responsable</p>
+        <p>Para tener una adopción responsable, es importante seguir algunos pasos clave:
+
+            Investigar: investigue sobre diferentes tipos de animales y asegúrese de que pueda proporcionarle un hogar adecuado y que se adapte a su estilo de vida.
+            
+            Adoptar de un refugio: adopte de un refugio en lugar de comprar de un criador, ya que esto ayudará a reducir el número de animales abandonados.
+            
+            Considerar las necesidades del animal: piense en las necesidades del animal y asegúrese de que pueda proporcionarle todo lo que necesita para vivir una vida feliz y saludable.
+            
+            Proporcionar un entrenamiento y una educación adecuados: proporcione entrenamiento y educación adecuados para ayudar a su animal a adaptarse a su hogar y a su familia.
+            
+            Asegurar una vida de por vida: adopte para toda la vida, estar dispuesto a cuidar al animal durante toda su vida, no solo mientras es joven y lindo.
+            
+            Comprender los gastos: adopciones pueden tener costos adicionales, estar preparado para pagar por gastos de salud, alimentación, entrenamiento, etc.
+            
+            Siguiendo estos pasos, puede estar seguro de que está proporcionando un hogar seguro y amoroso a un animal necesitado.</p>
       
         </div>
 
