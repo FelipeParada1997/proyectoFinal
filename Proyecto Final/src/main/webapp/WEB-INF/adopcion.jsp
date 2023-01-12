@@ -78,6 +78,8 @@
 
 
 <!-- Formulario -->
+<form:form method="post" action="/adopcion" modelAttribute="mascota" enctype="multipart/form-data">
+
 <div class="wrapper">
 	<div class="header">
 		<ul>
@@ -101,7 +103,6 @@
 	<div class="form_wrap">
 		<div class="form_1 data_info">
 			<h2>Información de la Mascota</h2>
-			<form:form method="post" action="/adopcion" modelAttribute="mascota" enctype="multipart/form-data">
 				<div class="form_container">
 					<div class="input_wrap">
 						<form:label id="label" path="nombre">Nombre:</form:label>
@@ -123,11 +124,9 @@
 						<form:input class="input" path="tamano" type="text"  name="edad" id="edad"/>
 					</div>
 				</div>
-			</form:form>
 		</div>
 		<div class="form_2 data_info" style="display: none;">
 			<h2>Información de la Mascota</h2>
-			<form:form method="post" action="/adopcion" modelAttribute="mascota" enctype="multipart/form-data">
 				<div class="form_container">
 					<div class="input_wrap">
 						<label for="user_name">User Name</label>
@@ -142,11 +141,9 @@
 						<input type="text" name="Last Name" class="input" id="last_name">
 					</div>
 				</div>
-			</form:form>
 		</div>
 		<div class="form_3 data_info" style="display: none;">
 			<h2>Información de la Mascota</h2>
-			<form:form method="post" action="/adopcion" modelAttribute="mascota" enctype="multipart/form-data">
 				<div class="form_container">
 					<div class="input_wrap">
 						<label for="company">Current Company</label>
@@ -161,7 +158,6 @@
 						<input type="text" name="Designation" class="input" id="designation">
 					</div>
 				</div>
-			</form:form>
 		</div>
 	</div>
 	<div class="btns_wrap">
@@ -178,7 +174,6 @@
 		</div>
 	</div>
 </div>
-
 <div class="modal_wrapper">
 	<div class="shadow"></div>
 	<div class="success_wrap">
@@ -187,8 +182,10 @@
 	</div>
 </div>
 
+</form:form>
 
-    <script src="adopcion.js"></script>
+
+    <script src="/js/adopcion.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 </html>

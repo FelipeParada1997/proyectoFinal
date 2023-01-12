@@ -17,10 +17,10 @@ integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG
     <title>Inicia sesión | Registrate</title>
 </head>
 <body>
-
     <div class="wrapper">
         <div class="form-wrapper sign-in" >
             <form method="post" action="/loginpost">
+                <h1>${error}</h1> 
                 <h2>Inicia sesión</h2>
 
                 <div class="input-group">
@@ -56,34 +56,39 @@ integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG
                     <div class="input-group">
                         <form:input type="text"  path="nombre" />
                         <form:label path="nombre">Nombre</form:label>
+                        <form:errors path="nombre"/>
                     </div>
                     <div class="input-group">
                         <form:input type="text"  path="apellido" />
                         <form:label path="apellido">Apellido</form:label>
+                        <form:errors path="apellido"/>
                     </div>
 
                     <div class="input-group">
                         <form:input type="date"  path="fechaNacimiento"/>
                         <form:label path="fechaNacimiento">Fecha de nacimiento</form:label>
+                        <form:errors path="fechaNacimiento"/>
                     </div>
                     <div class="input-group">
                         <form:input type="email"  path="email" />
                         <form:label path="email">Correo electrónico</form:label>
+                        <form:errors path="email"/>
                     </div>
                     <div class="input-group">
                         <form:input type="int"  path="celular" />
                         <form:label path="celular">Celular</form:label>
+                        <form:errors path="celular"/>
                     </div>
                     <div class="input-group">
                         <form:input type="password"  path="password" />
                         <form:label path="password">Contraseña</form:label>
+                        <form:errors path="password"/>
                     </div>
                     <div class="input-group">
                         <form:input type="password"  path="passwordConfirm" />
                         <form:label path="passwordConfirm">Confirma contraseña</form:label>
+                        <form:errors path="password"/>
                     </div>
-
-
                             <div class="remember">
                                 <label><input type="checkbox"> Acepto los términos y condiciones</label>
                             </div>

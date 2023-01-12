@@ -34,6 +34,7 @@ public class UserController {
                                 BindingResult result, HttpSession session, Model model) {
         System.out.println(result.getAllErrors());
         if (result.hasErrors()) {
+            model.addAttribute("error", "has ingresado los datos de manera incorrecta!");
             return "inicio";
         }
         boolean duplicated = userService.duplicatedUser(user.getEmail());
@@ -77,4 +78,3 @@ public class UserController {
     //---------------------------------------------Home--------------------------------------------------
 
 //para ver publicaciones en el home en general
-
