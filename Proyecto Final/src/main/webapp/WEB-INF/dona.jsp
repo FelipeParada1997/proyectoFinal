@@ -1,3 +1,9 @@
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %> 
+<%@ page isErrorPage="true" %> 
+
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -5,7 +11,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Dona</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-  </head>
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- CSS FILE -->
+    <link rel="stylesheet" href="css/dona.css">
+</head>
   <body>
      <!-- Navbar -->
      <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3" >
@@ -66,22 +77,51 @@
     </nav>
 
     <!-- Main -->
-    <div class="container text-center">   
+    <div class="container ">   
     <div class="row">
         <div class="col-6">
             <h1 class="titulo">Como realizar tu donacion</h1>
             <h2 class="subTitulo ">Bienvenidos a Second Chance</h2>
 
-            <p class="parrafo">Lorem ipsum dolor sit, amet consectetur adipisicing elit. At eaque natus eos aliquid, velit nisi laborum ad reprehenderit nam adipisci, tempore corporis iure quae sequi porro a tenetur non quam.</p>
-            <p class="parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis quidem aspernatur numquam, excepturi vero, officia arc</p>
+            <p >Lorem ipsum dolor sit, amet consectetur adipisicing elit. At eaque natus eos aliquid, velit nisi laborum ad reprehenderit nam adipisci, tempore corporis iure quae sequi porro a tenetur non quam.</p>
+            <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis quidem aspernatur numquam, excepturi vero, officia arc</p>
+            <br>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor deleniti repudiandae magnam reiciendis explicabo quaerat velit doloribus ad temporibus nisi? Quidem doloremque suscipit quia mollitia pariatur culpa, cumque itaque molestiae?</p>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, animi, nobis qui libero sequi repellendus illo doloremque totam et magni ad quaerat ut esse saepe, non voluptas architecto porro quia.</p>
+        
+        
         </div>
         <div class="col-6">
-            <img src="" alt="">
+            <img src="imagenes/gatoscorazon.jpg" alt="gato con corazon">
         </div>
       </div>
     </div>
 
-
+ <!-- Footer -->
+ <footer class="footer fixed-down footer-expand-lg bg-dark p-md-3 mt-4">
+    <div class="container-fluid text-white">
+        <nav class="row">
+            <a href="" class="col-3 text-reset text-uppercase d-flex align-items-center">
+                <img src="/imagenes/Second Chance.png" alt="logo second chance" class="logo mr-2" >
+            </a>
+            <ul class="col-3 list-unstyled">
+                <li class="font-weight-bold text-uppercase">Teléfonos</li>
+                <li><a href="#" class="text-reset">(22) 37825605</a></li>
+                <li><a href="#" class="text-reset">(+569) 83750182</a></li>
+            </ul>
+            <ul class="col-3 list-unstyled">
+                <li class="font-weight-bold text-uppercase">Dirección</li>
+                <li><a href="#" class="text-reset">Av. las rosas comuna La Dehesa</a></li>
+            </ul>
+            <ul class="col-3 list-unstyled">
+                <li class="font-weight-bold text-uppercase">Email</li>
+                <li><a href="#" class="text-reset">secondChance@gmail.com</a></li>
+            </ul>
+        </nav>
+    </div>
+</footer>
 
 
 
