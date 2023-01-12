@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.felipe.IoC.Models.Mascota;
+import com.felipe.IoC.Models.Publicacion;
 import com.felipe.IoC.Models.TipoAnimal;
 import com.felipe.IoC.Models.User;
 import com.felipe.IoC.Services.MascotaService;
@@ -44,6 +45,8 @@ public class homeController {
             model.addAttribute("user", user);
         }
         List<Mascota> mascota;
+        Publicacion publicacion = publicacionService.findById(id);
+        model.addAttribute("publicacion", publicacion);
         mascota = mascotaService.findAll();
         model.addAttribute("mascota", mascota);
         return "home";

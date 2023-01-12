@@ -15,7 +15,7 @@
         <h1>EditarPublicacion</h1>
         <a href="/" class="col-auto">Volver al home</a>
         <br>
-        <form:form action="" method="post" modelAttribute="mascota">
+        <form:form action="" method="post" modelAttribute="publicacion">
         <input type="hidden" name="_method" value="put">
                 <p>
                     <form:label path="titulo">titulo</form:label>
@@ -26,16 +26,6 @@
                     <form:label path="descripcion">descripcion</form:label>
                     <form:errors path="descripcion"/>
                     <form:input path="descripcion" />
-            </p>
-            <p>
-                <form:label path="mascota">Mascotas</form:label>
-                    <form:select path="mascota">
-                        <c:forEach items="${mascota}" var="mascota" >
-                            <form:option value="${mascota.id}">
-                                <c:out value="${mascota.nombre}"/>
-                            </form:option>
-                        </c:forEach>
-                    </form:select>
             </p>
             </p>
                 <form:label path="ciudad">Ciudad</form:label>
@@ -57,7 +47,7 @@
         </form:select>
     </p>
             <input type="submit" value="submit"/>
-            <a href="/userdentro" class="btn btn-primary">cancel</a>
+            <a href="/" class="btn btn-primary">cancel</a>
         </form:form>
 
         <a href="/mascota/{mascota.id}/edit">editar mascota</a>

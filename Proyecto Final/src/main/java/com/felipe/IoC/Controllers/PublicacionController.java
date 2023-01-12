@@ -129,6 +129,7 @@ public class PublicacionController {
 
         List<Mascota> mascota = u.getMascotas();
         model.addAttribute("mascota", mascota);
+        System.out.println(mascota);
 
         return "editP";
     }
