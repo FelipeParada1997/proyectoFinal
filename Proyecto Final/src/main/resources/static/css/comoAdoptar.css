@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+
 .navbar{
     background-color: black;
 
@@ -5,19 +12,16 @@
 .logo{
     width: 160px;
 }
-.cuerpo{
-    margin-top: 140px;
-    margin-left: 30px;
-    width: 500px;
-    display: inline-block;
+
+.container{
+    margin-top: 150px;
 }
+
 .subTitulo{
     font-family: courier;
 }
-.animacion{
-    margin-top: 200px;
-
-}
-img{
-    width: 300px;
+.col img{
+    margin-left: 100px;
+    width: 450px;
+    border-radius: 50px;
 }
