@@ -45,7 +45,7 @@ pageEncoding="UTF-8"%>
                             </ul>
                     </li>
 
-                        <c:if test="${userId == null}">
+                        <!-- <c:if test="${userId == null}">
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-person-fill"></i>
                                 Bienvenido
@@ -53,14 +53,13 @@ pageEncoding="UTF-8"%>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="/iniciasesion/registrate">Registro/Inicio</a></li>
                             </ul>
-                        </c:if>
+                        </c:if> -->
                         <c:if test="${userId != null}">
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-person-fill"></i>
                                 <c:out value="${user.nombre}"></c:out>
                                 </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Mi perfil</a></li>
                                 <li><a class="dropdown-item" href="/misesion">Mi sesion</a></li>
                                 <li><a class="dropdown-item" href="/adopcion">Crear publicacion</a></li>
                                 <li><a class="dropdown-item" href="/salir">Cerrar sesión</a></li>
